@@ -32,7 +32,7 @@ Author's custom styles
 ========================================================================== */
 
 body {font-family: wf_segoe-ui_normal, 'Segoe UI', Tahoma, Arial, sans-serif;}
-
+header, main, footer {padding: 2em 25% 2em 25%}
 
 
 

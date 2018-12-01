@@ -1,20 +1,18 @@
 /*! Base styles: Mobile First */
-html { color: #111; font-size: 110%; background:#ccc;}
+html { color: #eee; font-size: 110%; background:#222;}
 body {font-family: wf_segoe-ui_normal, 'Segoe UI', Tahoma, Arial, sans-serif;}
-header {padding: 1.5rem 5% 1.5rem 5%; display:block; background:#bfc;}
-main {padding: 0.5rem 5%; display:block; background:#eee;}
+header {padding: 1.5rem 5% 1.5rem 5%; display:block; background:#051;}
+main {padding: 0.5rem 5%; display:block; background:#111;}
 footer {padding: 0rem 5% 2rem 5%;}
 p { word-spacing: 0.35rem; line-height:1.4rem;}
-a {text-decoration:none; font-weight:bold; border-bottom:1px dashed #666; letter-spacing:.08rem;}
-a:link {color:#136;}
-a:visited {color:#444;}
-a:hover {color:#820;}
-a:active {color:#820;}
+a {text-decoration:none; font-weight:bold; border-bottom:1px dashed #aaa; letter-spacing:.08rem;}
+a:link {color:#7af;}
+a:visited {color:#ccc;}
+a:hover {color:#fd0;}
+a:active {color:#fd0;}
 b {letter-spacing:.08rem;}
 h1 {margin:0.7rem 0 1rem 0; line-height:100%;}
-svg#ITLlogo {fill:#111;}
-
-
+svg#ITLlogo {fill:#eee;}
 
 
 /* opinionated defaults*/
@@ -26,6 +24,7 @@ audio, canvas, iframe, img, svg, video { vertical-align: middle; }
 fieldset { border: 0; margin: 0; padding: 0;}
 /* Allow only vertical resizing of textareas.  */
 textarea { resize: vertical;}
+
 
 
 /* Helper classes */
@@ -65,7 +64,6 @@ EXAMPLE Media Queries for Responsive Design.
 These examples override the primary ('mobile first') styles.
 Modify as content requires.
 ========================================================================== */
-
 
 @media only screen and (min-width: 35em) {
 html { font-size: 120%;}

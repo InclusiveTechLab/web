@@ -1,18 +1,7 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>No Hands Rocket League : Microsoft Inclusive Tech Lab</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="normalize.css">
-<link rel="stylesheet" href="http://i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.css">
-<link rel="stylesheet" href="qr.dark.css">
-</head>
-<body>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 
-<header>
-<svg width="140px" height="50px" viewBox="0 0 91571 32821" version="1.1" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;" id="ITLlogo" aria-labelledby="ITLTitle" role="img"><title id="ITLTitle">Inclusive Tech Lab</title>
+
+<svg width="100%" height="100%" viewBox="0 0 91571 32821" version="1.1" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;" id="ITLlogo" aria-labelledby="ITLTitle" role="img"><title id="ITLTitle">Inclusive Tech Lab</title>
 <g><rect x="39.023" y="240.752" width="1685.99" height="14390.7" style="fill:#fff;"/>
 <path d="M16893.6,14631.5l-2047.21,0l-7426.13,-11470.4c-174.028,-267.518 -324.566,-568.577 -451.563,-903.213l-60.226,0c53.472,307.831 80.295,966.859 80.295,1976.98l-0.034,10396.6l-1685.96,0l0.053,-14390.7l2187.71,0l7205.35,11289.8l582.031,963.386l40.139,0c-66.944,-414.74 -100.364,-1120.5 -100.364,-2117.45l0.034,-10135.7l1675.9,0l-0.034,14390.7Z" style="fill:#fff;fill-rule:nonzero;"/>
 <path d="M30255.8,14039.5c-1057.14,561.98 -2378.34,842.935 -3963.93,842.935c-1331.42,0 -2512.28,-297.604 -3542.47,-893.126c-1030.37,-595.417 -1824.88,-1440.09 -2383.39,-2533.94c-558.698,-1093.86 -837.969,-2343.27 -837.952,-3748.2c0,-1465.16 311.094,-2788.11 933.299,-3968.96c622.188,-1180.73 1495.26,-2098.98 2619.22,-2754.71c1123.94,-655.591 2384.97,-983.455 3783.32,-983.455c1358.07,0 2488.75,197.413 3391.93,592.101l0,1786.29c-1030.33,-575.296 -2167.62,-863.056 -3412,-863.056c-1083.8,-0.018 -2047.21,250.885 -2890.18,752.639c-842.987,501.771 -1496.98,1217.73 -1961.89,2147.55c-465.087,930.001 -697.483,1993.75 -697.483,3191.24c-0.018,1137.47 217.326,2144.29 652.292,3020.66c434.827,876.511 1050.26,1550.44 1846.51,2022.12c796.077,471.65 1706.01,707.5 2729.59,707.5c1445.11,0 2689.5,-321.128 3733.15,-963.368l-0.018,1645.78Z" style="fill:#fff;fill-rule:nonzero;"/>
@@ -29,17 +18,3 @@
 <path d="M73010.1,20337l-60.191,0c-46.91,401.407 -117.153,746.06 -210.747,1033.63l-1966.95,5549.54l4415.54,0.017l-1976.93,-5549.55c-66.979,-173.889 -133.924,-518.368 -200.729,-1033.63m4174.69,12233.1l-1314.65,-3632.78l-5760.25,-0.017l-1254.44,3632.78l-2609.17,-0.017l5449.21,-14390.7l2649.34,0.017l5469.21,14390.7l-2629.24,-0.017Z" style="fill:#fff;fill-rule:nonzero;"/>
 <path d="M89040.3,28315.3c0,-688.976 -247.57,-1227.61 -742.605,-1615.68c-495.174,-387.935 -1234.32,-582.05 -2217.8,-582.05l-1806.36,0l-0.018,4475.72l2017.09,0.017c856.286,0 1528.68,-205.694 2017.14,-617.136c488.282,-411.458 732.553,-964.983 732.553,-1660.87m-682.379,-6372.45c0,-568.542 -212.448,-1008.52 -637.24,-1319.64c-424.914,-311.094 -1055.43,-466.632 -1891.67,-466.632l-1555.45,0l-0.017,3984.01l1535.4,0c809.41,0 1436.62,-188.941 1881.63,-566.98c444.844,-377.882 667.344,-921.528 667.344,-1630.77m3211.29,6432.68c0,1257.87 -463.351,2271.43 -1389.9,3040.7c-926.702,769.445 -2122.47,1154.06 -3587.64,1154.06l-4706.55,-0.017l0.034,-14390.7l4546.01,0.018c1378.13,0 2465.23,297.76 3261.46,893.143c796.077,595.556 1194.2,1401.65 1194.2,2418.54c0,776.164 -237.552,1465.16 -712.518,2067.24c-475.104,602.136 -1100.57,1023.61 -1876.6,1264.46l0,40.139c1023.6,133.924 1824.69,511.824 2403.46,1134.01c578.594,622.17 868.056,1414.98 868.039,2378.37" style="fill:#fff;fill-rule:nonzero;"/>
 </g></svg>
-</header>
-<main role="main">
-<section id="s1">
-<h1>No Hands Rocket&nbsp;League</h1>
-<p>In this demonstration we play Rocket League without a traditional controller using just one foot and one knee and optionally using a head mounted button for jump this is played on Xbox One using a modified arcade stick. This is an approachable demonstration which is intended to give people who try it a new perspective. We want people to understand that gaming doesn't have to be about your hands.</p>
-</section>
-</main>
-
-<footer>
-<p>The <a href="https://inclusivetechlab.github.io/web/">Inclusive Tech Lab</a> by <a href="https://www.microsoft.com">Microsoft</a>.<br><b>Thank you for visiting.</b></p>
-</footer>
-
-</body>
-</html>

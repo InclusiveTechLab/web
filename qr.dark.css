@@ -1,7 +1,7 @@
 /*! Base styles: Mobile First */
 html { color: #eee; font-size: 110%; background:#222;}
 body {font-family: wf_segoe-ui_normal, 'Segoe UI', Tahoma, Arial, sans-serif;}
-header {padding: 1.5rem 5% 1.5rem 5%; display:block; background:#051;}
+header {padding: 1.5rem 5% 1.5rem 5%; display:block; background:#333;}
 main {padding: 0.5rem 5%; display:block; background:#111;}
 footer {padding: 0rem 5% 2rem 5%;}
 p { word-spacing: 0.35rem; line-height:1.4rem;}

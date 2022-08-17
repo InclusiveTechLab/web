@@ -1,0 +1,461 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 16.0 MIMEDIR//EN
+VERSION:2.0
+METHOD:REQUEST
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+BEGIN:VTIMEZONE
+TZID:Pacific Standard Time
+BEGIN:STANDARD
+DTSTART:16011104T020000
+RRULE:FREQ=YEARLY;BYDAY=1SU;BYMONTH=11
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:16010311T020000
+RRULE:FREQ=YEARLY;BYDAY=2SU;BYMONTH=3
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20220817T031406Z
+DESCRIPTION:Setting up a meeting series of office hours\, just for W+D Desi
+	gn\, in the Inclusive Tech Lab. (+ hybrid of course)\n\n*	Wanna hold an in
+	clusive design sprint and need help organizing it. Learn more about Micros
+	oft Inclusive Design <https://www.microsoft.com/design/inclusive/> \n*	Hav
+	e a question about how people with disabilities interact with technology\n
+	*	Do you need to find some disabled folks to chat with\, to make sure you 
+	are practicing “Nothing about us\, without us <https://www.huffpost.com/
+	entry/nothing-about-us-without-us-mantra-for-a-movement_b_59aea450e4b0c506
+	40cd61cf> ”\n*	Or maybe you just would like to run an idea by us\, ask a
+	 question\, or have a quick tour of the lab\n\n \n\nThanks!\n\nBryce and S
+	olomon. \n\n \n\n📨Reach out to Bryce Johnson <mailto:brycejo@microsof
+	t.com>  or Solomon Romney <mailto:sromney@microsoft.com>  with questions. 
+	\n\n🌎Our website <https://aka.ms/inclusivetechlab>  provides a brief 
+	introduction into our work. https://aka.ms/inclusivetechlab\n\n👩‍
+	🦼Our SharePoint site <https://aka.ms/ITL>  (needs updating 😊) bu
+	t is a good source of how we engage in e2e.  https://aka.ms/ITL\n\n🧏
+	🏽‍♀️Keep up to date. Yammer <https://aka.ms/itl_Yammer>  has ou
+	r feed of visitors and ideas. https://aka.ms/itl_Yammer\n\n \n\n__________
+	______________________________________________________________________ \n\
+	nMicrosoft Teams meeting \n\nJoin on your computer or mobile app \n\nClick
+	 here to join the meeting <https://teams.microsoft.com/l/meetup-join/19%3a
+	meeting_NjM5OGI4NTQtYjlhMi00NjFhLWEyMDItMmM5Njc2NTE0MGU0%40thread.v2/0?con
+	text=%7b%22Tid%22%3a%2272f988bf-86f1-41af-91ab-2d7cd011db47%22%2c%22Oid%22
+	%3a%22cc787d9e-df17-48cb-866b-15da8af16a09%22%7d>  \n\nMeeting ID: 276 400
+	 793 824 \nPasscode: 6fQve7 \n\nDownload Teams <https://www.microsoft.com/
+	en-us/microsoft-teams/download-app>  | Join on the web <https://www.micros
+	oft.com/microsoft-teams/join-a-meeting> \n\nOr call in (audio only) \n\n+1
+	 323-849-4874\,\,388842920# <tel:+13238494874\,\,388842920#>    United Sta
+	tes\, Los Angeles \n\nPhone Conference ID: 388 842 920# \n\nFind a local n
+	umber <https://dialin.teams.microsoft.com/8551f4c1-bea3-441a-8738-69aa517a
+	91c5?id=388842920>  | Reset PIN <https://dialin.teams.microsoft.com/usp/ps
+	tnconferencing>  \n\nLearn More <https://aka.ms/JoinTeamsMeeting>  | Meeti
+	ng options <https://teams.microsoft.com/meetingOptions/?organizerId=cc787d
+	9e-df17-48cb-866b-15da8af16a09&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db
+	47&threadId=19_meeting_NjM5OGI4NTQtYjlhMi00NjFhLWEyMDItMmM5Njc2NTE0MGU0@th
+	read.v2&messageId=0&language=en-US>  \n\n_________________________________
+	_______________________________________________ \n\n \n\n
+DTEND;TZID="Pacific Standard Time":20220819T105500
+DTSTAMP:20220817T031250Z
+DTSTART;TZID="Pacific Standard Time":20220819T100500
+LAST-MODIFIED:20220817T031406Z
+LOCATION:Microsoft Teams Meeting\; (and beside the 86 Cafe)
+ORGANIZER;CN="Solomon Romney":mailto:sromney@microsoft.com
+PRIORITY:5
+RRULE:FREQ=WEEKLY;COUNT=33;BYDAY=FR
+SEQUENCE:4
+SUMMARY;LANGUAGE=en-us:W+D Design – inclusive design office hours from th
+	e Inclusive Tech Lab
+TRANSP:TRANSPARENT
+UID:040000008200E00074C5B7101A82E00800000000BF9C864EE5B1D801000000000000000
+	010000000EFF7A8C2FEA49944B995F0E271C3FB7B
+X-ALT-DESC;FMTTYPE=text/html:<html xmlns:v="urn:schemas-microsoft-com:vml" 
+	xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-mic
+	rosoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/
+	12/omml" xmlns="http://www.w3.org/TR/REC-html40">\n<head>\n\n<meta name="G
+	enerator" content="Microsoft Word 15 (filtered medium)">\n<style><!--\n/* 
+	Font Definitions */\n@font-face\n	{font-family:"Cambria Math"\;\n	panose-1
+	:2 4 5 3 5 4 6 3 2 4\;}\n@font-face\n	{font-family:Calibri\;\n	panose-1:2 
+	15 5 2 2 2 4 3 2 4\;}\n@font-face\n	{font-family:"Segoe UI Emoji"\;\n	pano
+	se-1:2 11 5 2 4 2 4 2 2 3\;}\n@font-face\n	{font-family:"Segoe UI"\;\n	pan
+	ose-1:2 11 5 2 4 2 4 2 2 3\;}\n@font-face\n	{font-family:"Segoe UI Semibol
+	d"\;\n	panose-1:2 11 7 2 4 2 4 2 2 3\;}\n/* Style Definitions */\np.MsoNor
+	mal\, li.MsoNormal\, div.MsoNormal\n	{margin:0in\;\n	font-size:11.0pt\;\n	
+	font-family:"Calibri"\,sans-serif\;}\na:link\, span.MsoHyperlink\n	{mso-st
+	yle-priority:99\;\n	color:#0563C1\;\n	text-decoration:underline\;}\np.MsoL
+	istParagraph\, li.MsoListParagraph\, div.MsoListParagraph\n	{mso-style-pri
+	ority:34\;\n	margin-top:0in\;\n	margin-right:0in\;\n	margin-bottom:0in\;\n
+		margin-left:.5in\;\n	font-size:11.0pt\;\n	font-family:"Calibri"\,sans-ser
+	if\;}\nspan.EmailStyle20\n	{mso-style-type:personal-compose\;}\n.MsoChpDef
+	ault\n	{mso-style-type:export-only\;\n	font-size:10.0pt\;\n	font-family:"C
+	alibri"\,sans-serif\;}\n@page WordSection1\n	{size:8.5in 11.0in\;\n	margin
+	:1.0in 1.0in 1.0in 1.0in\;}\ndiv.WordSection1\n	{page:WordSection1\;}\n/* 
+	List Definitions */\n@list l0\n	{mso-list-id:1267889109\;\n	mso-list-templ
+	ate-ids:570477252\;}\n@list l0:level1\n	{mso-level-number-format:bullet\;\
+	n	mso-level-text:\;\n	mso-level-tab-stop:.5in\;\n	mso-level-number-posi
+	tion:left\;\n	text-indent:-.25in\;\n	mso-ansi-font-size:10.0pt\;\n	font-fa
+	mily:Symbol\;}\n@list l0:level2\n	{mso-level-number-format:bullet\;\n	mso-
+	level-text:\;\n	mso-level-tab-stop:1.0in\;\n	mso-level-number-position:
+	left\;\n	text-indent:-.25in\;\n	mso-ansi-font-size:10.0pt\;\n	font-family:
+	Symbol\;}\n@list l0:level3\n	{mso-level-number-format:bullet\;\n	mso-level
+	-text:\;\n	mso-level-tab-stop:1.5in\;\n	mso-level-number-position:left\
+	;\n	text-indent:-.25in\;\n	mso-ansi-font-size:10.0pt\;\n	font-family:Symbo
+	l\;}\n@list l0:level4\n	{mso-level-number-format:bullet\;\n	mso-level-text
+	:\;\n	mso-level-tab-stop:2.0in\;\n	mso-level-number-position:left\;\n	t
+	ext-indent:-.25in\;\n	mso-ansi-font-size:10.0pt\;\n	font-family:Symbol\;}\
+	n@list l0:level5\n	{mso-level-number-format:bullet\;\n	mso-level-text:\
+	;\n	mso-level-tab-stop:2.5in\;\n	mso-level-number-position:left\;\n	text-i
+	ndent:-.25in\;\n	mso-ansi-font-size:10.0pt\;\n	font-family:Symbol\;}\n@lis
+	t l0:level6\n	{mso-level-number-format:bullet\;\n	mso-level-text:\;\n	m
+	so-level-tab-stop:3.0in\;\n	mso-level-number-position:left\;\n	text-indent
+	:-.25in\;\n	mso-ansi-font-size:10.0pt\;\n	font-family:Symbol\;}\n@list l0:
+	level7\n	{mso-level-number-format:bullet\;\n	mso-level-text:\;\n	mso-le
+	vel-tab-stop:3.5in\;\n	mso-level-number-position:left\;\n	text-indent:-.25
+	in\;\n	mso-ansi-font-size:10.0pt\;\n	font-family:Symbol\;}\n@list l0:level
+	8\n	{mso-level-number-format:bullet\;\n	mso-level-text:\;\n	mso-level-t
+	ab-stop:4.0in\;\n	mso-level-number-position:left\;\n	text-indent:-.25in\;\
+	n	mso-ansi-font-size:10.0pt\;\n	font-family:Symbol\;}\n@list l0:level9\n	{
+	mso-level-number-format:bullet\;\n	mso-level-text:\;\n	mso-level-tab-st
+	op:4.5in\;\n	mso-level-number-position:left\;\n	text-indent:-.25in\;\n	mso
+	-ansi-font-size:10.0pt\;\n	font-family:Symbol\;}\nol\n	{margin-bottom:0in\
+	;}\nul\n	{margin-bottom:0in\;}\n--></style><!--[if gte mso 9]><xml>\n<o:sh
+	apedefaults v:ext="edit" spidmax="1026" />\n</xml><![endif]--><!--[if gte 
+	mso 9]><xml>\n<o:shapelayout v:ext="edit">\n<o:idmap v:ext="edit" data="1"
+	 />\n</o:shapelayout></xml><![endif]-->\n</head>\n<body lang="EN-US" link=
+	"#0563C1" vlink="#954F72" style="word-wrap:break-word">\n<div class="WordS
+	ection1">\n<div>\n<div>\n<p class="MsoNormal" style="margin-bottom:12.0pt"
+	><b>Setting up a meeting series of office hours\, just for W+D Design\, in
+	 the Inclusive Tech Lab. (+ hybrid of course)</b><o:p></o:p></p>\n<ul styl
+	e="margin-top:0in" type="disc">\n<li class="MsoListParagraph" style="margi
+	n-left:0in\;mso-list:l0 level1 lfo1">Wanna hold an inclusive design sprint
+	 and need help organizing it. Learn more about\n<a href="https://www.micro
+	soft.com/design/inclusive/">Microsoft Inclusive Design</a><o:p></o:p></li>
+	<li class="MsoListParagraph" style="margin-left:0in\;mso-list:l0 level1 lf
+	o1">Have a question about how people with disabilities interact with techn
+	ology<o:p></o:p></li><li class="MsoListParagraph" style="margin-left:0in\;
+	mso-list:l0 level1 lfo1">Do you need to find some disabled folks to chat w
+	ith\, to make sure you are practicing “<a href="https://www.huffpost.com
+	/entry/nothing-about-us-without-us-mantra-for-a-movement_b_59aea450e4b0c50
+	640cd61cf">Nothing\n about us\, without us</a>”<o:p></o:p></li><li class
+	="MsoListParagraph" style="margin-left:0in\;mso-list:l0 level1 lfo1">Or ma
+	ybe you just would like to run an idea by us\, ask a question\, or have a 
+	quick tour of the lab<o:p></o:p></li></ul>\n<p class="MsoNormal">&nbsp\;<o
+	:p></o:p></p>\n<p class="MsoNormal">Thanks!<o:p></o:p></p>\n<p class="MsoN
+	ormal">Bryce and Solomon. <o:p></o:p></p>\n<p class="MsoNormal">&nbsp\;<o:
+	p></o:p></p>\n<p class="MsoNormal"><span style="font-family:&quot\;Segoe U
+	I Emoji&quot\;\,sans-serif">&#128232\;</span>Reach out to\n<a href="mailto
+	:brycejo@microsoft.com">Bryce Johnson</a> or <a href="mailto:sromney@micro
+	soft.com">\nSolomon Romney</a> with questions. <o:p></o:p></p>\n<p class="
+	MsoNormal"><span style="font-family:&quot\;Segoe UI Emoji&quot\;\,sans-ser
+	if">&#127758\;</span>Our\n<a href="https://aka.ms/inclusivetechlab">websit
+	e</a> provides a brief introduction into our work.\n<a href="https://aka.m
+	s/inclusivetechlab">https://aka.ms/inclusivetechlab</a><o:p></o:p></p>\n<p
+	 class="MsoNormal"><span style="font-family:&quot\;Segoe UI Emoji&quot\;\,
+	sans-serif">&#128105\;‍&#129468\;</span>Our\n<a href="https://aka.ms/ITL
+	">SharePoint site</a> (needs updating <span style="font-family:&quot\;Sego
+	e UI Emoji&quot\;\,sans-serif">\n&#128522\;</span>) but is a good source o
+	f how we engage in e2e. &nbsp\;<a href="https://aka.ms/ITL">https://aka.ms
+	/ITL</a><o:p></o:p></p>\n<p class="MsoNormal"><span style="font-family:&qu
+	ot\;Segoe UI Emoji&quot\;\,sans-serif">&#129487\;&#127997\;‍♀️</span
+	>Keep up to date.\n<a href="https://aka.ms/itl_Yammer">Yammer</a> has our 
+	feed of visitors and ideas.\n<a href="https://aka.ms/itl_Yammer">https://a
+	ka.ms/itl_Yammer</a><o:p></o:p></p>\n<p class="MsoNormal">&nbsp\;<o:p></o:
+	p></p>\n<div>\n<p class="MsoNormal"><span style="color:#5F5F5F">__________
+	______________________________________________________________________</sp
+	an>\n<o:p></o:p></p>\n</div>\n<div>\n<div style="margin-top:.25in\;margin-
+	bottom:15.0pt">\n<p class="MsoNormal"><span style="font-size:18.0pt\;font-
+	family:&quot\;Segoe UI&quot\;\,sans-serif\;color:#252424">Microsoft Teams 
+	meeting</span><span style="font-family:&quot\;Segoe UI&quot\;\,sans-serif\
+	;color:#252424">\n</span><o:p></o:p></p>\n</div>\n<div style="margin-botto
+	m:15.0pt">\n<div>\n<p class="MsoNormal"><b><span style="font-size:10.5pt\;
+	font-family:&quot\;Segoe UI&quot\;\,sans-serif\;color:#252424">Join on you
+	r computer or mobile app</span></b><b><span style="font-family:&quot\;Sego
+	e UI&quot\;\,sans-serif\;color:#252424">\n</span></b><o:p></o:p></p>\n</di
+	v>\n<p class="MsoNormal"><span style="font-family:&quot\;Segoe UI&quot\;\,
+	sans-serif\;color:#252424"><a href="https://teams.microsoft.com/l/meetup-j
+	oin/19%3ameeting_NjM5OGI4NTQtYjlhMi00NjFhLWEyMDItMmM5Njc2NTE0MGU0%40thread
+	.v2/0?context=%7b%22Tid%22%3a%2272f988bf-86f1-41af-91ab-2d7cd011db47%22%2c
+	%22Oid%22%3a%22cc787d9e-df17-48cb-866b-15da8af16a09%22%7d"><span style="fo
+	nt-size:10.5pt\;font-family:&quot\;Segoe UI Semibold&quot\;\,sans-serif\;c
+	olor:#6264A7">Click\n here to join the meeting</span></a> </span><o:p></o:
+	p></p>\n</div>\n<div style="margin-top:15.0pt\;margin-bottom:15.0pt">\n<di
+	v style="margin-bottom:3.0pt">\n<p class="MsoNormal"><span style="font-siz
+	e:10.5pt\;font-family:&quot\;Segoe UI&quot\;\,sans-serif\;color:#252424">M
+	eeting ID:\n</span><span style="font-size:12.0pt\;font-family:&quot\;Segoe
+	 UI&quot\;\,sans-serif\;color:#252424">276 400 793 824</span><span style="
+	font-size:10.5pt\;font-family:&quot\;Segoe UI&quot\;\,sans-serif\;color:#2
+	52424">\n</span><span style="font-family:&quot\;Segoe UI&quot\;\,sans-seri
+	f\;color:#252424"><br>\n</span><span style="font-size:10.5pt\;font-family:
+	&quot\;Segoe UI&quot\;\,sans-serif\;color:#252424">Passcode:\n</span><span
+	 style="font-size:12.0pt\;font-family:&quot\;Segoe UI&quot\;\,sans-serif\;
+	color:#252424">6fQve7\n</span><o:p></o:p></p>\n<div>\n<p class="MsoNormal"
+	><span style="font-size:10.5pt\;font-family:&quot\;Segoe UI&quot\;\,sans-s
+	erif\;color:#252424"><a href="https://www.microsoft.com/en-us/microsoft-te
+	ams/download-app"><span style="color:#6264A7">Download Teams</span></a> |\
+	n<a href="https://www.microsoft.com/microsoft-teams/join-a-meeting"><span 
+	style="color:#6264A7">Join on the web</span></a></span><o:p></o:p></p>\n</
+	div>\n</div>\n</div>\n<div style="margin-bottom:3.0pt">\n<div style="margi
+	n-bottom:3.0pt">\n<p class="MsoNormal"><b><span style="font-size:10.5pt\;f
+	ont-family:&quot\;Segoe UI&quot\;\,sans-serif\;color:#252424">Or call in (
+	audio only)</span></b><span style="font-family:&quot\;Segoe UI&quot\;\,san
+	s-serif\;color:#252424">\n</span><o:p></o:p></p>\n</div>\n<div style="marg
+	in-bottom:3.0pt">\n<p class="MsoNormal"><span style="font-family:&quot\;Se
+	goe UI&quot\;\,sans-serif\;color:#252424"><a href="tel:+13238494874\,\,388
+	842920# "><span style="font-size:10.5pt\;color:#6264A7">+1 323-849-4874\,\
+	,388842920#</span></a>\n</span><span style="font-size:10.5pt\;font-family:
+	&quot\;Segoe UI&quot\;\,sans-serif\;color:#252424">&nbsp\; United States\,
+	 Los Angeles\n</span><o:p></o:p></p>\n</div>\n</div>\n<p class="MsoNormal"
+	><span style="font-size:10.5pt\;font-family:&quot\;Segoe UI&quot\;\,sans-s
+	erif\;color:#252424">Phone Conference ID:\n</span><span style="font-size:1
+	2.0pt\;font-family:&quot\;Segoe UI&quot\;\,sans-serif\;color:#252424">388 
+	842 920#\n</span><o:p></o:p></p>\n<div style="margin-bottom:15.0pt">\n<p c
+	lass="MsoNormal"><span style="font-family:&quot\;Segoe UI&quot\;\,sans-ser
+	if\;color:#252424"><a href="https://dialin.teams.microsoft.com/8551f4c1-be
+	a3-441a-8738-69aa517a91c5?id=388842920"><span style="font-size:10.5pt\;col
+	or:#6264A7">Find a local number</span></a> |\n<a href="https://dialin.team
+	s.microsoft.com/usp/pstnconferencing"><span style="font-size:10.5pt\;color
+	:#6264A7">Reset PIN</span></a>\n</span><o:p></o:p></p>\n</div>\n<div style
+	="margin-top:15.0pt\;margin-bottom:.25in">\n<p class="MsoNormal"><span sty
+	le="font-family:&quot\;Segoe UI&quot\;\,sans-serif\;color:#252424"><a href
+	="https://aka.ms/JoinTeamsMeeting"><span style="font-size:10.5pt\;color:#6
+	264A7">Learn More</span></a> |\n<a href="https://teams.microsoft.com/meeti
+	ngOptions/?organizerId=cc787d9e-df17-48cb-866b-15da8af16a09&amp\;tenantId=
+	72f988bf-86f1-41af-91ab-2d7cd011db47&amp\;threadId=19_meeting_NjM5OGI4NTQt
+	YjlhMi00NjFhLWEyMDItMmM5Njc2NTE0MGU0@thread.v2&amp\;messageId=0&amp\;langu
+	age=en-US">\n<span style="font-size:10.5pt\;color:#6264A7">Meeting options
+	</span></a> </span><o:p></o:p></p>\n</div>\n</div>\n<div>\n<p class="MsoNo
+	rmal"><span style="color:#5F5F5F">________________________________________
+	________________________________________</span>\n<o:p></o:p></p>\n</div>\n
+	<p class="MsoNormal">&nbsp\;<o:p></o:p></p>\n</div>\n</div>\n</div>\n</bod
+	y>\n</html>\n
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MS-OLK-APPTLASTSEQUENCE:5
+X-MS-OLK-APPTSEQTIME:20220817T031250Z
+BEGIN:VALARM
+TRIGGER:-PT1080M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20220817T031406Z
+DESCRIPTION:Setting up a meeting series of office hours\, just for W+D Desi
+	gn\, in the Inclusive Tech Lab. (+ hybrid of course)\n\n*	Wanna hold an in
+	clusive design sprint and need help organizing it. Learn more about Micros
+	oft Inclusive Design <https://www.microsoft.com/design/inclusive/> \n*	Hav
+	e a question about how people with disabilities interact with technology\n
+	*	Do you need to find some disabled folks to chat with\, to make sure you 
+	are practicing “Nothing about us\, without us <https://www.huffpost.com/
+	entry/nothing-about-us-without-us-mantra-for-a-movement_b_59aea450e4b0c506
+	40cd61cf> ”\n*	Or maybe you just would like to run an idea by us\, ask a
+	 question\, or have a quick tour of the lab\n\n \n\nThanks!\n\nBryce and S
+	olomon. \n\n \n\n📨Reach out to Bryce Johnson <mailto:brycejo@microsof
+	t.com>  or Solomon Romney <mailto:sromney@microsoft.com>  with questions. 
+	\n\n🌎Our website <https://aka.ms/inclusivetechlab>  provides a brief 
+	introduction into our work. https://aka.ms/inclusivetechlab\n\n👩‍
+	🦼Our SharePoint site <https://aka.ms/ITL>  (needs updating 😊) bu
+	t is a good source of how we engage in e2e.  https://aka.ms/ITL\n\n🧏
+	🏽‍♀️Keep up to date. Yammer <https://aka.ms/itl_Yammer>  has ou
+	r feed of visitors and ideas. https://aka.ms/itl_Yammer\n\n \n\n__________
+	______________________________________________________________________ \n\
+	nMicrosoft Teams meeting \n\nJoin on your computer or mobile app \n\nClick
+	 here to join the meeting <https://teams.microsoft.com/l/meetup-join/19%3a
+	meeting_NjM5OGI4NTQtYjlhMi00NjFhLWEyMDItMmM5Njc2NTE0MGU0%40thread.v2/0?con
+	text=%7b%22Tid%22%3a%2272f988bf-86f1-41af-91ab-2d7cd011db47%22%2c%22Oid%22
+	%3a%22cc787d9e-df17-48cb-866b-15da8af16a09%22%7d>  \n\nMeeting ID: 276 400
+	 793 824 \nPasscode: 6fQve7 \n\nDownload Teams <https://www.microsoft.com/
+	en-us/microsoft-teams/download-app>  | Join on the web <https://www.micros
+	oft.com/microsoft-teams/join-a-meeting> \n\nOr call in (audio only) \n\n+1
+	 323-849-4874\,\,388842920# <tel:+13238494874\,\,388842920#>    United Sta
+	tes\, Los Angeles \n\nPhone Conference ID: 388 842 920# \n\nFind a local n
+	umber <https://dialin.teams.microsoft.com/8551f4c1-bea3-441a-8738-69aa517a
+	91c5?id=388842920>  | Reset PIN <https://dialin.teams.microsoft.com/usp/ps
+	tnconferencing>  \n\nLearn More <https://aka.ms/JoinTeamsMeeting>  | Meeti
+	ng options <https://teams.microsoft.com/meetingOptions/?organizerId=cc787d
+	9e-df17-48cb-866b-15da8af16a09&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db
+	47&threadId=19_meeting_NjM5OGI4NTQtYjlhMi00NjFhLWEyMDItMmM5Njc2NTE0MGU0@th
+	read.v2&messageId=0&language=en-US>  \n\n_________________________________
+	_______________________________________________ \n\n \n\n
+DTEND:20220819T175500Z
+DTSTAMP:20220817T031250Z
+DTSTART:20220819T170500Z
+LAST-MODIFIED:20220817T031406Z
+PRIORITY:5
+RECURRENCE-ID:20220819T170500Z
+SEQUENCE:5
+UID:040000008200E00074C5B7101A82E00800000000BF9C864EE5B1D801000000000000000
+	010000000EFF7A8C2FEA49944B995F0E271C3FB7B
+X-ALT-DESC;FMTTYPE=text/html:<html xmlns:v="urn:schemas-microsoft-com:vml" 
+	xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-mic
+	rosoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/
+	12/omml" xmlns="http://www.w3.org/TR/REC-html40">\n<head>\n\n<meta name="G
+	enerator" content="Microsoft Word 15 (filtered medium)">\n<style><!--\n/* 
+	Font Definitions */\n@font-face\n	{font-family:"Cambria Math"\;\n	panose-1
+	:2 4 5 3 5 4 6 3 2 4\;}\n@font-face\n	{font-family:Calibri\;\n	panose-1:2 
+	15 5 2 2 2 4 3 2 4\;}\n@font-face\n	{font-family:"Segoe UI Emoji"\;\n	pano
+	se-1:2 11 5 2 4 2 4 2 2 3\;}\n@font-face\n	{font-family:"Segoe UI"\;\n	pan
+	ose-1:2 11 5 2 4 2 4 2 2 3\;}\n@font-face\n	{font-family:"Segoe UI Semibol
+	d"\;\n	panose-1:2 11 7 2 4 2 4 2 2 3\;}\n/* Style Definitions */\np.MsoNor
+	mal\, li.MsoNormal\, div.MsoNormal\n	{margin:0in\;\n	font-size:11.0pt\;\n	
+	font-family:"Calibri"\,sans-serif\;}\na:link\, span.MsoHyperlink\n	{mso-st
+	yle-priority:99\;\n	color:#0563C1\;\n	text-decoration:underline\;}\np.MsoL
+	istParagraph\, li.MsoListParagraph\, div.MsoListParagraph\n	{mso-style-pri
+	ority:34\;\n	margin-top:0in\;\n	margin-right:0in\;\n	margin-bottom:0in\;\n
+		margin-left:.5in\;\n	font-size:11.0pt\;\n	font-family:"Calibri"\,sans-ser
+	if\;}\nspan.EmailStyle20\n	{mso-style-type:personal-compose\;}\n.MsoChpDef
+	ault\n	{mso-style-type:export-only\;\n	font-size:10.0pt\;\n	font-family:"C
+	alibri"\,sans-serif\;}\n@page WordSection1\n	{size:8.5in 11.0in\;\n	margin
+	:1.0in 1.0in 1.0in 1.0in\;}\ndiv.WordSection1\n	{page:WordSection1\;}\n/* 
+	List Definitions */\n@list l0\n	{mso-list-id:1932885505\;\n	mso-list-templ
+	ate-ids:1608550554\;}\n@list l0:level1\n	{mso-level-number-format:bullet\;
+	\n	mso-level-text:\;\n	mso-level-tab-stop:.5in\;\n	mso-level-number-pos
+	ition:left\;\n	text-indent:-.25in\;\n	mso-ansi-font-size:10.0pt\;\n	font-f
+	amily:Symbol\;}\n@list l0:level2\n	{mso-level-number-format:bullet\;\n	mso
+	-level-text:\;\n	mso-level-tab-stop:1.0in\;\n	mso-level-number-position
+	:left\;\n	text-indent:-.25in\;\n	mso-ansi-font-size:10.0pt\;\n	font-family
+	:Symbol\;}\n@list l0:level3\n	{mso-level-number-format:bullet\;\n	mso-leve
+	l-text:\;\n	mso-level-tab-stop:1.5in\;\n	mso-level-number-position:left
+	\;\n	text-indent:-.25in\;\n	mso-ansi-font-size:10.0pt\;\n	font-family:Symb
+	ol\;}\n@list l0:level4\n	{mso-level-number-format:bullet\;\n	mso-level-tex
+	t:\;\n	mso-level-tab-stop:2.0in\;\n	mso-level-number-position:left\;\n	
+	text-indent:-.25in\;\n	mso-ansi-font-size:10.0pt\;\n	font-family:Symbol\;}
+	\n@list l0:level5\n	{mso-level-number-format:bullet\;\n	mso-level-text:
+	\;\n	mso-level-tab-stop:2.5in\;\n	mso-level-number-position:left\;\n	text-
+	indent:-.25in\;\n	mso-ansi-font-size:10.0pt\;\n	font-family:Symbol\;}\n@li
+	st l0:level6\n	{mso-level-number-format:bullet\;\n	mso-level-text:\;\n	
+	mso-level-tab-stop:3.0in\;\n	mso-level-number-position:left\;\n	text-inden
+	t:-.25in\;\n	mso-ansi-font-size:10.0pt\;\n	font-family:Symbol\;}\n@list l0
+	:level7\n	{mso-level-number-format:bullet\;\n	mso-level-text:\;\n	mso-l
+	evel-tab-stop:3.5in\;\n	mso-level-number-position:left\;\n	text-indent:-.2
+	5in\;\n	mso-ansi-font-size:10.0pt\;\n	font-family:Symbol\;}\n@list l0:leve
+	l8\n	{mso-level-number-format:bullet\;\n	mso-level-text:\;\n	mso-level-
+	tab-stop:4.0in\;\n	mso-level-number-position:left\;\n	text-indent:-.25in\;
+	\n	mso-ansi-font-size:10.0pt\;\n	font-family:Symbol\;}\n@list l0:level9\n	
+	{mso-level-number-format:bullet\;\n	mso-level-text:\;\n	mso-level-tab-s
+	top:4.5in\;\n	mso-level-number-position:left\;\n	text-indent:-.25in\;\n	ms
+	o-ansi-font-size:10.0pt\;\n	font-family:Symbol\;}\nol\n	{margin-bottom:0in
+	\;}\nul\n	{margin-bottom:0in\;}\n--></style><!--[if gte mso 9]><xml>\n<o:s
+	hapedefaults v:ext="edit" spidmax="1026" />\n</xml><![endif]--><!--[if gte
+	 mso 9]><xml>\n<o:shapelayout v:ext="edit">\n<o:idmap v:ext="edit" data="1
+	" />\n</o:shapelayout></xml><![endif]-->\n</head>\n<body lang="EN-US" link
+	="#0563C1" vlink="#954F72" style="word-wrap:break-word">\n<div class="Word
+	Section1">\n<div>\n<div>\n<p class="MsoNormal" style="margin-bottom:12.0pt
+	"><b>Setting up a meeting series of office hours\, just for W+D Design\, i
+	n the Inclusive Tech Lab. (+ hybrid of course)</b><o:p></o:p></p>\n<ul sty
+	le="margin-top:0in" type="disc">\n<li class="MsoListParagraph" style="marg
+	in-left:0in\;mso-list:l0 level1 lfo1">Wanna hold an inclusive design sprin
+	t and need help organizing it. Learn more about\n<a href="https://www.micr
+	osoft.com/design/inclusive/">Microsoft Inclusive Design</a><o:p></o:p></li
+	><li class="MsoListParagraph" style="margin-left:0in\;mso-list:l0 level1 l
+	fo1">Have a question about how people with disabilities interact with tech
+	nology<o:p></o:p></li><li class="MsoListParagraph" style="margin-left:0in\
+	;mso-list:l0 level1 lfo1">Do you need to find some disabled folks to chat 
+	with\, to make sure you are practicing “<a href="https://www.huffpost.co
+	m/entry/nothing-about-us-without-us-mantra-for-a-movement_b_59aea450e4b0c5
+	0640cd61cf">Nothing\n about us\, without us</a>”<o:p></o:p></li><li clas
+	s="MsoListParagraph" style="margin-left:0in\;mso-list:l0 level1 lfo1">Or m
+	aybe you just would like to run an idea by us\, ask a question\, or have a
+	 quick tour of the lab<o:p></o:p></li></ul>\n<p class="MsoNormal">&nbsp\;<
+	o:p></o:p></p>\n<p class="MsoNormal">Thanks!<o:p></o:p></p>\n<p class="Mso
+	Normal">Bryce and Solomon. <o:p></o:p></p>\n<p class="MsoNormal">&nbsp\;<o
+	:p></o:p></p>\n<p class="MsoNormal"><span style="font-family:&quot\;Segoe 
+	UI Emoji&quot\;\,sans-serif">&#128232\;</span>Reach out to\n<a href="mailt
+	o:brycejo@microsoft.com">Bryce Johnson</a> or <a href="mailto:sromney@micr
+	osoft.com">\nSolomon Romney</a> with questions. <o:p></o:p></p>\n<p class=
+	"MsoNormal"><span style="font-family:&quot\;Segoe UI Emoji&quot\;\,sans-se
+	rif">&#127758\;</span>Our\n<a href="https://aka.ms/inclusivetechlab">websi
+	te</a> provides a brief introduction into our work.\n<a href="https://aka.
+	ms/inclusivetechlab">https://aka.ms/inclusivetechlab</a><o:p></o:p></p>\n<
+	p class="MsoNormal"><span style="font-family:&quot\;Segoe UI Emoji&quot\;\
+	,sans-serif">&#128105\;‍&#129468\;</span>Our\n<a href="https://aka.ms/IT
+	L">SharePoint site</a> (needs updating <span style="font-family:&quot\;Seg
+	oe UI Emoji&quot\;\,sans-serif">\n&#128522\;</span>) but is a good source 
+	of how we engage in e2e. &nbsp\;<a href="https://aka.ms/ITL">https://aka.m
+	s/ITL</a><o:p></o:p></p>\n<p class="MsoNormal"><span style="font-family:&q
+	uot\;Segoe UI Emoji&quot\;\,sans-serif">&#129487\;&#127997\;‍♀️</spa
+	n>Keep up to date.\n<a href="https://aka.ms/itl_Yammer">Yammer</a> has our
+	 feed of visitors and ideas.\n<a href="https://aka.ms/itl_Yammer">https://
+	aka.ms/itl_Yammer</a><o:p></o:p></p>\n<p class="MsoNormal">&nbsp\;<o:p></o
+	:p></p>\n<div>\n<p class="MsoNormal"><span style="color:#5F5F5F">_________
+	_______________________________________________________________________</s
+	pan>\n<o:p></o:p></p>\n</div>\n<div>\n<div style="margin-top:.25in\;margin
+	-bottom:15.0pt">\n<p class="MsoNormal"><span style="font-size:18.0pt\;font
+	-family:&quot\;Segoe UI&quot\;\,sans-serif\;color:#252424">Microsoft Teams
+	 meeting</span><span style="font-family:&quot\;Segoe UI&quot\;\,sans-serif
+	\;color:#252424">\n</span><o:p></o:p></p>\n</div>\n<div style="margin-bott
+	om:15.0pt">\n<div>\n<p class="MsoNormal"><b><span style="font-size:10.5pt\
+	;font-family:&quot\;Segoe UI&quot\;\,sans-serif\;color:#252424">Join on yo
+	ur computer or mobile app</span></b><b><span style="font-family:&quot\;Seg
+	oe UI&quot\;\,sans-serif\;color:#252424">\n</span></b><o:p></o:p></p>\n</d
+	iv>\n<p class="MsoNormal"><span style="font-family:&quot\;Segoe UI&quot\;\
+	,sans-serif\;color:#252424"><a href="https://teams.microsoft.com/l/meetup-
+	join/19%3ameeting_NjM5OGI4NTQtYjlhMi00NjFhLWEyMDItMmM5Njc2NTE0MGU0%40threa
+	d.v2/0?context=%7b%22Tid%22%3a%2272f988bf-86f1-41af-91ab-2d7cd011db47%22%2
+	c%22Oid%22%3a%22cc787d9e-df17-48cb-866b-15da8af16a09%22%7d"><span style="f
+	ont-size:10.5pt\;font-family:&quot\;Segoe UI Semibold&quot\;\,sans-serif\;
+	color:#6264A7">Click\n here to join the meeting</span></a> </span><o:p></o
+	:p></p>\n</div>\n<div style="margin-top:15.0pt\;margin-bottom:15.0pt">\n<d
+	iv style="margin-bottom:3.0pt">\n<p class="MsoNormal"><span style="font-si
+	ze:10.5pt\;font-family:&quot\;Segoe UI&quot\;\,sans-serif\;color:#252424">
+	Meeting ID:\n</span><span style="font-size:12.0pt\;font-family:&quot\;Sego
+	e UI&quot\;\,sans-serif\;color:#252424">276 400 793 824</span><span style=
+	"font-size:10.5pt\;font-family:&quot\;Segoe UI&quot\;\,sans-serif\;color:#
+	252424">\n</span><span style="font-family:&quot\;Segoe UI&quot\;\,sans-ser
+	if\;color:#252424"><br>\n</span><span style="font-size:10.5pt\;font-family
+	:&quot\;Segoe UI&quot\;\,sans-serif\;color:#252424">Passcode:\n</span><spa
+	n style="font-size:12.0pt\;font-family:&quot\;Segoe UI&quot\;\,sans-serif\
+	;color:#252424">6fQve7\n</span><o:p></o:p></p>\n<div>\n<p class="MsoNormal
+	"><span style="font-size:10.5pt\;font-family:&quot\;Segoe UI&quot\;\,sans-
+	serif\;color:#252424"><a href="https://www.microsoft.com/en-us/microsoft-t
+	eams/download-app"><span style="color:#6264A7">Download Teams</span></a> |
+	\n<a href="https://www.microsoft.com/microsoft-teams/join-a-meeting"><span
+	 style="color:#6264A7">Join on the web</span></a></span><o:p></o:p></p>\n<
+	/div>\n</div>\n</div>\n<div style="margin-bottom:3.0pt">\n<div style="marg
+	in-bottom:3.0pt">\n<p class="MsoNormal"><b><span style="font-size:10.5pt\;
+	font-family:&quot\;Segoe UI&quot\;\,sans-serif\;color:#252424">Or call in 
+	(audio only)</span></b><span style="font-family:&quot\;Segoe UI&quot\;\,sa
+	ns-serif\;color:#252424">\n</span><o:p></o:p></p>\n</div>\n<div style="mar
+	gin-bottom:3.0pt">\n<p class="MsoNormal"><span style="font-family:&quot\;S
+	egoe UI&quot\;\,sans-serif\;color:#252424"><a href="tel:+13238494874\,\,38
+	8842920# "><span style="font-size:10.5pt\;color:#6264A7">+1 323-849-4874\,
+	\,388842920#</span></a>\n</span><span style="font-size:10.5pt\;font-family
+	:&quot\;Segoe UI&quot\;\,sans-serif\;color:#252424">&nbsp\; United States\
+	, Los Angeles\n</span><o:p></o:p></p>\n</div>\n</div>\n<p class="MsoNormal
+	"><span style="font-size:10.5pt\;font-family:&quot\;Segoe UI&quot\;\,sans-
+	serif\;color:#252424">Phone Conference ID:\n</span><span style="font-size:
+	12.0pt\;font-family:&quot\;Segoe UI&quot\;\,sans-serif\;color:#252424">388
+	 842 920#\n</span><o:p></o:p></p>\n<div style="margin-bottom:15.0pt">\n<p 
+	class="MsoNormal"><span style="font-family:&quot\;Segoe UI&quot\;\,sans-se
+	rif\;color:#252424"><a href="https://dialin.teams.microsoft.com/8551f4c1-b
+	ea3-441a-8738-69aa517a91c5?id=388842920"><span style="font-size:10.5pt\;co
+	lor:#6264A7">Find a local number</span></a> |\n<a href="https://dialin.tea
+	ms.microsoft.com/usp/pstnconferencing"><span style="font-size:10.5pt\;colo
+	r:#6264A7">Reset PIN</span></a>\n</span><o:p></o:p></p>\n</div>\n<div styl
+	e="margin-top:15.0pt\;margin-bottom:.25in">\n<p class="MsoNormal"><span st
+	yle="font-family:&quot\;Segoe UI&quot\;\,sans-serif\;color:#252424"><a hre
+	f="https://aka.ms/JoinTeamsMeeting"><span style="font-size:10.5pt\;color:#
+	6264A7">Learn More</span></a> |\n<a href="https://teams.microsoft.com/meet
+	ingOptions/?organizerId=cc787d9e-df17-48cb-866b-15da8af16a09&amp\;tenantId
+	=72f988bf-86f1-41af-91ab-2d7cd011db47&amp\;threadId=19_meeting_NjM5OGI4NTQ
+	tYjlhMi00NjFhLWEyMDItMmM5Njc2NTE0MGU0@thread.v2&amp\;messageId=0&amp\;lang
+	uage=en-US">\n<span style="font-size:10.5pt\;color:#6264A7">Meeting option
+	s</span></a> </span><o:p></o:p></p>\n</div>\n</div>\n<div>\n<p class="MsoN
+	ormal"><span style="color:#5F5F5F">_______________________________________
+	_________________________________________</span>\n<o:p></o:p></p>\n</div>\
+	n<p class="MsoNormal">&nbsp\;<o:p></o:p></p>\n</div>\n</div>\n</div>\n</bo
+	dy>\n</html>\n
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MS-OLK-APPTSEQTIME:20220817T031250Z
+BEGIN:VALARM
+TRIGGER:-PT1080M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+END:VCALENDAR

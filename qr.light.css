@@ -4,7 +4,7 @@ body {font-family: wf_segoe-ui_normal, 'Segoe UI', Tahoma, Arial, sans-serif;}
 header {padding: 1.5rem 5% 1.5rem 5%; display:block; background:#bfc;}
 main {padding: 0.5rem 5%; display:block; background:#eee;}
 footer {padding: 0rem 5% 2rem 5%;}
-p { word-spacing: 0.35rem; line-height:1.4rem;}
+p, li { word-spacing: 0.35rem; line-height:1.4rem;}
 a {text-decoration:none; font-weight:bold; border-bottom:1px dashed #666; letter-spacing:.08rem;}
 a:link {color:#136;}
 a:visited {color:#444;}

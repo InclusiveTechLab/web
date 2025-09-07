@@ -13,23 +13,26 @@ code { font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; f
 .copy-btn {margin-bottom: 0.3rem; padding: 0.3rem 0.7rem; font-size: 0.7rem; cursor: pointer;}
 </style>
 <script>
-document.querySelectorAll('.copy-btn').forEach(function(button) {
-  button.addEventListener('click', function() {
-    // Find the next sibling <pre> and its <code> child
-    const pre = button.nextElementSibling;
-    if (pre && pre.tagName.toLowerCase() === 'pre') {
-      const code = pre.querySelector('code');
-      if (code) {
-        navigator.clipboard.writeText(code.innerText).then(function() {
-          button.textContent = 'Copied!';
-          setTimeout(() => button.textContent = 'Copy', 1500);
-        }, function() {
-          button.textContent = 'Error';
-        });
+  // Attach copy functionality to each button
+  document.querySelectorAll(".copy-btn").forEach((button) => {
+    button.addEventListener("click", () => {
+      // Find the <pre class="cdblk"> immediately after this button
+      const pre = button.nextElementSibling;
+      if (pre && pre.classList.contains("cdblk")) {
+        const codeEl = pre.querySelector("code");
+        if (codeEl) {
+          const text = codeEl.innerText.trim();
+          navigator.clipboard.writeText(text).then(() => {
+            // Optional feedback
+            button.textContent = "Copied!";
+            setTimeout(() => (button.textContent = "Copy"), 1500);
+          }).catch(err => {
+            console.error("Failed to copy: ", err);
+          });
+        }
       }
-    }
+    });
   });
-});
 </script>
 </head>
 <body>
@@ -58,8 +61,8 @@ document.querySelectorAll('.copy-btn').forEach(function(button) {
 <article aria-labelledby="art1Title">
 <h2 id="art1Title">Websites</h2>
 <p class="intro">TBD</p>
-<button class="copy-btn" aria-label="Copy code">Copy Prompt</button>
-<pre><code>
+<button class="copy-btn">Copy Prompt</button>
+<pre class="cdblk"><code>
 I am a web designer applying Microsoft Inclusive Design methods, specifically the principle of "recognize exclusion", to identify potential barriers in a website I'm designing.
 
 **Goal:** Generate a list of at least 24 potential exclusions that users with disabilities or assistive technology mismatches might encounter when interacting with my website.
@@ -90,8 +93,8 @@ Wait for my responses after each step before proceeding.
 <article aria-labelledby="art2Title">
 <h2 id="art2Title">Apps</h2>
 <p class="intro">tbd</p>
-<button class="copy-btn" aria-label="Copy code">Copy Prompt</button>
-<pre><code>
+<button class="copy-btn">Copy Prompt</button>
+<pre class="cdblk"><code>
 I am an app designer applying Microsoft Inclusive Design methods, specifically the principle of "recognize exclusion", to identify potential barriers in a mobile app I'm designing.
 
 **Goal:** Generate a list of at least 24 potential exclusions that users with disabilities or assistive technology mismatches might encounter when interacting with my mobile app.
@@ -122,8 +125,8 @@ Wait for my responses after each step before proceeding.
 <article aria-labelledby="art3Title">
 <h2 id="art3Title">Game</h2>
 <p class="intro">TBD</p>
-<button class="copy-btn" aria-label="Copy code">Copy Prompt</button>
-<pre><code>
+<button class="copy-btn">Copy Prompt</button>
+<pre class="cdblk"><code>
 I am a game designer applying Microsoft Inclusive Design methods, specifically the principle of "recognize exclusion", to identify potential barriers in a game I'm designing.
 
 **Goal:** Generate a list of at least 24 potential exclusions that users with disabilities or assistive technology mismatches might encounter when interacting with my game.

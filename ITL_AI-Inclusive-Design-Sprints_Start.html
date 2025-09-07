@@ -12,28 +12,6 @@ pre { background: #ccc; color: #333; padding: 1rem; overflow-x: auto; border-rad
 code { font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; font-size:0.7rem; line-height:1rem; white-space: pre-wrap; word-break: break-word;}
 .copy-btn {margin-bottom: 0.3rem; padding: 0.3rem 0.7rem; font-size: 0.7rem; cursor: pointer;}
 </style>
-<script>
-  // Attach copy functionality to each button
-  document.querySelectorAll(".copy-btn").forEach((button) => {
-    button.addEventListener("click", () => {
-      // Find the <pre class="cdblk"> immediately after this button
-      const pre = button.nextElementSibling;
-      if (pre && pre.classList.contains("cdblk")) {
-        const codeEl = pre.querySelector("code");
-        if (codeEl) {
-          const text = codeEl.innerText.trim();
-          navigator.clipboard.writeText(text).then(() => {
-            // Optional feedback
-            button.textContent = "Copied!";
-            setTimeout(() => (button.textContent = "Copy"), 1500);
-          }).catch(err => {
-            console.error("Failed to copy: ", err);
-          });
-        }
-      }
-    });
-  });
-</script>
 </head>
 <body>
 
@@ -61,7 +39,7 @@ code { font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; f
 <article aria-labelledby="art1Title">
 <h2 id="art1Title">Websites</h2>
 <p class="intro">TBD</p>
-<button class="copy-btn">Copy Prompt</button>
+<button class="copy-btn">Copy</button>
 <pre class="cdblk"><code>
 I am a web designer applying Microsoft Inclusive Design methods, specifically the principle of "recognize exclusion", to identify potential barriers in a website I'm designing.
 
@@ -93,7 +71,7 @@ Wait for my responses after each step before proceeding.
 <article aria-labelledby="art2Title">
 <h2 id="art2Title">Apps</h2>
 <p class="intro">tbd</p>
-<button class="copy-btn">Copy Prompt</button>
+<button class="copy-btn">Copy</button>
 <pre class="cdblk"><code>
 I am an app designer applying Microsoft Inclusive Design methods, specifically the principle of "recognize exclusion", to identify potential barriers in a mobile app I'm designing.
 
@@ -125,7 +103,7 @@ Wait for my responses after each step before proceeding.
 <article aria-labelledby="art3Title">
 <h2 id="art3Title">Game</h2>
 <p class="intro">TBD</p>
-<button class="copy-btn">Copy Prompt</button>
+<button class="copy-btn">Copy</button>
 <pre class="cdblk"><code>
 I am a game designer applying Microsoft Inclusive Design methods, specifically the principle of "recognize exclusion", to identify potential barriers in a game I'm designing.
 
@@ -161,6 +139,31 @@ Wait for my responses after each step before proceeding.
 <footer>
 <p>The <a href="https://aka.ms/inclusivetechlab">Inclusive Tech Lab</a> by <a href="https://www.microsoft.com">Microsoft</a>.</p>
 </footer>
+
+
+<script>
+  // Attach copy functionality to each button
+  document.querySelectorAll(".copy-btn").forEach((button) => {
+    button.addEventListener("click", () => {
+      // Find the <pre class="cdblk"> immediately after this button
+      const pre = button.nextElementSibling;
+      if (pre && pre.classList.contains("cdblk")) {
+        const codeEl = pre.querySelector("code");
+        if (codeEl) {
+          const text = codeEl.innerText.trim();
+          navigator.clipboard.writeText(text).then(() => {
+            // Optional feedback
+            button.textContent = "Copied!";
+            setTimeout(() => (button.textContent = "Copy"), 1500);
+          }).catch(err => {
+            console.error("Failed to copy: ", err);
+          });
+        }
+      }
+    });
+  });
+</script>
+
 
 </body>
 </html>

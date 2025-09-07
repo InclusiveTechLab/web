@@ -160,7 +160,7 @@ Wait for my responses after each step before proceeding.
           navigator.clipboard.writeText(text).then(() => {
             // Optional feedback
             button.textContent = "Copied!";
-            setTimeout(() => (button.textContent = "Copy"), 1500);
+            setTimeout(() => (button.textContent = "Copy Prompt"), 1500);
           }).catch(err => {
             console.error("Failed to copy: ", err);
           });

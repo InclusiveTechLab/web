@@ -4,1168 +4,1169 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Games Spreadsheet Rows as Articles</title>
-  <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.4; margin: 1.5rem; }
-    article { padding: 1rem; margin: 0 0 1rem 0; border: 1px solid #ddd; border-radius: 0.5rem; }
-    article:nth-child(odd) { background: #fafafa; }
-    ul { list-style: disc; padding-left: 1.25rem; margin: 0; }
-    .name { font-weight: 600; }
-    .value { font-weight: 400; }
-  </style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	 <style>
+	 	body {font: 1rem/1.1 sans-serif; margin:2rem;}
+	 	article {border: 1px solid #ccc; border-radius: 5px; padding: 1rem; margin: 1rem 0;}
+		dl {display: grid; grid-template-columns: max-content 1fr; column-gap: 0.5rem; row-gap: 0.5rem; align-items: baseline;}
+	 	dt {font-weight: bold;}
+	 	dt::after {content: ":"; font-weight: bold; margin-right: 0.25rem;}
+	 	dd {margin: 0; display:inline;}
+  	</style>
 </head>
 <body>
 <main>
-  <article class="row" data-row-index="1">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Achromatopsia &gt; Protanopia &gt; Deuteranopia</span></li>
-      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Color-only distinctions fail</span></li>
-      <li><span class="name">Context</span>: <span class="value">Colors convey status but can&#x27;t be decoded.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Health bars displayed only in red</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="2">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">ADHD &gt; Dyslexia &gt; Dyspraxia</span></li>
-      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Difficulty following dense text</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player skims tutorials</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Tutorial info is only in large text blocks</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="3">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">ALS &gt; Muscular Dystrophy &gt; Spinal Injury</span></li>
-      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">No rapid sequences</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player with switch device</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Rhythm game requires constant button mashing</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="4">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">ALS &gt; Spinal Muscular Atrophy &gt; Muscular Dystrophy</span></li>
-      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Weak or no grip</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player with adaptive pad</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Game demands fast stick rotation (QTE)</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="5">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Amputation &gt; Prosthetic Use &gt; Carpal Tunnel Syndrome</span></li>
-      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Limited grip strength and dexterity</span></li>
-      <li><span class="name">Context</span>: <span class="value">Complex combos are unreliable.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Complex fighting game combo strings with no remap</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="6">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Anxiety &gt; PTSD &gt; Obsessive-Compulsive Disorder</span></li>
-      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Sensitivity to gore</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player in RPG</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">No “gore filter” toggle in settings</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="7">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Anxiety &gt; PTSD &gt; Panic Disorder</span></li>
-      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Triggers from loud jumpscares</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player enjoys horror genre</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">No option to disable sudden scream events</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="8">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Anxiety &gt; PTSD &gt; Sensory Processing Disorder</span></li>
-      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Triggers from gore &amp; sound</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player in horror game</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">No toggle for disabling blood effects</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="9">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Anxiety &gt; PTSD &gt; Sensory Processing Disorder</span></li>
-      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Overstimulated by loud jump scares</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player explores</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Game includes mandatory loud shock events</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="10">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Aphasia &gt; Brain Fog &gt; Stroke</span></li>
-      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Language difficulty</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player reads tutorials</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Tutorials only in dense paragraphs</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="11">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Arthritis &gt; Carpal Tunnel Syndrome &gt; Repetitive Strain Injury</span></li>
-      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Painful repetition</span></li>
-      <li><span class="name">Context</span>: <span class="value">Repetition worsens pain.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Farming games requiring thousands of clicks</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="12">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Arthritis &gt; Tremor &gt; Multiple Sclerosis</span></li>
-      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Difficulty with precision input</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player aims slowly</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Game requires rapid analog stick flicks</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="13">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Arthritis &gt; Tremor &gt; Multiple Sclerosis</span></li>
-      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Limited fine motor</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player aiming</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Game punishes drift with weapon sway</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="14">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Arthrogryposis &gt; Joint Contractures &gt; Severe Arthritis</span></li>
-      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Very limited range of motion</span></li>
-      <li><span class="name">Context</span>: <span class="value">can&#x27;t reach across large controllers.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Games mapping critical actions to far-apart buttons</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="15">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Auditory Processing Disorder &gt; Autism &gt; ADHD</span></li>
-      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Trouble filtering layered sounds</span></li>
-      <li><span class="name">Context</span>: <span class="value">Noisy scenes overwhelm comprehension.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Gunfire + voice chat + narrative audio overlapping</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="16">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Auditory Processing Disorder &gt; Tinnitus &gt; Aging</span></li>
-      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Hard to parse complex soundscapes</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player in noisy room</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Audio cues not shown visually</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="17">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Auditory Processing Disorder &gt; Tinnitus &gt; Aging Adults</span></li>
-      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Overwhelmed by overlapping sound</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player in shooter</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Grenade warning only via audio cue</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="18">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Autism &gt; ADHD &gt; Fetal Alcohol Spectrum Disorder</span></li>
-      <li><span class="name">Category</span>: <span class="value">Developmental &amp; Learning</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Impulse control and planning challenges</span></li>
-      <li><span class="name">Context</span>: <span class="value">Sudden decisions often regretted.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Permanent character choices with no confirmation</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="19">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Autism &gt; ADHD &gt; Sensory Processing Disorder</span></li>
-      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Overstimulated by clutter</span></li>
-      <li><span class="name">Context</span>: <span class="value">Busy menus overwhelm.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Main menus with autoplay trailers</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="20">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Autism &gt; Sensory Processing Disorder &gt; ADHD</span></li>
-      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Overloaded by lights/sounds</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player in hub world</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Hub filled with constant NPC chatter</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="21">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Autism &gt; Sensory Processing Disorder &gt; Anxiety</span></li>
-      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Overloaded by noisy visuals</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player in fast combat scene</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Screen full of flashing damage effects</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="22">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Blindness &gt; Partially Sighted &gt; Aging vision</span></li>
-      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Non-visual play</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player uses audio to navigate</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Game map only shows visual waypoints</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="23">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Blindness &gt; Partially Sighted &gt; Aging vision</span></li>
-      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Cannot see visual UI</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player depends on narration</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Inventory only shows icons with no labels</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="24">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Blindness &gt; Partially Sighted &gt; Dyslexia</span></li>
-      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Difficulty perceiving or decoding text</span></li>
-      <li><span class="name">Context</span>: <span class="value">Reading instructions is unreliable or slow.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Tutorials presented only as text dumps</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="25">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Blindness &gt; Retinitis Pigmentosa &gt; Glaucoma</span></li>
-      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">No access to visual-only cues</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player navigates world by audio</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Puzzle game requires spotting subtle symbols</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="26">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Blindness &gt; Retinopathy &gt; Partially Sighted</span></li>
-      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Reliance on non-visual navigation</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player listens for cues</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Stealth game requires spotting shadows only</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="27">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Blindness &gt; Screen Reader Users &gt; Partially Sighted</span></li>
-      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Cannot parse visual-only menus</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player navigates options</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Menus read as “button” with no labels</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="28">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Broken Arm &gt; Wrist Injury &gt; One-Handed Play</span></li>
-      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">One-handed interaction</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player on portable console</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Game requires two-stick movement</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="29">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Broken Finger &gt; Hand Cast &gt; One-Handed Use</span></li>
-      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Limited input</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player tries console shooter</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">No single-stick aiming option</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="30">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Cancer Fatigue &gt; Chemotherapy Recovery &gt; Chronic Fatigue Syndrome</span></li>
-      <li><span class="name">Category</span>: <span class="value">Chronic Illness &amp; Fatigue</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Extreme exhaustion mid-task</span></li>
-      <li><span class="name">Context</span>: <span class="value">Energy may vanish suddenly.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Unskippable cutscenes between checkpoints</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="31">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Cataracts &gt; Low Contrast Sensitivity &gt; Presbyopia</span></li>
-      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Poor text clarity</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player adjusts brightness</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Quest text in pale gray over patterned background</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="32">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Cerebral Palsy &gt; Brain Injury &gt; Stroke</span></li>
-      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Irregular motor control</span></li>
-      <li><span class="name">Context</span>: <span class="value">Rhythm and timing are difficult.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Rhythm games needing perfect timing</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="33">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Cerebral Palsy &gt; Essential Tremor &gt; Stroke</span></li>
-      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Inconsistent button accuracy</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player aims slowly</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Game has no aim-assist toggle</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="34">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Cerebral Palsy &gt; Parkinson’s Disease &gt; Essential Tremor</span></li>
-      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Involuntary inputs</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player aims in FPS</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Game detects shake as “fire weapon”</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="35">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Chronic Pain &gt; Arthritis &gt; Frailty</span></li>
-      <li><span class="name">Category</span>: <span class="value">Chronic Illness &amp; Fatigue</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Discomfort from long sessions</span></li>
-      <li><span class="name">Context</span>: <span class="value">Extended play increases pain.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">No save in long missions</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="36">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Chronic Pain &gt; Arthritis &gt; Frailty</span></li>
-      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Discomfort from prolonged sessions</span></li>
-      <li><span class="name">Context</span>: <span class="value">Sitting long periods worsens pain.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Games saving only after marathons</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="37">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Cleft Lip &gt; Palate &gt; Speech Delay</span></li>
-      <li><span class="name">Category</span>: <span class="value">Speech &amp; Communication</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Speech production challenges</span></li>
-      <li><span class="name">Context</span>: <span class="value">Speech commands unreliable.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Games requiring clear speech commands</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="38">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Climate Sensitivity &gt; Multiple Sclerosis &gt; Aging Heat Intolerance</span></li>
-      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Heat worsens symptoms</span></li>
-      <li><span class="name">Context</span>: <span class="value">Heat sensitivity reduces focus.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Survival games ignoring climate filters</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="39">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Cochlear Implant &gt; Aging Adults &gt; Hard of Hearing</span></li>
-      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Struggle with high-pitch tones</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player needs lower freq</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Game only signals alarms with shrill beeps</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="40">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Cochlear Implant &gt; Hard of Hearing &gt; Aging Adults</span></li>
-      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Distorted sound perception</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player in story cutscene</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">No transcript for cinematic narration</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="41">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Cochlear Implant &gt; Hard of Hearing &gt; Deaf</span></li>
-      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Reliance on vibration</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player with haptics off</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Cutscene relies on whispered speech</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="42">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Colorblindness (Deuteranopia &gt; Protanopia &gt; Tritanopia)</span></li>
-      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Cannot distinguish color coding</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player tries to identify teams</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Team colors red/green only</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="43">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Colorblindness &gt; Deuteranopia &gt; Protanopia</span></li>
-      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">can&#x27;t distinguish certain colors</span></li>
-      <li><span class="name">Context</span>: <span class="value">Reliance on red/green contrast fails.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Enemy vs ally indicators shown only by color</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="44">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Colorblindness &gt; Partially Sighted &gt; Migraine Sensitivity</span></li>
-      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Struggle with contrast</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player in bright room</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Important enemies blend into background</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="45">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Colorblindness &gt; Tritanopia &gt; Deuteranopia</span></li>
-      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Cannot differentiate certain hues</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player chooses teams</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Puzzle requires matching blue vs purple</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="46">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Cystic Fibrosis &gt; Chronic Obstructive Pulmonary Disease &gt; Asthma</span></li>
-      <li><span class="name">Category</span>: <span class="value">Chronic Illness &amp; Fatigue</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Reduced breath capacity, fatigue</span></li>
-      <li><span class="name">Context</span>: <span class="value">Extended exertion in VR or motion gaming is difficult.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">VR games requiring constant heavy breathing mechanics</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="47">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Deaf &gt; Hard of Hearing &gt; Cochlear Implant</span></li>
-      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Missed spoken dialogue</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player relies on captions</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Cutscenes have no subtitles</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="48">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Deaf &gt; Hard of Hearing &gt; English as a Second Language</span></li>
-      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Missed dialogue</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player follows story</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Audio-only lore collectibles</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="49">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Deaf &gt; Hard of Hearing &gt; English as a Second Language</span></li>
-      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Requires readable subtitles</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player in co-op mission</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Team callouts not captioned</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="50">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Deaf &gt; Hard of Hearing &gt; Non-native Speakers</span></li>
-      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Needs full captions</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player in cutscene</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Subtitles omit speaker identification</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="51">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Deafness &gt; Hard of Hearing &gt; Auditory Processing Disorder</span></li>
-      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Reliance on captions</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player watches cutscene</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Captions omit background voices</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="52">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Deafness &gt; Hard of Hearing &gt; Auditory Processing Disorder</span></li>
-      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Audio-only instructions inaccessible</span></li>
-      <li><span class="name">Context</span>: <span class="value">Players miss critical instructions.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Tutorials without subtitles</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="53">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dementia &gt; Alzheimer’s Disease &gt; Aging</span></li>
-      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Forgetfulness</span></li>
-      <li><span class="name">Context</span>: <span class="value">Objectives not remembered.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">No save reminders</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="54">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dementia &gt; Mild Cognitive Impairment &gt; Brain Fog</span></li>
-      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Memory lapses mid-task</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player resumes save</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">No tutorial recap after long absence</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="55">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dementia &gt; Mild Cognitive Impairment &gt; Brain Fog</span></li>
-      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Forgetting controls</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player resumes after week away</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Game offers no “relearn controls” option</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="56">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dementia &gt; Mild Cognitive Impairment &gt; Traumatic Brain Injury</span></li>
-      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Memory lapses mid-level</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player forgets quest steps</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">RPG log hides objectives behind multiple menus</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="57">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dementia &gt; Traumatic Brain Injury &gt; Mild Cognitive Impairment</span></li>
-      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Short-term memory lapses</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player pauses mid-quest</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">No quest log recap after resuming</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="58">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dementia &gt; Traumatic Brain Injury &gt; Mild Cognitive Impairment</span></li>
-      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Forgetting objectives</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player mid-mission</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">HUD has no reminder of active goal</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="59">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Depression &gt; ADHD &gt; Fatigue</span></li>
-      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Low stamina for long sessions</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player takes frequent breaks</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Online game punishes AFK with bans</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="60">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Depression &gt; ADHD &gt; Fatigue</span></li>
-      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Difficulty with daily grind</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player returns casually</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Game removes streak rewards if missed</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="61">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Depression &gt; Burnout &gt; Anxiety</span></li>
-      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Low motivation</span></li>
-      <li><span class="name">Context</span>: <span class="value">Repetitive grind is unmanageable.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Grind-heavy progression systems</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="62">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Depression &gt; Chronic Fatigue &gt; ADHD</span></li>
-      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Energy crashes mid-play</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player logs off suddenly</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Progress lost without auto-save</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="63">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Depression &gt; Fatigue &gt; ADHD</span></li>
-      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Difficulty sustaining play</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player prefers short sessions</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Game locks rewards behind daily 3-hour grind</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="64">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Depression &gt; Fatigue &gt; ADHD</span></li>
-      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Difficulty sustaining streaks</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player returns casually</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Game erases daily login streak progress</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="65">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Diabetes (neuropathy) &gt; Peripheral Artery Disease &gt; Stroke Recovery</span></li>
-      <li><span class="name">Category</span>: <span class="value">Chronic Illness &amp; Fatigue</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Reduced sensation/dexterity</span></li>
-      <li><span class="name">Context</span>: <span class="value">Players can&#x27;t feel or reliably press buttons.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Controllers requiring vibration feedback as primary signal</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="66">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Down Syndrome &gt; Fragile X Syndrome &gt; Intellectual Disability</span></li>
-      <li><span class="name">Category</span>: <span class="value">Developmental &amp; Learning</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Slower comprehension</span></li>
-      <li><span class="name">Context</span>: <span class="value">Players need more time.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">No slow mode for text</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="67">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dyscalculia &gt; ADHD &gt; Math Anxiety</span></li>
-      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Difficulty with numbers</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player checks stats</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Crafting uses complex ratios with no auto-calc</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="68">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dyscalculia &gt; ADHD &gt; Nonverbal Learning Disability</span></li>
-      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Numbers hard to parse</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player builds team stats</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Stat screen uses decimals and percentages only</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="69">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dyscalculia &gt; ADHD &gt; Nonverbal Learning Disability</span></li>
-      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Trouble with quantities</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player manages resources</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Game shows icons with no numeric labels</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="70">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dyscalculia &gt; Math Anxiety &gt; ADHD</span></li>
-      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Difficulty with numbers</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player builds economy</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Resource game uses fractions with no visuals</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="71">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dyscalculia &gt; Math Anxiety &gt; ADHD</span></li>
-      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Struggle with probabilities</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player builds deck</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Card stats rely on percentages with no symbols</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="72">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dyscalculia &gt; Traumatic Brain Injury &gt; Stroke</span></li>
-      <li><span class="name">Category</span>: <span class="value">Developmental &amp; Learning</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Math difficulties</span></li>
-      <li><span class="name">Context</span>: <span class="value">Difficulty with number-based logic.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Captchas requiring arithmetic</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="73">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dysgraphia &gt; Dyslexia &gt; Dyspraxia</span></li>
-      <li><span class="name">Category</span>: <span class="value">Developmental &amp; Learning</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Written communication barriers</span></li>
-      <li><span class="name">Context</span>: <span class="value">Writing-intensive input is hard.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Games requiring long-form text input only</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="74">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dyslexia &gt; ADHD &gt; Dyspraxia</span></li>
-      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Struggle with dense reading</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player opens quest</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Quest tracker only in text-heavy logs</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="75">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dyslexia &gt; ADHD &gt; Low Literacy</span></li>
-      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Reading strain</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player navigates lore</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">All story hidden in text-heavy codex</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="76">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dyslexia &gt; Dyscalculia &gt; Dyspraxia</span></li>
-      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Processing written/numeric info</span></li>
-      <li><span class="name">Context</span>: <span class="value">Instructions are confusing or slow.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Inventory systems using abbreviations and numeric codes only</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="77">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dyslexia &gt; Dysgraphia &gt; Dyscalculia</span></li>
-      <li><span class="name">Category</span>: <span class="value">Developmental &amp; Learning</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Processing written, numeric, symbolic content</span></li>
-      <li><span class="name">Context</span>: <span class="value">Reading or math-heavy systems block progress.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">RPG skill trees explained only in text/numbers</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="78">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dyspraxia &gt; Autism &gt; ADHD</span></li>
-      <li><span class="name">Category</span>: <span class="value">Developmental &amp; Learning</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Difficulty sequencing steps</span></li>
-      <li><span class="name">Context</span>: <span class="value">Players lose track of multi-step inputs.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Crafting requiring exact input sequences</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="79">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dystonia &gt; Multiple System Atrophy &gt; Huntington’s Disease</span></li>
-      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Involuntary twisting contractions</span></li>
-      <li><span class="name">Context</span>: <span class="value">Precision aiming disrupted.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Sniping challenges requiring pixel-perfect accuracy</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="80">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Ehlers-Danlos Syndrome &gt; Fibromyalgia &gt; Aging Muscle Loss</span></li>
-      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Declining strength over time</span></li>
-      <li><span class="name">Context</span>: <span class="value">Fatigue makes repeated play difficult.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Games that require constant button holds for movement</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="81">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Ehlers-Danlos Syndrome &gt; Fibromyalgia &gt; Rheumatoid Arthritis</span></li>
-      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Joint pain, repetitive strain</span></li>
-      <li><span class="name">Context</span>: <span class="value">Repetitive input causes pain quickly.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Repetitive button tapping for sprinting or stamina recovery</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="82">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Epilepsy &gt; Migraine &gt; Photosensitive Autism</span></li>
-      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Sensitivity to flashing/strobing</span></li>
-      <li><span class="name">Context</span>: <span class="value">Visual triggers cause seizures or migraines.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Boss attacks using flashing red screen effects</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="83">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Epilepsy &gt; Migraine &gt; Photosensitive Autism</span></li>
-      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Sensitivity to flashing/strobing</span></li>
-      <li><span class="name">Context</span>: <span class="value">Visual triggers cause seizures or migraines.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Boss attacks using flashing effects</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="84">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Epilepsy &gt; Photosensitive Migraines &gt; Sensory Processing Disorder</span></li>
-      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Sensitivity to flicker</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player toggles settings</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Menu option “disable flashes” missing</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="85">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Fetal Alcohol Syndrome &gt; ADHD &gt; Autism</span></li>
-      <li><span class="name">Category</span>: <span class="value">Developmental &amp; Learning</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Impulsivity, attention challenges</span></li>
-      <li><span class="name">Context</span>: <span class="value">Poor inhibition and planning.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">One-click purchases with no undo</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="86">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Glaucoma &gt; Tunnel Vision &gt; Retinitis Pigmentosa</span></li>
-      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Restricted FOV</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player scans center only</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Minimap critical info in far edge</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="87">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Hand Injury &gt; Holding Baby &gt; Commuting</span></li>
-      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">One-handed use</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player with mobile game</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Requires multitouch gestures like pinch-zoom</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="88">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Hearing Sensitivity &gt; Hyperacusis &gt; Migraine</span></li>
-      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Audio overload</span></li>
-      <li><span class="name">Context</span>: <span class="value">Volume painful.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Music games too loud by default</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="89">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">HIV (neurocognitive) &gt; Hepatitis C &gt; Long COVID</span></li>
-      <li><span class="name">Category</span>: <span class="value">Chronic Illness &amp; Fatigue</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Reduced sharpness, fatigue</span></li>
-      <li><span class="name">Context</span>: <span class="value">Cognitive strain from systemic illness.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Jargon-heavy game menus</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="90">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Hyperacusis &gt; PTSD &gt; Migraine</span></li>
-      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Painful overreaction to sound</span></li>
-      <li><span class="name">Context</span>: <span class="value">Loud or sudden noises overwhelm.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Explosions that bypass volume sliders</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="91">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Hyperacusis &gt; Tinnitus &gt; Hearing Sensitivity</span></li>
-      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Oversensitivity to sound</span></li>
-      <li><span class="name">Context</span>: <span class="value">Loud or shrill sounds cause discomfort.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Sudden, unmutable high-pitched enemy screeches</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="92">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Intellectual Disability &gt; Autism &gt; Global Developmental Delay</span></li>
-      <li><span class="name">Category</span>: <span class="value">Developmental &amp; Learning</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Need for simplified, structured guidance</span></li>
-      <li><span class="name">Context</span>: <span class="value">Concrete, step-based learning is key.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Puzzle games requiring abstract logic without hints</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="93">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Limb Difference &gt; Quadriplegia &gt; Cerebral Palsy</span></li>
-      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Limited or no fine motor control</span></li>
-      <li><span class="name">Context</span>: <span class="value">Players can&#x27;t reliably press multiple buttons or move both sticks.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Default controllers requiring dual-stick + trigger combos</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="94">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Locked-in Syndrome &gt; Severe Cerebral Palsy &gt; Brainstem Stroke</span></li>
-      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Reliance on eye-tracking or single switch</span></li>
-      <li><span class="name">Context</span>: <span class="value">Cognition intact but minimal input.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Games without switch-scanning menus</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="95">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Lupus &gt; Crohn’s Disease &gt; Irritable Bowel Syndrome</span></li>
-      <li><span class="name">Category</span>: <span class="value">Chronic Illness &amp; Fatigue</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Urgent need for breaks</span></li>
-      <li><span class="name">Context</span>: <span class="value">Flare cycles force unexpected absences.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Boss fights with no pause function</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="96">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Macular Degeneration &gt; Cataracts &gt; Presbyopia</span></li>
-      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Blurred center vision</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player zooms text</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Dialogue font locked at tiny size</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="97">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Math Disability &gt; Dyslexia (math) &gt; ADHD</span></li>
-      <li><span class="name">Category</span>: <span class="value">Developmental &amp; Learning</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Number reasoning difficulties</span></li>
-      <li><span class="name">Context</span>: <span class="value">Numerical reasoning unreliable.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Mini-games requiring math puzzles</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="98">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Migraine &gt; Epilepsy &gt; Photophobia</span></li>
-      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Light sensitivity</span></li>
-      <li><span class="name">Context</span>: <span class="value">Bright UI causes pain.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Pulsing highlights in UI</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="99">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Multiple Sclerosis &gt; Fatigue &gt; Arthritis</span></li>
-      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Weak endurance</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player holds sprint</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Game requires constant button hold</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="100">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Myasthenia Gravis &gt; Chronic Fatigue Syndrome &gt; Long COVID</span></li>
-      <li><span class="name">Category</span>: <span class="value">Chronic Illness &amp; Fatigue</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Severe fatigue, limited stamina</span></li>
-      <li><span class="name">Context</span>: <span class="value">Energy drains unpredictably, requiring pacing.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Raids requiring hours-long uninterrupted sessions</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="101">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Nonverbal Autism &gt; ALS &gt; Aphasia</span></li>
-      <li><span class="name">Category</span>: <span class="value">Speech &amp; Communication</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">No spoken communication</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player joins multiplayer</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Lobby only supports voice chat</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="102">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Nonverbal Autism &gt; Aphasia &gt; Stutter</span></li>
-      <li><span class="name">Category</span>: <span class="value">Speech &amp; Communication</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Limited speech</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player in online match</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Game requires voice chat for coordination</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="103">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Osteogenesis Imperfecta &gt; Arthritis &gt; Frailty</span></li>
-      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Fragile joints</span></li>
-      <li><span class="name">Context</span>: <span class="value">High strain risks injury.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Motion controllers without seated modes</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="104">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Panic Disorder &gt; PTSD &gt; Phobia</span></li>
-      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Emotional triggers</span></li>
-      <li><span class="name">Context</span>: <span class="value">Trauma triggered by content.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Mandatory traumatic cutscenes</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="105">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Panic Disorder &gt; PTSD &gt; Social Anxiety</span></li>
-      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Easily triggered by unexpected content</span></li>
-      <li><span class="name">Context</span>: <span class="value">Stimuli can provoke panic or flashbacks.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Horror jump-scares without content warnings</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="106">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Parkinson’s Disease &gt; Essential Tremor &gt; Cerebral Palsy</span></li>
-      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Unsteady hand movement</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player uses controller with tremor</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Game penalizes for accidental double inputs</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="107">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Parkinson’s Disease &gt; Tremor &gt; Arthritis</span></li>
-      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Shaky hand control</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player aiming</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Sniper mode magnifies every tremor</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="108">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Partially Sighted &gt; Macular Degeneration &gt; Cataracts</span></li>
-      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Blurry or distorted visuals</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player increases HUD size</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">UI text doesn’t scale, overlaps</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="109">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Photophobia &gt; Migraine &gt; Epilepsy</span></li>
-      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Sensitivity to flicker</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player adjusts display</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Game includes mandatory flashing sequences</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="110">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Photophobia &gt; Post-Concussion &gt; Albinism</span></li>
-      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Sensitivity to bright light</span></li>
-      <li><span class="name">Context</span>: <span class="value">Bright screens cause pain.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Mandatory sun-bloom or lens-flare visuals</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="111">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Retinitis Pigmentosa &gt; Stargardt Disease &gt; Diabetic Retinopathy</span></li>
-      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Partial field of view, blind spots</span></li>
-      <li><span class="name">Context</span>: <span class="value">Hard to see enemies/items in periphery.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">HUD elements placed only in screen corners</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="112">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Sensory Processing Disorder &gt; Autism &gt; Migraine</span></li>
-      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Overstimulation from sensory input</span></li>
-      <li><span class="name">Context</span>: <span class="value">Competing effects overwhelm.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Arcade shooters with flashing + noise</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="113">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Spinal Muscular Atrophy &gt; Muscular Dystrophy &gt; Multiple Sclerosis</span></li>
-      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Progressive weakness, limited stamina</span></li>
-      <li><span class="name">Context</span>: <span class="value">Inputs possible but exhausting if sustained.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Button-mash sequences to break free or open doors</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="114">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Stroke &gt; Amputee &gt; Arthritis</span></li>
-      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Limited finger reach</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player tries compact controller</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Default mapping uses unreachable buttons</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="115">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Stroke &gt; Cerebral Palsy &gt; Amputation</span></li>
-      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Reduced dexterity</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player remaps buttons</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Key functions locked to non-remappable combos</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="116">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Tinnitus &gt; Auditory Processing Disorder &gt; Ménière’s Disease</span></li>
-      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Difficulty filtering audio</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player in team match</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">All dialogue overlaps with gunfire</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="117">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Tinnitus &gt; Auditory Processing Disorder &gt; Ménière’s Disease</span></li>
-      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Can’t parse layered sounds</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player fights boss</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Audio mixes dialogue with explosions equally</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="118">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Tourette Syndrome &gt; Parkinson’s Disease &gt; Essential Tremor</span></li>
-      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Involuntary movement</span></li>
-      <li><span class="name">Context</span>: <span class="value">Aiming disrupted.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Aim drift penalized heavily</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="119">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Tourette Syndrome &gt; Parkinson’s Disease &gt; Essential Tremor</span></li>
-      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Involuntary movements reduce precision</span></li>
-      <li><span class="name">Context</span>: <span class="value">Aiming and targeting accuracy is affected.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Precision-only mechanics like headshots in shooters</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="120">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Traumatic Brain Injury &gt; Aphasia &gt; Stroke</span></li>
-      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Language processing difficulty</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player in tutorial</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Dialog is too quick and overlaps with other NPCS</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="121">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Tunnel Vision &gt; Retinitis Pigmentosa &gt; Glaucoma</span></li>
-      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Limited scanning area</span></li>
-      <li><span class="name">Context</span>: <span class="value">Player looks straight ahead</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Important enemies spawn off-screen periphery</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="122">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Tunnel Vision &gt; Retinitis Pigmentosa &gt; Hemianopia</span></li>
-      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Limited field of view</span></li>
-      <li><span class="name">Context</span>: <span class="value">Players can&#x27;t monitor HUD spread across the screen.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Radar/minimap always in a corner</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="123">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Unilateral Deafness &gt; Partial Loss &gt; Asymmetrical Hearing</span></li>
-      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">can&#x27;t locate sound sources</span></li>
-      <li><span class="name">Context</span>: <span class="value">Stereo cues misleading.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Horror games using directional audio as only clue</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="124">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Unilateral Deafness &gt; Partial Loss &gt; Asymmetrical Hearing</span></li>
-      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Difficulty localizing sound</span></li>
-      <li><span class="name">Context</span>: <span class="value">can&#x27;t rely on stereo cues.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Stealth mechanics where enemy location is only audio-based</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="125">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Usher Syndrome &gt; Macular Degeneration &gt; Glaucoma</span></li>
-      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Gradual sight loss</span></li>
-      <li><span class="name">Context</span>: <span class="value">Detail recognition degrades over time.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Tiny text quest logs or crafting menus</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="126">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Vestibular Disorder &gt; Ménière’s Disease &gt; Motion Sensitivity</span></li>
-      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Sensitivity to motion</span></li>
-      <li><span class="name">Context</span>: <span class="value">Movement visuals cause nausea.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">First-person camera shake with no toggle</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="127">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Vestibular Disorder &gt; Motion Sensitivity &gt; Ménière’s Disease</span></li>
-      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Dizziness, imbalance</span></li>
-      <li><span class="name">Context</span>: <span class="value">Camera movement induces vertigo.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Shaky cam cutscenes</span></li>
-    </ul>
-  </article>
-  <article class="row" data-row-index="128">
-    <ul>
-      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Williams Syndrome &gt; Fragile X Syndrome &gt; Down Syndrome</span></li>
-      <li><span class="name">Category</span>: <span class="value">Developmental &amp; Learning</span></li>
-      <li><span class="name">Shared Limitation</span>: <span class="value">Slower information processing</span></li>
-      <li><span class="name">Context</span>: <span class="value">Complex instructions overwhelm.</span></li>
-      <li><span class="name">Game Mismatch</span>: <span class="value">Tutorials that flash instructions too quickly</span></li>
-    </ul>
+  <article role="group" class="row" data-row-index="1">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Achromatopsia &rarr; Protanopia &rarr; Deuteranopia</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Vision &amp; Reading</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Color-only distinctions fail</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Colors convey status but can&#x27;t be decoded.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Health bars displayed only in red</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="2">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">ADHD &rarr; Dyslexia &rarr; Dyspraxia</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Cognitive &amp; Memory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Difficulty following dense text</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player skims tutorials</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Tutorial info is only in large text blocks</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="3">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">ALS &rarr; Muscular Dystrophy &rarr; Spinal Injury</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Motor &amp; Physical Control</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">No rapid sequences</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player with switch device</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Rhythm game requires constant button mashing</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="4">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">ALS &rarr; Spinal Muscular Atrophy &rarr; Muscular Dystrophy</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Motor &amp; Physical Control</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Weak or no grip</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player with adaptive pad</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Game demands fast stick rotation (QTE)</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="5">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Amputation &rarr; Prosthetic Use &rarr; Carpal Tunnel Syndrome</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Motor &amp; Physical Control</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Limited grip strength and dexterity</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Complex combos are unreliable.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Complex fighting game combo strings with no remap</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="6">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Anxiety &rarr; PTSD &rarr; Obsessive-Compulsive Disorder</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Mental Health</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Sensitivity to gore</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player in RPG</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">No “gore filter” toggle in settings</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="7">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Anxiety &rarr; PTSD &rarr; Panic Disorder</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Mental Health</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Triggers from loud jumpscares</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player enjoys horror genre</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">No option to disable sudden scream events</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="8">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Anxiety &rarr; PTSD &rarr; Sensory Processing Disorder</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Mental Health</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Triggers from gore &amp; sound</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player in horror game</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">No toggle for disabling blood effects</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="9">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Anxiety &rarr; PTSD &rarr; Sensory Processing Disorder</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Mental Health</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Overstimulated by loud jump scares</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player explores</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Game includes mandatory loud shock events</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="10">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Aphasia &rarr; Brain Fog &rarr; Stroke</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Cognitive &amp; Memory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Language difficulty</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player reads tutorials</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Tutorials only in dense paragraphs</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="11">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Arthritis &rarr; Carpal Tunnel Syndrome &rarr; Repetitive Strain Injury</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Motor &amp; Physical Control</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Painful repetition</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Repetition worsens pain.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Farming games requiring thousands of clicks</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="12">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Arthritis &rarr; Tremor &rarr; Multiple Sclerosis</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Motor &amp; Physical Control</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Difficulty with precision input</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player aims slowly</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Game requires rapid analog stick flicks</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="13">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Arthritis &rarr; Tremor &rarr; Multiple Sclerosis</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Motor &amp; Physical Control</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Limited fine motor</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player aiming</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Game punishes drift with weapon sway</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="14">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Arthrogryposis &rarr; Joint Contractures &rarr; Severe Arthritis</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Motor &amp; Physical Control</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Very limited range of motion</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">can&#x27;t reach across large controllers.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Games mapping critical actions to far-apart buttons</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="15">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Auditory Processing Disorder &rarr; Autism &rarr; ADHD</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Hearing &amp; Auditory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Trouble filtering layered sounds</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Noisy scenes overwhelm comprehension.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Gunfire + voice chat + narrative audio overlapping</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="16">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Auditory Processing Disorder &rarr; Tinnitus &rarr; Aging</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Hearing &amp; Auditory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Hard to parse complex soundscapes</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player in noisy room</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Audio cues not shown visually</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="17">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Auditory Processing Disorder &rarr; Tinnitus &rarr; Aging Adults</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Hearing &amp; Auditory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Overwhelmed by overlapping sound</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player in shooter</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Grenade warning only via audio cue</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="18">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Autism &rarr; ADHD &rarr; Fetal Alcohol Spectrum Disorder</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Developmental &amp; Learning</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Impulse control and planning challenges</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Sudden decisions often regretted.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Permanent character choices with no confirmation</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="19">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Autism &rarr; ADHD &rarr; Sensory Processing Disorder</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Sensory &amp; Environmental</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Overstimulated by clutter</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Busy menus overwhelm.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Main menus with autoplay trailers</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="20">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Autism &rarr; Sensory Processing Disorder &rarr; ADHD</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Cognitive &amp; Memory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Overloaded by lights/sounds</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player in hub world</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Hub filled with constant NPC chatter</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="21">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Autism &rarr; Sensory Processing Disorder &rarr; Anxiety</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Cognitive &amp; Memory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Overloaded by noisy visuals</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player in fast combat scene</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Screen full of flashing damage effects</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="22">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Blindness &rarr; Partially Sighted &rarr; Aging vision</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Vision &amp; Reading</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Non-visual play</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player uses audio to navigate</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Game map only shows visual waypoints</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="23">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Blindness &rarr; Partially Sighted &rarr; Aging vision</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Vision &amp; Reading</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Cannot see visual UI</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player depends on narration</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Inventory only shows icons with no labels</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="24">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Blindness &rarr; Partially Sighted &rarr; Dyslexia</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Vision &amp; Reading</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Difficulty perceiving or decoding text</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Reading instructions is unreliable or slow.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Tutorials presented only as text dumps</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="25">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Blindness &rarr; Retinitis Pigmentosa &rarr; Glaucoma</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Vision &amp; Reading</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">No access to visual-only cues</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player navigates world by audio</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Puzzle game requires spotting subtle symbols</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="26">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Blindness &rarr; Retinopathy &rarr; Partially Sighted</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Vision &amp; Reading</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Reliance on non-visual navigation</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player listens for cues</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Stealth game requires spotting shadows only</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="27">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Blindness &rarr; Screen Reader Users &rarr; Partially Sighted</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Vision &amp; Reading</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Cannot parse visual-only menus</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player navigates options</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Menus read as “button” with no labels</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="28">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Broken Arm &rarr; Wrist Injury &rarr; One-Handed Play</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Motor &amp; Physical Control</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">One-handed interaction</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player on portable console</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Game requires two-stick movement</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="29">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Broken Finger &rarr; Hand Cast &rarr; One-Handed Use</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Motor &amp; Physical Control</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Limited input</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player tries console shooter</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">No single-stick aiming option</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="30">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Cancer Fatigue &rarr; Chemotherapy Recovery &rarr; Chronic Fatigue Syndrome</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Chronic Illness &amp; Fatigue</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Extreme exhaustion mid-task</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Energy may vanish suddenly.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Unskippable cutscenes between checkpoints</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="31">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Cataracts &rarr; Low Contrast Sensitivity &rarr; Presbyopia</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Vision &amp; Reading</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Poor text clarity</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player adjusts brightness</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Quest text in pale gray over patterned background</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="32">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Cerebral Palsy &rarr; Brain Injury &rarr; Stroke</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Motor &amp; Physical Control</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Irregular motor control</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Rhythm and timing are difficult.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Rhythm games needing perfect timing</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="33">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Cerebral Palsy &rarr; Essential Tremor &rarr; Stroke</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Motor &amp; Physical Control</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Inconsistent button accuracy</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player aims slowly</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Game has no aim-assist toggle</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="34">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Cerebral Palsy &rarr; Parkinson’s Disease &rarr; Essential Tremor</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Motor &amp; Physical Control</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Involuntary inputs</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player aims in FPS</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Game detects shake as “fire weapon”</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="35">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Chronic Pain &rarr; Arthritis &rarr; Frailty</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Chronic Illness &amp; Fatigue</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Discomfort from long sessions</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Extended play increases pain.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">No save in long missions</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="36">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Chronic Pain &rarr; Arthritis &rarr; Frailty</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Sensory &amp; Environmental</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Discomfort from prolonged sessions</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Sitting long periods worsens pain.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Games saving only after marathons</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="37">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Cleft Lip &rarr; Palate &rarr; Speech Delay</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Speech &amp; Communication</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Speech production challenges</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Speech commands unreliable.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Games requiring clear speech commands</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="38">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Climate Sensitivity &rarr; Multiple Sclerosis &rarr; Aging Heat Intolerance</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Sensory &amp; Environmental</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Heat worsens symptoms</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Heat sensitivity reduces focus.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Survival games ignoring climate filters</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="39">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Cochlear Implant &rarr; Aging Adults &rarr; Hard of Hearing</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Hearing &amp; Auditory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Struggle with high-pitch tones</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player needs lower freq</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Game only signals alarms with shrill beeps</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="40">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Cochlear Implant &rarr; Hard of Hearing &rarr; Aging Adults</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Hearing &amp; Auditory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Distorted sound perception</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player in story cutscene</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">No transcript for cinematic narration</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="41">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Cochlear Implant &rarr; Hard of Hearing &rarr; Deaf</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Hearing &amp; Auditory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Reliance on vibration</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player with haptics off</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Cutscene relies on whispered speech</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="42">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Colorblindness (Deuteranopia &rarr; Protanopia &rarr; Tritanopia)</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Vision &amp; Reading</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Cannot distinguish color coding</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player tries to identify teams</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Team colors red/green only</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="43">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Colorblindness &rarr; Deuteranopia &rarr; Protanopia</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Vision &amp; Reading</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">can&#x27;t distinguish certain colors</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Reliance on red/green contrast fails.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Enemy vs ally indicators shown only by color</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="44">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Colorblindness &rarr; Partially Sighted &rarr; Migraine Sensitivity</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Vision &amp; Reading</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Struggle with contrast</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player in bright room</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Important enemies blend into background</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="45">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Colorblindness &rarr; Tritanopia &rarr; Deuteranopia</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Vision &amp; Reading</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Cannot differentiate certain hues</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player chooses teams</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Puzzle requires matching blue vs purple</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="46">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Cystic Fibrosis &rarr; Chronic Obstructive Pulmonary Disease &rarr; Asthma</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Chronic Illness &amp; Fatigue</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Reduced breath capacity, fatigue</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Extended exertion in VR or motion gaming is difficult.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">VR games requiring constant heavy breathing mechanics</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="47">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Deaf &rarr; Hard of Hearing &rarr; Cochlear Implant</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Hearing &amp; Auditory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Missed spoken dialogue</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player relies on captions</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Cutscenes have no subtitles</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="48">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Deaf &rarr; Hard of Hearing &rarr; English as a Second Language</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Hearing &amp; Auditory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Missed dialogue</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player follows story</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Audio-only lore collectibles</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="49">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Deaf &rarr; Hard of Hearing &rarr; English as a Second Language</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Hearing &amp; Auditory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Requires readable subtitles</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player in co-op mission</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Team callouts not captioned</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="50">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Deaf &rarr; Hard of Hearing &rarr; Non-native Speakers</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Hearing &amp; Auditory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Needs full captions</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player in cutscene</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Subtitles omit speaker identification</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="51">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Deafness &rarr; Hard of Hearing &rarr; Auditory Processing Disorder</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Hearing &amp; Auditory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Reliance on captions</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player watches cutscene</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Captions omit background voices</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="52">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Deafness &rarr; Hard of Hearing &rarr; Auditory Processing Disorder</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Hearing &amp; Auditory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Audio-only instructions inaccessible</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Players miss critical instructions.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Tutorials without subtitles</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="53">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Dementia &rarr; Alzheimer’s Disease &rarr; Aging</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Cognitive &amp; Memory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Forgetfulness</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Objectives not remembered.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">No save reminders</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="54">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Dementia &rarr; Mild Cognitive Impairment &rarr; Brain Fog</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Cognitive &amp; Memory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Memory lapses mid-task</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player resumes save</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">No tutorial recap after long absence</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="55">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Dementia &rarr; Mild Cognitive Impairment &rarr; Brain Fog</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Cognitive &amp; Memory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Forgetting controls</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player resumes after week away</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Game offers no “relearn controls” option</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="56">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Dementia &rarr; Mild Cognitive Impairment &rarr; Traumatic Brain Injury</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Cognitive &amp; Memory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Memory lapses mid-level</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player forgets quest steps</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">RPG log hides objectives behind multiple menus</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="57">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Dementia &rarr; Traumatic Brain Injury &rarr; Mild Cognitive Impairment</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Cognitive &amp; Memory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Short-term memory lapses</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player pauses mid-quest</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">No quest log recap after resuming</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="58">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Dementia &rarr; Traumatic Brain Injury &rarr; Mild Cognitive Impairment</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Cognitive &amp; Memory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Forgetting objectives</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player mid-mission</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">HUD has no reminder of active goal</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="59">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Depression &rarr; ADHD &rarr; Fatigue</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Mental Health</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Low stamina for long sessions</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player takes frequent breaks</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Online game punishes AFK with bans</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="60">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Depression &rarr; ADHD &rarr; Fatigue</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Mental Health</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Difficulty with daily grind</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player returns casually</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Game removes streak rewards if missed</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="61">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Depression &rarr; Burnout &rarr; Anxiety</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Mental Health</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Low motivation</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Repetitive grind is unmanageable.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Grind-heavy progression systems</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="62">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Depression &rarr; Chronic Fatigue &rarr; ADHD</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Mental Health</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Energy crashes mid-play</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player logs off suddenly</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Progress lost without auto-save</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="63">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Depression &rarr; Fatigue &rarr; ADHD</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Mental Health</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Difficulty sustaining play</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player prefers short sessions</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Game locks rewards behind daily 3-hour grind</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="64">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Depression &rarr; Fatigue &rarr; ADHD</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Mental Health</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Difficulty sustaining streaks</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player returns casually</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Game erases daily login streak progress</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="65">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Diabetes (neuropathy) &rarr; Peripheral Artery Disease &rarr; Stroke Recovery</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Chronic Illness &amp; Fatigue</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Reduced sensation/dexterity</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Players can&#x27;t feel or reliably press buttons.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Controllers requiring vibration feedback as primary signal</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="66">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Down Syndrome &rarr; Fragile X Syndrome &rarr; Intellectual Disability</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Developmental &amp; Learning</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Slower comprehension</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Players need more time.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">No slow mode for text</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="67">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Dyscalculia &rarr; ADHD &rarr; Math Anxiety</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Cognitive &amp; Memory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Difficulty with numbers</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player checks stats</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Crafting uses complex ratios with no auto-calc</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="68">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Dyscalculia &rarr; ADHD &rarr; Nonverbal Learning Disability</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Cognitive &amp; Memory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Numbers hard to parse</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player builds team stats</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Stat screen uses decimals and percentages only</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="69">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Dyscalculia &rarr; ADHD &rarr; Nonverbal Learning Disability</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Cognitive &amp; Memory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Trouble with quantities</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player manages resources</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Game shows icons with no numeric labels</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="70">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Dyscalculia &rarr; Math Anxiety &rarr; ADHD</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Cognitive &amp; Memory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Difficulty with numbers</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player builds economy</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Resource game uses fractions with no visuals</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="71">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Dyscalculia &rarr; Math Anxiety &rarr; ADHD</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Cognitive &amp; Memory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Struggle with probabilities</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player builds deck</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Card stats rely on percentages with no symbols</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="72">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Dyscalculia &rarr; Traumatic Brain Injury &rarr; Stroke</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Developmental &amp; Learning</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Math difficulties</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Difficulty with number-based logic.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Captchas requiring arithmetic</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="73">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Dysgraphia &rarr; Dyslexia &rarr; Dyspraxia</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Developmental &amp; Learning</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Written communication barriers</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Writing-intensive input is hard.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Games requiring long-form text input only</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="74">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Dyslexia &rarr; ADHD &rarr; Dyspraxia</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Cognitive &amp; Memory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Struggle with dense reading</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player opens quest</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Quest tracker only in text-heavy logs</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="75">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Dyslexia &rarr; ADHD &rarr; Low Literacy</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Cognitive &amp; Memory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Reading strain</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player navigates lore</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">All story hidden in text-heavy codex</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="76">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Dyslexia &rarr; Dyscalculia &rarr; Dyspraxia</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Vision &amp; Reading</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Processing written/numeric info</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Instructions are confusing or slow.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Inventory systems using abbreviations and numeric codes only</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="77">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Dyslexia &rarr; Dysgraphia &rarr; Dyscalculia</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Developmental &amp; Learning</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Processing written, numeric, symbolic content</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Reading or math-heavy systems block progress.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">RPG skill trees explained only in text/numbers</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="78">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Dyspraxia &rarr; Autism &rarr; ADHD</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Developmental &amp; Learning</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Difficulty sequencing steps</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Players lose track of multi-step inputs.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Crafting requiring exact input sequences</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="79">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Dystonia &rarr; Multiple System Atrophy &rarr; Huntington’s Disease</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Motor &amp; Physical Control</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Involuntary twisting contractions</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Precision aiming disrupted.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Sniping challenges requiring pixel-perfect accuracy</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="80">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Ehlers-Danlos Syndrome &rarr; Fibromyalgia &rarr; Aging Muscle Loss</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Motor &amp; Physical Control</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Declining strength over time</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Fatigue makes repeated play difficult.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Games that require constant button holds for movement</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="81">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Ehlers-Danlos Syndrome &rarr; Fibromyalgia &rarr; Rheumatoid Arthritis</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Motor &amp; Physical Control</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Joint pain, repetitive strain</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Repetitive input causes pain quickly.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Repetitive button tapping for sprinting or stamina recovery</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="82">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Epilepsy &rarr; Migraine &rarr; Photosensitive Autism</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Sensory &amp; Environmental</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Sensitivity to flashing/strobing</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Visual triggers cause seizures or migraines.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Boss attacks using flashing red screen effects</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="83">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Epilepsy &rarr; Migraine &rarr; Photosensitive Autism</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Sensory &amp; Environmental</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Sensitivity to flashing/strobing</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Visual triggers cause seizures or migraines.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Boss attacks using flashing effects</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="84">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Epilepsy &rarr; Photosensitive Migraines &rarr; Sensory Processing Disorder</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Vision &amp; Reading</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Sensitivity to flicker</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player toggles settings</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Menu option “disable flashes” missing</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="85">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Fetal Alcohol Syndrome &rarr; ADHD &rarr; Autism</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Developmental &amp; Learning</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Impulsivity, attention challenges</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Poor inhibition and planning.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">One-click purchases with no undo</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="86">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Glaucoma &rarr; Tunnel Vision &rarr; Retinitis Pigmentosa</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Vision &amp; Reading</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Restricted FOV</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player scans center only</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Minimap critical info in far edge</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="87">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Hand Injury &rarr; Holding Baby &rarr; Commuting</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Motor &amp; Physical Control</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">One-handed use</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player with mobile game</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Requires multitouch gestures like pinch-zoom</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="88">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Hearing Sensitivity &rarr; Hyperacusis &rarr; Migraine</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Hearing &amp; Auditory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Audio overload</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Volume painful.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Music games too loud by default</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="89">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">HIV (neurocognitive) &rarr; Hepatitis C &rarr; Long COVID</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Chronic Illness &amp; Fatigue</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Reduced sharpness, fatigue</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Cognitive strain from systemic illness.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Jargon-heavy game menus</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="90">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Hyperacusis &rarr; PTSD &rarr; Migraine</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Hearing &amp; Auditory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Painful overreaction to sound</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Loud or sudden noises overwhelm.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Explosions that bypass volume sliders</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="91">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Hyperacusis &rarr; Tinnitus &rarr; Hearing Sensitivity</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Hearing &amp; Auditory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Oversensitivity to sound</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Loud or shrill sounds cause discomfort.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Sudden, unmutable high-pitched enemy screeches</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="92">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Intellectual Disability &rarr; Autism &rarr; Global Developmental Delay</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Developmental &amp; Learning</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Need for simplified, structured guidance</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Concrete, step-based learning is key.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Puzzle games requiring abstract logic without hints</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="93">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Limb Difference &rarr; Quadriplegia &rarr; Cerebral Palsy</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Motor &amp; Physical Control</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Limited or no fine motor control</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Players can&#x27;t reliably press multiple buttons or move both sticks.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Default controllers requiring dual-stick + trigger combos</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="94">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Locked-in Syndrome &rarr; Severe Cerebral Palsy &rarr; Brainstem Stroke</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Motor &amp; Physical Control</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Reliance on eye-tracking or single switch</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Cognition intact but minimal input.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Games without switch-scanning menus</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="95">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Lupus &rarr; Crohn’s Disease &rarr; Irritable Bowel Syndrome</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Chronic Illness &amp; Fatigue</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Urgent need for breaks</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Flare cycles force unexpected absences.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Boss fights with no pause function</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="96">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Macular Degeneration &rarr; Cataracts &rarr; Presbyopia</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Vision &amp; Reading</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Blurred center vision</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player zooms text</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Dialogue font locked at tiny size</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="97">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Math Disability &rarr; Dyslexia (math) &rarr; ADHD</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Developmental &amp; Learning</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Number reasoning difficulties</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Numerical reasoning unreliable.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Mini-games requiring math puzzles</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="98">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Migraine &rarr; Epilepsy &rarr; Photophobia</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Vision &amp; Reading</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Light sensitivity</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Bright UI causes pain.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Pulsing highlights in UI</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="99">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Multiple Sclerosis &rarr; Fatigue &rarr; Arthritis</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Motor &amp; Physical Control</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Weak endurance</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player holds sprint</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Game requires constant button hold</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="100">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Myasthenia Gravis &rarr; Chronic Fatigue Syndrome &rarr; Long COVID</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Chronic Illness &amp; Fatigue</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Severe fatigue, limited stamina</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Energy drains unpredictably, requiring pacing.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Raids requiring hours-long uninterrupted sessions</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="101">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Nonverbal Autism &rarr; ALS &rarr; Aphasia</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Speech &amp; Communication</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">No spoken communication</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player joins multiplayer</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Lobby only supports voice chat</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="102">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Nonverbal Autism &rarr; Aphasia &rarr; Stutter</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Speech &amp; Communication</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Limited speech</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player in online match</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Game requires voice chat for coordination</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="103">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Osteogenesis Imperfecta &rarr; Arthritis &rarr; Frailty</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Motor &amp; Physical Control</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Fragile joints</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">High strain risks injury.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Motion controllers without seated modes</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="104">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Panic Disorder &rarr; PTSD &rarr; Phobia</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Mental Health</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Emotional triggers</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Trauma triggered by content.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Mandatory traumatic cutscenes</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="105">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Panic Disorder &rarr; PTSD &rarr; Social Anxiety</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Mental Health</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Easily triggered by unexpected content</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Stimuli can provoke panic or flashbacks.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Horror jump-scares without content warnings</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="106">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Parkinson’s Disease &rarr; Essential Tremor &rarr; Cerebral Palsy</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Motor &amp; Physical Control</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Unsteady hand movement</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player uses controller with tremor</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Game penalizes for accidental double inputs</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="107">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Parkinson’s Disease &rarr; Tremor &rarr; Arthritis</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Motor &amp; Physical Control</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Shaky hand control</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player aiming</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Sniper mode magnifies every tremor</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="108">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Partially Sighted &rarr; Macular Degeneration &rarr; Cataracts</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Vision &amp; Reading</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Blurry or distorted visuals</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player increases HUD size</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">UI text doesn’t scale, overlaps</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="109">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Photophobia &rarr; Migraine &rarr; Epilepsy</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Vision &amp; Reading</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Sensitivity to flicker</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player adjusts display</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Game includes mandatory flashing sequences</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="110">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Photophobia &rarr; Post-Concussion &rarr; Albinism</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Sensory &amp; Environmental</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Sensitivity to bright light</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Bright screens cause pain.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Mandatory sun-bloom or lens-flare visuals</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="111">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Retinitis Pigmentosa &rarr; Stargardt Disease &rarr; Diabetic Retinopathy</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Vision &amp; Reading</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Partial field of view, blind spots</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Hard to see enemies/items in periphery.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">HUD elements placed only in screen corners</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="112">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Sensory Processing Disorder &rarr; Autism &rarr; Migraine</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Sensory &amp; Environmental</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Overstimulation from sensory input</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Competing effects overwhelm.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Arcade shooters with flashing + noise</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="113">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Spinal Muscular Atrophy &rarr; Muscular Dystrophy &rarr; Multiple Sclerosis</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Motor &amp; Physical Control</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Progressive weakness, limited stamina</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Inputs possible but exhausting if sustained.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Button-mash sequences to break free or open doors</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="114">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Stroke &rarr; Amputee &rarr; Arthritis</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Motor &amp; Physical Control</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Limited finger reach</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player tries compact controller</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Default mapping uses unreachable buttons</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="115">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Stroke &rarr; Cerebral Palsy &rarr; Amputation</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Motor &amp; Physical Control</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Reduced dexterity</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player remaps buttons</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Key functions locked to non-remappable combos</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="116">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Tinnitus &rarr; Auditory Processing Disorder &rarr; Ménière’s Disease</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Hearing &amp; Auditory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Difficulty filtering audio</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player in team match</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">All dialogue overlaps with gunfire</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="117">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Tinnitus &rarr; Auditory Processing Disorder &rarr; Ménière’s Disease</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Hearing &amp; Auditory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Can’t parse layered sounds</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player fights boss</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Audio mixes dialogue with explosions equally</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="118">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Tourette Syndrome &rarr; Parkinson’s Disease &rarr; Essential Tremor</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Motor &amp; Physical Control</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Involuntary movement</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Aiming disrupted.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Aim drift penalized heavily</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="119">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Tourette Syndrome &rarr; Parkinson’s Disease &rarr; Essential Tremor</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Motor &amp; Physical Control</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Involuntary movements reduce precision</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Aiming and targeting accuracy is affected.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Precision-only mechanics like headshots in shooters</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="120">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Traumatic Brain Injury &rarr; Aphasia &rarr; Stroke</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Cognitive &amp; Memory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Language processing difficulty</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player in tutorial</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Dialog is too quick and overlaps with other NPCS</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="121">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Tunnel Vision &rarr; Retinitis Pigmentosa &rarr; Glaucoma</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Vision &amp; Reading</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Limited scanning area</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Player looks straight ahead</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Important enemies spawn off-screen periphery</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="122">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Tunnel Vision &rarr; Retinitis Pigmentosa &rarr; Hemianopia</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Vision &amp; Reading</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Limited field of view</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Players can&#x27;t monitor HUD spread across the screen.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Radar/minimap always in a corner</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="123">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Unilateral Deafness &rarr; Partial Loss &rarr; Asymmetrical Hearing</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Hearing &amp; Auditory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">can&#x27;t locate sound sources</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Stereo cues misleading.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Horror games using directional audio as only clue</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="124">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Unilateral Deafness &rarr; Partial Loss &rarr; Asymmetrical Hearing</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Hearing &amp; Auditory</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Difficulty localizing sound</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">can&#x27;t rely on stereo cues.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Stealth mechanics where enemy location is only audio-based</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="125">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Usher Syndrome &rarr; Macular Degeneration &rarr; Glaucoma</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Vision &amp; Reading</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Gradual sight loss</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Detail recognition degrades over time.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Tiny text quest logs or crafting menus</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="126">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Vestibular Disorder &rarr; Ménière’s Disease &rarr; Motion Sensitivity</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Sensory &amp; Environmental</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Sensitivity to motion</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Movement visuals cause nausea.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">First-person camera shake with no toggle</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="127">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Vestibular Disorder &rarr; Motion Sensitivity &rarr; Ménière’s Disease</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Sensory &amp; Environmental</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Dizziness, imbalance</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Camera movement induces vertigo.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Shaky cam cutscenes</dd>
+    </dl>
+  </article>
+  <article role="group" class="row" data-row-index="128">
+    <dl role="list">
+      <dt data-label="Solve for One Extend to Many" role="listitem">Solve for One Extend to Many</dt><dd role="listitem">Williams Syndrome &rarr; Fragile X Syndrome &rarr; Down Syndrome</dd>
+      <dt data-label="Category" role="listitem">Category</dt><dd role="listitem">Developmental &amp; Learning</dd>
+      <dt data-label="Shared Limitation" role="listitem">Shared Limitation</dt><dd role="listitem">Slower information processing</dd>
+      <dt data-label="Context" role="listitem">Context</dt><dd role="listitem">Complex instructions overwhelm.</dd>
+      <dt data-label="Game Mismatch" role="listitem">Game Mismatch</dt><dd role="listitem">Tutorials that flash instructions too quickly</dd>
+    </dl>
   </article>
 </main>
 </body>

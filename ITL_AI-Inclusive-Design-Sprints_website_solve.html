@@ -1,0 +1,1451 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spreadsheet Rows as Articles</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.4; margin: 1.5rem; }
+    article { padding: 1rem; margin: 0 0 1rem 0; border: 1px solid #ddd; border-radius: 0.5rem; }
+    article:nth-child(odd) { background: #fafafa; }
+    ul { list-style: disc; padding-left: 1.25rem; margin: 0; }
+    .name { font-weight: 600; }
+    .value { font-weight: 400; }
+  </style>
+</head>
+<body>
+<main>
+  <article class="row" data-row-index="1">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">ADHD &gt; Autism &gt; Sensory Processing Disorder</span></li>
+      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Easily distracted</span></li>
+      <li><span class="name">Context</span>: <span class="value">User checking article</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Autoplay videos start mid-scroll</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="2">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">ADHD &gt; Depression &gt; Burnout</span></li>
+      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Struggle with sustained focus</span></li>
+      <li><span class="name">Context</span>: <span class="value">User filling application</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Scholarship form cannot be saved mid-way</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="3">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">ADHD &gt; Dyslexia &gt; Autism</span></li>
+      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Need clear chunking</span></li>
+      <li><span class="name">Context</span>: <span class="value">User skims page quickly</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Wall of text with no headings or bullets</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="4">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">ADHD &gt; Dyslexia &gt; Autism</span></li>
+      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Easily overwhelmed by clutter</span></li>
+      <li><span class="name">Context</span>: <span class="value">User browsing homepage</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Homepage packed with multiple carousels</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="5">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">ADHD &gt; Sensory Processing Disorder &gt; Autism</span></li>
+      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Overwhelmed by clutter</span></li>
+      <li><span class="name">Context</span>: <span class="value">User searching products</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Page filled with flashing ads and sidebars</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="6">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">ALS &gt; Augmentative and Alternative Communication &gt; Stroke</span></li>
+      <li><span class="name">Category</span>: <span class="value">Speech &amp; Communication</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Slow text entry</span></li>
+      <li><span class="name">Context</span>: <span class="value">User typing verification</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">OTP code expires in 15 seconds</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="7">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">ALS &gt; Multiple Sclerosis &gt; Aphasia</span></li>
+      <li><span class="name">Category</span>: <span class="value">Speech &amp; Communication</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Slow text entry with AAC</span></li>
+      <li><span class="name">Context</span>: <span class="value">User enters login code</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Verification code expires too quickly</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="8">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">ALS &gt; Nonverbal Autism &gt; Cerebral Palsy (speech-affected)</span></li>
+      <li><span class="name">Category</span>: <span class="value">Speech &amp; Communication</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Limited or absent speech</span></li>
+      <li><span class="name">Context</span>: <span class="value">Mouth/voice can’t produce reliable speech.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Voice-only authentication (phone verification).</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="9">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">ALS &gt; Quadriplegia &gt; Muscular Dystrophy</span></li>
+      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Reliance on switch input</span></li>
+      <li><span class="name">Context</span>: <span class="value">User navigating menu</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Dropdown requires hover-and-hold</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="10">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Alzheimer’s Disease &gt; Mild Cognitive Impairment &gt; Aging Memory Decline</span></li>
+      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Memory lapses and declining attention</span></li>
+      <li><span class="name">Context</span>: <span class="value">Users forget navigation paths or form steps.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Sites with hidden navigation menus.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="11">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Alzheimer’s Disease &gt; Parkinson’s Disease &gt; Dementia</span></li>
+      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Forgetting navigation</span></li>
+      <li><span class="name">Context</span>: <span class="value">User can’t recall previous page</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">No breadcrumb or back button support</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="12">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Alzheimer’s Disease &gt; Traumatic Brain Injury &gt; ADHD</span></li>
+      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Memory lapses, executive dysfunction</span></li>
+      <li><span class="name">Context</span>: <span class="value">Forget steps or lose focus mid-task.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Hidden navigation and inconsistent labels.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="13">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Amputee &gt; Spinal Cord Injury &gt; Multiple Sclerosis</span></li>
+      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Reliance on keyboard navigation</span></li>
+      <li><span class="name">Context</span>: <span class="value">User tabs through links</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Site lacks skip-to-content link</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="14">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Anxiety &gt; PTSD &gt; Obsessive-Compulsive Disorder</span></li>
+      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Heightened sensitivity to surprises</span></li>
+      <li><span class="name">Context</span>: <span class="value">User reading article</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Sudden flashing survey pop-up</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="15">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Anxiety &gt; PTSD &gt; Obsessive-Compulsive Disorder</span></li>
+      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Startled by popups</span></li>
+      <li><span class="name">Context</span>: <span class="value">User reading blog</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Pop-up survey interrupts abruptly</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="16">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Anxiety &gt; PTSD &gt; Panic Disorder</span></li>
+      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Triggers from unexpected content</span></li>
+      <li><span class="name">Context</span>: <span class="value">User startled by surprise pop-ups</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Website uses auto-play sound effects</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="17">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Aphasia (post-stroke) &gt; Autism (language-delayed) &gt; Developmental Language Disorder</span></li>
+      <li><span class="name">Category</span>: <span class="value">Speech &amp; Communication</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Impaired language comprehension and/or expression</span></li>
+      <li><span class="name">Context</span>: <span class="value">Users may need symbols or multimodal cues.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Sites with jargon-heavy forms and no icons or help text.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="18">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Aphasia &gt; Tracheotomy &gt; Stroke</span></li>
+      <li><span class="name">Category</span>: <span class="value">Speech &amp; Communication</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Inconsistent speech output</span></li>
+      <li><span class="name">Context</span>: <span class="value">User attempts voice command</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Mic-only search with no text option</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="19">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Aphasia &gt; Traumatic Brain Injury &gt; Stroke</span></li>
+      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Language processing challenges</span></li>
+      <li><span class="name">Context</span>: <span class="value">User reading instructions</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Overly complex, jargon-filled directions</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="20">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Arthritis (juvenile) &gt; Carpal Tunnel Syndrome &gt; Tendonitis</span></li>
+      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Hand pain, reduced repetitive use</span></li>
+      <li><span class="name">Context</span>: <span class="value">Repeated strain worsens pain and limits function.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Sites requiring constant scrolling and clicking.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="21">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Arthritis &gt; Tremor &gt; Carpal Tunnel Syndrome</span></li>
+      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Difficulty with precision clicks</span></li>
+      <li><span class="name">Context</span>: <span class="value">User tries to tap small buttons</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Tiny clickable targets close together</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="22">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Arthritis &gt; Tremor &gt; Limited Grip</span></li>
+      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Difficulty with precise taps</span></li>
+      <li><span class="name">Context</span>: <span class="value">User on small touchscreen</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Tiny close button on modal dialog</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="23">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Arthritis &gt; Tremor &gt; Stroke</span></li>
+      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Poor fine motor</span></li>
+      <li><span class="name">Context</span>: <span class="value">User taps buttons</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Buttons too close together</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="24">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Auditory Neuropathy &gt; Auditory Processing Disorder &gt; Aging Adults</span></li>
+      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Hard to parse fast speech</span></li>
+      <li><span class="name">Context</span>: <span class="value">User needs slower playback</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Video player lacks speed controls</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="25">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Auditory Processing Disorder (Autism) &gt; Auditory Processing Disorder (Stroke) &gt; Auditory Processing Disorder (Traumatic Brain Injury)</span></li>
+      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Poor filtering of sounds</span></li>
+      <li><span class="name">Context</span>: <span class="value">Different causes but same need for clear speech alternatives.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Overlapping audio instructions with no text backup.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="26">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Auditory Processing Disorder &gt; Autism &gt; ADHD</span></li>
+      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Difficulty filtering speech from background noise</span></li>
+      <li><span class="name">Context</span>: <span class="value">Users hear but struggle to separate voices.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Webinars with overlapping speakers and no transcripts.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="27">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Auditory Processing Disorder &gt; Tinnitus &gt; Aging Adults</span></li>
+      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Hard to filter layered audio</span></li>
+      <li><span class="name">Context</span>: <span class="value">User listening to webinar</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Multiple speakers, no transcript</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="28">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Auditory Processing Disorder &gt; Tinnitus &gt; Ménière’s Disease</span></li>
+      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Difficulty parsing complex audio</span></li>
+      <li><span class="name">Context</span>: <span class="value">User misses details in spoken instructions</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Audio-only CAPTCHA</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="29">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Autism (rigid thinking) &gt; Obsessive-Compulsive Disorder &gt; Anxiety</span></li>
+      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Difficulty adapting to change</span></li>
+      <li><span class="name">Context</span>: <span class="value">Unexpected content shifts are disruptive.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Dynamic menus that change order between visits.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="30">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Autism (rigid thinking) &gt; Obsessive-Compulsive Disorder &gt; Anxiety</span></li>
+      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Trouble adapting to sudden changes</span></li>
+      <li><span class="name">Context</span>: <span class="value">Predictability is key to trust.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Menus that reorder dynamically.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="31">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Autism &gt; ADHD &gt; Fetal Alcohol Spectrum Disorder</span></li>
+      <li><span class="name">Category</span>: <span class="value">Developmental &amp; Learning</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Impulse control and sequencing challenges</span></li>
+      <li><span class="name">Context</span>: <span class="value">Tasks need clear order and confirmation.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Complex multi-step registration flows with no progress feedback.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="32">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Autism &gt; ADHD &gt; Fetal Alcohol Spectrum Disorder</span></li>
+      <li><span class="name">Category</span>: <span class="value">Developmental &amp; Learning</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Impulse control and sequencing issues</span></li>
+      <li><span class="name">Context</span>: <span class="value">Sudden changes disrupt focus.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Sites with pop-ups that interrupt task flow.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="33">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Autism &gt; ADHD &gt; Sensory Processing Disorder</span></li>
+      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Overload from clutter</span></li>
+      <li><span class="name">Context</span>: <span class="value">User distracted by visual noise</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Website with animated banners and flashing ads</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="34">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Autism &gt; Anxiety &gt; ADHD</span></li>
+      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Difficulty with surprise</span></li>
+      <li><span class="name">Context</span>: <span class="value">User startled by sudden changes</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Live chat box pops up without warning</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="35">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Autism &gt; PTSD &gt; Dementia</span></li>
+      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Sensory overload risk</span></li>
+      <li><span class="name">Context</span>: <span class="value">Chaotic environments overstimulate.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Busy pages with pop-ups or animated backgrounds.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="36">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Autism &gt; PTSD &gt; Dementia</span></li>
+      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Sensory overload risk</span></li>
+      <li><span class="name">Context</span>: <span class="value">Chaotic environments overstimulate.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Busy pages with pop-ups/animated backgrounds.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="37">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Bipolar Disorder (manic) &gt; ADHD &gt; Impulse Control Disorder</span></li>
+      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Impulsivity, distractibility</span></li>
+      <li><span class="name">Context</span>: <span class="value">Users may click or buy hastily.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">One-click purchases with no confirmation step.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="38">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Bipolar Disorder (manic) &gt; ADHD &gt; Impulse Control Disorders</span></li>
+      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Impulsivity and distractibility</span></li>
+      <li><span class="name">Context</span>: <span class="value">Users may make hasty decisions.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">One-click purchases without confirmation.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="39">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Blindness &gt; Glaucoma &gt; Retinitis Pigmentosa</span></li>
+      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">No access to visual layout</span></li>
+      <li><span class="name">Context</span>: <span class="value">User relies on screen reader navigation</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Site uses unlabeled buttons and decorative icons as links</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="40">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Blindness &gt; Partially Sighted &gt; Dyslexia</span></li>
+      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Barriers to perceiving or decoding text</span></li>
+      <li><span class="name">Context</span>: <span class="value">Blindness affects sight, dyslexia affects decoding, both need alternatives.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Images of text or untagged PDFs.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="41">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Blindness &gt; Retinitis Pigmentosa &gt; Screen Reader Users</span></li>
+      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Reliance on audio navigation</span></li>
+      <li><span class="name">Context</span>: <span class="value">User browsing ecommerce</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Product images lack alt text</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="42">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Blindness &gt; Retinopathy &gt; Screen Reader Users</span></li>
+      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">No reliance on visual cues</span></li>
+      <li><span class="name">Context</span>: <span class="value">User navigating by headings</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Site uses “click here” links without context</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="43">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Blindness &gt; Screen Reader Users &gt; Braille Display</span></li>
+      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Non-visual navigation</span></li>
+      <li><span class="name">Context</span>: <span class="value">User reads content linearly</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Table layout used for page structure</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="44">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Body Dysmorphic Disorder &gt; Eating Disorder Recovery &gt; Anxiety</span></li>
+      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Sensitivity to body/appearance imagery</span></li>
+      <li><span class="name">Context</span>: <span class="value">Certain visuals can cause harm.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Sites ranking or judging user-submitted photos.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="45">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Body Dysmorphic Disorder &gt; Eating Disorder Recovery &gt; Depression</span></li>
+      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Sensitivity to appearance-based imagery</span></li>
+      <li><span class="name">Context</span>: <span class="value">Image-heavy content can reinforce harmful biases.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Websites ranking user photos or body image.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="46">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Cancer Fatigue &gt; Chemotherapy Recovery &gt; Chronic Fatigue Syndrome</span></li>
+      <li><span class="name">Category</span>: <span class="value">Chronic Illness &amp; Fatigue</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Sudden exhaustion mid-task</span></li>
+      <li><span class="name">Context</span>: <span class="value">Need rest breaks during tasks.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Timed quizzes or exams with no pause option.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="47">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Cancer Fatigue &gt; Chemotherapy Recovery &gt; Chronic Fatigue Syndrome</span></li>
+      <li><span class="name">Category</span>: <span class="value">Chronic Illness &amp; Fatigue</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Extreme exhaustion mid-task</span></li>
+      <li><span class="name">Context</span>: <span class="value">Users need flexibility to stop and resume.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">E-commerce checkout with no save cart option.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="48">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Carpal Tunnel Syndrome &gt; Repetitive Strain Injury &gt; Multiple Sclerosis</span></li>
+      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Limited repetitive typing</span></li>
+      <li><span class="name">Context</span>: <span class="value">User fills form</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Website requires retyping personal data each time</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="49">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Cataracts &gt; Low Contrast Sensitivity &gt; Presbyopia</span></li>
+      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Difficulty distinguishing low-contrast text</span></li>
+      <li><span class="name">Context</span>: <span class="value">User reads in dim light on tablet</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Fine-print disclaimers in pale gray</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="50">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Charcot-Marie-Tooth Disease &gt; Peripheral Neuropathy &gt; Diabetic Neuropathy</span></li>
+      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Reduced sensation and fine motor feedback in hands/feet</span></li>
+      <li><span class="name">Context</span>: <span class="value">Grip and balance impacted.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Forms requiring exact mouse hover precision.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="51">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Chemotherapy Brain Fog &gt; Fibromyalgia Fog &gt; Post-COVID Cognitive Impairment</span></li>
+      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Temporary lapses in clarity and focus</span></li>
+      <li><span class="name">Context</span>: <span class="value">Users may lose track of details mid-task.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Dense forms with no autosave function.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="52">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Chronic Obstructive Pulmonary Disease &gt; Cystic Fibrosis &gt; Asthma</span></li>
+      <li><span class="name">Category</span>: <span class="value">Chronic Illness &amp; Fatigue</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Reduced breath capacity and fatigue</span></li>
+      <li><span class="name">Context</span>: <span class="value">Tasks may be exhausting.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Sites with long, multi-step verification flows.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="53">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Color Vision Deficiency &gt; Protanopia &gt; Deuteranopia</span></li>
+      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Inability to distinguish certain colors</span></li>
+      <li><span class="name">Context</span>: <span class="value">Users can’t rely on red-green-blue distinctions.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Error states indicated by red alone.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="54">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Colorblindness (Deuteranopia &gt; Protanopia &gt; Tritanopia)</span></li>
+      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Cannot distinguish color codes</span></li>
+      <li><span class="name">Context</span>: <span class="value">User relies on shapes/text instead of hue</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Charts rely only on red/green distinction</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="55">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Colorblindness &gt; Deuteranopia &gt; Tritanopia</span></li>
+      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Poor color distinction</span></li>
+      <li><span class="name">Context</span>: <span class="value">User comparing data charts</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Graph only uses color-coded lines</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="56">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Cystic Fibrosis &gt; Chronic Obstructive Pulmonary Disease &gt; Asthma</span></li>
+      <li><span class="name">Category</span>: <span class="value">Chronic Illness &amp; Fatigue</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Reduced breath capacity and endurance</span></li>
+      <li><span class="name">Context</span>: <span class="value">Extended tasks may be exhausting.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Webinars without pause or replay options.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="57">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Deaf &gt; Cochlear Implant &gt; Auditory Processing Disorder</span></li>
+      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Missed spoken alerts</span></li>
+      <li><span class="name">Context</span>: <span class="value">User depends on text equivalents</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Critical error only signaled with sound</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="58">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Deaf &gt; Hard of Hearing &gt; Cochlear Implant</span></li>
+      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">No reliable auditory input</span></li>
+      <li><span class="name">Context</span>: <span class="value">User needs captions for videos</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Auto-play video lacks captions</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="59">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Deaf &gt; Hard of Hearing &gt; Cochlear Implant</span></li>
+      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">No audio comprehension</span></li>
+      <li><span class="name">Context</span>: <span class="value">User streaming video</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">No captions provided</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="60">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Deaf &gt; Hard of Hearing &gt; Non-native Speakers</span></li>
+      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Reliance on transcripts</span></li>
+      <li><span class="name">Context</span>: <span class="value">User reviews webinar recording</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Audio-only podcast with no transcript</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="61">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dementia &gt; Mild Cognitive Impairment &gt; Brain Fog</span></li>
+      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Struggles with orientation</span></li>
+      <li><span class="name">Context</span>: <span class="value">User re-enters site later</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Site doesn’t preserve login session</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="62">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dementia &gt; Mild Cognitive Impairment &gt; Traumatic Brain Injury</span></li>
+      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Forgetting steps</span></li>
+      <li><span class="name">Context</span>: <span class="value">User filling long form</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">No “save and continue later” option</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="63">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Depression &gt; ADHD &gt; Burnout Syndrome</span></li>
+      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Difficulty starting or persisting on tasks</span></li>
+      <li><span class="name">Context</span>: <span class="value">Low motivation overlaps with executive dysfunction.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Mandatory long forms without autosave.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="64">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Depression &gt; ADHD &gt; Chronic Fatigue</span></li>
+      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Low motivation and focus</span></li>
+      <li><span class="name">Context</span>: <span class="value">User struggles with long forms</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Application with 20+ required fields and no autosave</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="65">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Depression &gt; ADHD &gt; Chronic Illness</span></li>
+      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Difficulty finishing tasks</span></li>
+      <li><span class="name">Context</span>: <span class="value">User applying for benefits</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Form rejects partial save and clears all data</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="66">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Depression &gt; ADHD &gt; Fatigue</span></li>
+      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Struggles with long tasks</span></li>
+      <li><span class="name">Context</span>: <span class="value">User doing job application</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Application erases data after timeout</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="67">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Depression &gt; Burnout &gt; ADHD</span></li>
+      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Difficulty sustaining focus and effort</span></li>
+      <li><span class="name">Context</span>: <span class="value">Starting or completing tasks is overwhelming.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Websites with mandatory long processes and no breaks.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="68">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Diabetes (neuropathy) &gt; Peripheral Artery Disease &gt; Stroke Recovery</span></li>
+      <li><span class="name">Category</span>: <span class="value">Chronic Illness &amp; Fatigue</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Circulation issues reduce mobility/dexterity</span></li>
+      <li><span class="name">Context</span>: <span class="value">Numbness and weakness overlap.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Payment forms with no autofill support.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="69">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Diabetes (neuropathy) &gt; Peripheral Artery Disease &gt; Stroke Recovery</span></li>
+      <li><span class="name">Category</span>: <span class="value">Chronic Illness &amp; Fatigue</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Reduced sensation and dexterity</span></li>
+      <li><span class="name">Context</span>: <span class="value">Clicking and navigation are harder.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Sites with small, clustered interactive elements.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="70">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Down Syndrome &gt; Fragile X Syndrome &gt; Intellectual Disability</span></li>
+      <li><span class="name">Category</span>: <span class="value">Developmental &amp; Learning</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Slower comprehension and problem-solving</span></li>
+      <li><span class="name">Context</span>: <span class="value">More time and clear structure needed.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Timed registration processes with no flexibility.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="71">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dyscalculia &gt; ADHD &gt; Math Anxiety</span></li>
+      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Numbers hard to process</span></li>
+      <li><span class="name">Context</span>: <span class="value">User reviews prices</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Store uses complex discount math without totals</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="72">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dyscalculia &gt; ADHD &gt; Nonverbal Learning Disability</span></li>
+      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Difficulty with numbers</span></li>
+      <li><span class="name">Context</span>: <span class="value">User tries to calculate totals</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Shopping cart hides tax/shipping until last step</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="73">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dyscalculia &gt; Math Anxiety &gt; ADHD</span></li>
+      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Struggle with numbers</span></li>
+      <li><span class="name">Context</span>: <span class="value">User reviewing billing</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Invoice presented as raw table of figures</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="74">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dyslexia &gt; ADHD &gt; Dyspraxia</span></li>
+      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Reading difficulties</span></li>
+      <li><span class="name">Context</span>: <span class="value">User skims content in short bursts</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Dense walls of text without headings</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="75">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dyslexia &gt; Dyscalculia &gt; Dysgraphia</span></li>
+      <li><span class="name">Category</span>: <span class="value">Developmental &amp; Learning</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Processing written, number, or symbolic content</span></li>
+      <li><span class="name">Context</span>: <span class="value">Reading, writing, and math create compound barriers.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Testing sites without multimodal supports.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="76">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dyslexia &gt; Dyscalculia &gt; Dysgraphia</span></li>
+      <li><span class="name">Category</span>: <span class="value">Developmental &amp; Learning</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Barriers to reading, writing, or math</span></li>
+      <li><span class="name">Context</span>: <span class="value">Written/numeric-heavy tasks block progress.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">CAPTCHAs relying only on distorted text or math.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="77">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dyslexia &gt; Dysgraphia &gt; Dyscalculia</span></li>
+      <li><span class="name">Category</span>: <span class="value">Developmental &amp; Learning</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Difficulty with reading, writing, or math</span></li>
+      <li><span class="name">Context</span>: <span class="value">Text/numeric-heavy tasks cause barriers.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">CAPTCHAs relying only on text or math puzzles.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="78">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dyslexia &gt; Dyspraxia &gt; ADHD</span></li>
+      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Reading strain</span></li>
+      <li><span class="name">Context</span>: <span class="value">User reading blog</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Dense text with no headings</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="79">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dyslexia &gt; Low Literacy &gt; Aphasia</span></li>
+      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Reliance on visuals</span></li>
+      <li><span class="name">Context</span>: <span class="value">User follows icons instead of text</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Site uses vague icons with no labels</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="80">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dyspraxia &gt; Autism &gt; ADHD</span></li>
+      <li><span class="name">Category</span>: <span class="value">Developmental &amp; Learning</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Difficulty sequencing steps</span></li>
+      <li><span class="name">Context</span>: <span class="value">Users lose track of what to do next.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Sites requiring exact multi-step sequences with no guidance.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="81">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Dyspraxia &gt; Autism &gt; ADHD</span></li>
+      <li><span class="name">Category</span>: <span class="value">Developmental &amp; Learning</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Difficulty sequencing actions</span></li>
+      <li><span class="name">Context</span>: <span class="value">Users lose track in multi-step workflows.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Sites requiring exact step sequences with no hints.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="82">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Ehlers-Danlos Syndrome &gt; Fibromyalgia &gt; Rheumatoid Arthritis</span></li>
+      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Joint pain, instability, fatigue</span></li>
+      <li><span class="name">Context</span>: <span class="value">Painful or unstable joints make repetitive motions difficult.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Interfaces requiring repeated, high-effort actions like drag-and-drop only.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="83">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Encephalitis &gt; Traumatic Brain Injury &gt; Post-COVID Brain Fog</span></li>
+      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Unpredictable cognitive clarity</span></li>
+      <li><span class="name">Context</span>: <span class="value">Function fluctuates day-to-day.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Sessions that time out quickly with no autosave.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="84">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Encephalitis &gt; Traumatic Brain Injury &gt; Post-COVID Brain Fog</span></li>
+      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Unpredictable cognitive clarity</span></li>
+      <li><span class="name">Context</span>: <span class="value">Function fluctuates day-to-day.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Multi-step logins without “remember me.”</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="85">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Epilepsy &gt; Migraine &gt; Photosensitive Autism</span></li>
+      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Flashing light sensitivity</span></li>
+      <li><span class="name">Context</span>: <span class="value">Visual triggers can cause seizures or migraines.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Auto-playing flashing banners.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="86">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Epilepsy &gt; Migraine with Aura &gt; Photosensitive Autism</span></li>
+      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Visual sensitivity to flashing or high-contrast patterns</span></li>
+      <li><span class="name">Context</span>: <span class="value">Flashing lights trigger seizures or migraines.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Flashing banners or auto-rotating carousels.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="87">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Epilepsy &gt; Migraine with Aura &gt; Photosensitive Autism</span></li>
+      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Visual sensitivity to flashing patterns</span></li>
+      <li><span class="name">Context</span>: <span class="value">Flashing lights trigger seizures/migraines.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Flashing banners or carousels.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="88">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Epilepsy &gt; Migraine with Aura &gt; Photosensitive Autism</span></li>
+      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Flashing visual sensitivity</span></li>
+      <li><span class="name">Context</span>: <span class="value">Triggers seizures or migraines.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Animated flashing banners without stop controls.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="89">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Glaucoma &gt; Tunnel Vision &gt; Retinitis Pigmentosa</span></li>
+      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Restricted field of view</span></li>
+      <li><span class="name">Context</span>: <span class="value">User scans page slowly</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Wide mega-menus vanish if not hovered correctly</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="90">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Global Developmental Delay &gt; Down Syndrome &gt; Learning Disability</span></li>
+      <li><span class="name">Category</span>: <span class="value">Developmental &amp; Learning</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Slower pace of task processing</span></li>
+      <li><span class="name">Context</span>: <span class="value">More time needed for comprehension.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Time-limited quizzes or registration.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="91">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Glossectomy &gt; Oral Cancer Recovery &gt; ALS (late)</span></li>
+      <li><span class="name">Category</span>: <span class="value">Speech &amp; Communication</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Loss of tongue function, no speech</span></li>
+      <li><span class="name">Context</span>: <span class="value">Users depend on AAC fully.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Call-only two-factor authentication.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="92">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Hearing Loss (genetic/profound) &gt; Ménière’s Disease &gt; Age-related Hearing Loss</span></li>
+      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Difficulty perceiving spoken language</span></li>
+      <li><span class="name">Context</span>: <span class="value">Hearing may be absent, fluctuating, or reduced with age.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Videos without captions/transcripts.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="93">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Huntington’s Disease &gt; Frontotemporal Dementia &gt; Alzheimer’s Disease</span></li>
+      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Short-term memory loss</span></li>
+      <li><span class="name">Context</span>: <span class="value">User forgets previous steps</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Multi-page checkout with no progress indicator</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="94">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Huntington’s Disease &gt; Frontotemporal Dementia &gt; Alzheimer’s Disease</span></li>
+      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Progressive cognitive decline impacting planning and communication</span></li>
+      <li><span class="name">Context</span>: <span class="value">Problem-solving abilities fade.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Complex multi-step checkouts with no progress indicator.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="95">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Hyperacusis &gt; Tinnitus &gt; Hearing Sensitivity</span></li>
+      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Oversensitivity to sound</span></li>
+      <li><span class="name">Context</span>: <span class="value">Even moderate audio is overwhelming.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Autoplaying media or loud alerts with no volume control.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="96">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Intellectual Disability &gt; Autism &gt; Global Developmental Delay</span></li>
+      <li><span class="name">Category</span>: <span class="value">Developmental &amp; Learning</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Need for structured, simplified guidance</span></li>
+      <li><span class="name">Context</span>: <span class="value">Abstract concepts may confuse.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Abstract puzzle-based navigation or gamified login.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="97">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Laryngitis &gt; Chronic Obstructive Pulmonary Disease (voice fatigue) &gt; Post-COVID Dysphonia</span></li>
+      <li><span class="name">Category</span>: <span class="value">Speech &amp; Communication</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Voice fatigues quickly</span></li>
+      <li><span class="name">Context</span>: <span class="value">Extended talking is painful.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Long customer support calls with no chat option.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="98">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Locked-in Syndrome &gt; Brainstem Stroke &gt; Severe Cerebral Palsy</span></li>
+      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Near-total paralysis with preserved cognition</span></li>
+      <li><span class="name">Context</span>: <span class="value">Users can think clearly but have little/no movement, relying on eye-tracking or switches.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Interfaces requiring precise mouse control or rapid clicks without alternatives.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="99">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Lupus &gt; Crohn’s Disease &gt; Irritable Bowel Syndrome</span></li>
+      <li><span class="name">Category</span>: <span class="value">Chronic Illness &amp; Fatigue</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Unpredictable urgent breaks</span></li>
+      <li><span class="name">Context</span>: <span class="value">Users may need to pause abruptly.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Timed logouts during form entry.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="100">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Lupus &gt; Crohn’s Disease &gt; Irritable Bowel Syndrome</span></li>
+      <li><span class="name">Category</span>: <span class="value">Chronic Illness &amp; Fatigue</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Unpredictable flare cycles</span></li>
+      <li><span class="name">Context</span>: <span class="value">Need to leave suddenly for breaks.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Forms that expire mid-entry with no autosave.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="101">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Ménière’s Disease &gt; Hard of Hearing &gt; English as a Second Language</span></li>
+      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Misses fast dialogue</span></li>
+      <li><span class="name">Context</span>: <span class="value">User viewing tutorial</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Auto-captions inaccurate or missing punctuation</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="102">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Migraine &gt; Epilepsy &gt; Sensory Processing Disorder</span></li>
+      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Sensitivity to flicker</span></li>
+      <li><span class="name">Context</span>: <span class="value">User loading landing page</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Animated GIFs loop continuously with no pause</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="103">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Migraine &gt; Photophobia &gt; Epilepsy</span></li>
+      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Light sensitivity</span></li>
+      <li><span class="name">Context</span>: <span class="value">User browsing news</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">White background with flashing banner ads</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="104">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Mild Cognitive Impairment &gt; Aging Memory Decline &gt; Alzheimer’s Disease</span></li>
+      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Progressive memory and attention decline</span></li>
+      <li><span class="name">Context</span>: <span class="value">Tasks and instructions are easily forgotten.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Websites with no persistent navigation or task reminders.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="105">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Multiple Chemical Sensitivity &gt; Asthma &gt; Chronic Obstructive Pulmonary Disease</span></li>
+      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Vulnerability to environmental triggers</span></li>
+      <li><span class="name">Context</span>: <span class="value">External stress reduces capacity for online tasks.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Sites with autoplay perfume/cleaning ads with strong imagery.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="106">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Multiple Chemical Sensitivity &gt; Asthma &gt; Chronic Obstructive Pulmonary Disease</span></li>
+      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Environmental sensitivities</span></li>
+      <li><span class="name">Context</span>: <span class="value">Stress reduces task ability.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Perfume/cleaning product ads with animated visuals.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="107">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Multiple Sclerosis (heat intolerance) &gt; Dysautonomia &gt; Aging Heat Sensitivity</span></li>
+      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Heat worsens symptoms</span></li>
+      <li><span class="name">Context</span>: <span class="value">Environmental factors impact focus.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Sites ignoring user system dark/light mode or contrast settings.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="108">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Multiple Sclerosis (heat intolerance) &gt; Dysautonomia &gt; Aging Heat Sensitivity</span></li>
+      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Heat sensitivity worsens symptoms</span></li>
+      <li><span class="name">Context</span>: <span class="value">Design choices should adapt to user system modes.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Sites ignoring system-level dark/light or high contrast settings.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="109">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Multiple Sclerosis (heat intolerance) &gt; Dysautonomia &gt; Aging Heat Sensitivity</span></li>
+      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Heat makes symptoms worse</span></li>
+      <li><span class="name">Context</span>: <span class="value">Adaptation to user settings is crucial.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Sites ignoring OS-level dark/high-contrast modes.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="110">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Multiple Sclerosis (heat intolerance) &gt; Dysautonomia &gt; Aging Heat Sensitivity</span></li>
+      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Heat worsens symptoms</span></li>
+      <li><span class="name">Context</span>: <span class="value">Environmental factors impact focus.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Travel sites ignoring climate/temperature filters.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="111">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Multiple Sclerosis &gt; Cerebral Palsy &gt; Stroke</span></li>
+      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Fatigue, limited motor accuracy</span></li>
+      <li><span class="name">Context</span>: <span class="value">User types slowly with adaptive keyboard</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Login form times out quickly</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="112">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Myasthenia Gravis &gt; Chronic Fatigue Syndrome &gt; Type 1 Diabetes</span></li>
+      <li><span class="name">Category</span>: <span class="value">Chronic Illness &amp; Fatigue</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Energy depletion, pacing needs</span></li>
+      <li><span class="name">Context</span>: <span class="value">Unpredictable stamina requires flexibility.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Interfaces with no save/resume.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="113">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Myasthenia Gravis &gt; Chronic Fatigue Syndrome &gt; Type 1 Diabetes</span></li>
+      <li><span class="name">Category</span>: <span class="value">Chronic Illness &amp; Fatigue</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Energy depletion and pacing needs</span></li>
+      <li><span class="name">Context</span>: <span class="value">Unpredictable stamina requires flexibility.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Interfaces with no save/resume options.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="114">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Night Blindness &gt; Partially Sighted &gt; Colorblindness</span></li>
+      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Difficulty with dark modes</span></li>
+      <li><span class="name">Context</span>: <span class="value">User browsing at night</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Dark mode uses pure black with no adjustments</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="115">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Nonverbal Autism &gt; ALS &gt; Cerebral Palsy</span></li>
+      <li><span class="name">Category</span>: <span class="value">Speech &amp; Communication</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Reliance on AAC devices</span></li>
+      <li><span class="name">Context</span>: <span class="value">User copies/pastes responses</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Chatbot times out waiting for reply</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="116">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Nonverbal Autism &gt; Aphasia &gt; Stutter</span></li>
+      <li><span class="name">Category</span>: <span class="value">Speech &amp; Communication</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Limited speech</span></li>
+      <li><span class="name">Context</span>: <span class="value">User tries to call support</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Voice-only helpline with no text option</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="117">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Nonverbal Autism &gt; Augmentative and Alternative Communication &gt; Selective Mutism</span></li>
+      <li><span class="name">Category</span>: <span class="value">Speech &amp; Communication</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Typed responses only</span></li>
+      <li><span class="name">Context</span>: <span class="value">User messaging customer service</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Live chat disconnects after 30s of inactivity</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="118">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Nystagmus &gt; Strabismus &gt; Convergence Insufficiency</span></li>
+      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Eye instability causing blurred tracking</span></li>
+      <li><span class="name">Context</span>: <span class="value">Reading/scanning fast content is difficult.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Scrolling marquees or flashing banners with text.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="119">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Panic Disorder &gt; PTSD &gt; Social Anxiety</span></li>
+      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Triggers from surprise content</span></li>
+      <li><span class="name">Context</span>: <span class="value">Unexpected imagery/sound provokes panic.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Surprise pop-ups or autoplay violent ads.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="120">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Panic Disorder &gt; PTSD &gt; Social Anxiety</span></li>
+      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Triggers from surprise content</span></li>
+      <li><span class="name">Context</span>: <span class="value">Unexpected imagery/sound provokes panic.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Pop-ups/autoplay violent ads.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="121">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Parkinson’s Disease (cognitive) &gt; Huntington’s Disease (late stage) &gt; Alzheimer’s Disease (late stage)</span></li>
+      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Slowed decision-making and processing</span></li>
+      <li><span class="name">Context</span>: <span class="value">High-pressure timed decisions are overwhelming.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Timed web forms with strict countdowns.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="122">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Parkinson’s Disease &gt; Essential Tremor &gt; Arthritis</span></li>
+      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Difficulty with drag-and-drop</span></li>
+      <li><span class="name">Context</span>: <span class="value">User filling form with mouse</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Form builder only supports drag to reorder</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="123">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Partially Sighted &gt; Cataracts &gt; Presbyopia</span></li>
+      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Need large fonts</span></li>
+      <li><span class="name">Context</span>: <span class="value">User zooms browser</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Navigation bar overlaps content at 200% zoom</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="124">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Partially Sighted &gt; Keratoconus &gt; Presbyopia</span></li>
+      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Blurry or distorted text</span></li>
+      <li><span class="name">Context</span>: <span class="value">User enlarges font in browser</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Layout overlaps when text is scaled</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="125">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Partially Sighted &gt; Macular Degeneration &gt; Diabetic Retinopathy</span></li>
+      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Need high contrast and scaling</span></li>
+      <li><span class="name">Context</span>: <span class="value">User zooms browser to 200%</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Layout breaks when text is enlarged</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="126">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Photophobia (Migraine) &gt; Albinism &gt; Post-Concussion</span></li>
+      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Light sensitivity</span></li>
+      <li><span class="name">Context</span>: <span class="value">Bright designs can trigger pain.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Websites locked in high-brightness themes.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="127">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Photophobia &gt; Migraine &gt; Albinism</span></li>
+      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Sensitivity to bright light</span></li>
+      <li><span class="name">Context</span>: <span class="value">Bright designs can be painful.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">White-only themes without dark mode.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="128">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Photophobia &gt; Post-Concussion &gt; Migraine</span></li>
+      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Sensitivity to brightness</span></li>
+      <li><span class="name">Context</span>: <span class="value">User browsing in dark room</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Site locked in high-brightness white theme</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="129">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">PTSD (combat) &gt; Panic Disorder &gt; Autism (sensory overload)</span></li>
+      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Hyperarousal to triggers</span></li>
+      <li><span class="name">Context</span>: <span class="value">Loud or chaotic design elements cause distress.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Graphic autoplay ads with violence.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="130">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">PTSD &gt; Anxiety &gt; Obsessive-Compulsive Disorder</span></li>
+      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Triggers from graphic images</span></li>
+      <li><span class="name">Context</span>: <span class="value">User browsing health site</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Medical site autoloads graphic photos</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="131">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">PTSD &gt; Autism &gt; Sensory Processing Disorder</span></li>
+      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Sudden loud or chaotic content overwhelms</span></li>
+      <li><span class="name">Context</span>: <span class="value">Unexpected sensory load is harmful.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Sites with autoplay audio effects.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="132">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">PTSD &gt; Panic Disorder &gt; Social Anxiety</span></li>
+      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Triggered by surprise or stress-inducing design</span></li>
+      <li><span class="name">Context</span>: <span class="value">Unexpected elements can provoke panic.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Auto-playing horror or violent ads.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="133">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">PTSD &gt; Sensory Processing Disorder &gt; Anxiety</span></li>
+      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Triggered by sudden changes</span></li>
+      <li><span class="name">Context</span>: <span class="value">User reading news</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Pop-up video launches automatically at top</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="134">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Quadriplegia &gt; ALS &gt; Muscular Dystrophy</span></li>
+      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Limited hand movement</span></li>
+      <li><span class="name">Context</span>: <span class="value">User relies on switch or eye-tracking input</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Site requires rapid mouse hover menus</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="135">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Quadriplegia &gt; Muscular Dystrophy &gt; Spinal Muscular Atrophy</span></li>
+      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">No hand mobility</span></li>
+      <li><span class="name">Context</span>: <span class="value">User navigates by switch scanning</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Interactive map only works by dragging</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="136">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Repetitive Strain Injury &gt; Carpal Tunnel Syndrome &gt; Tendonitis</span></li>
+      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Limited repetitive input</span></li>
+      <li><span class="name">Context</span>: <span class="value">User avoids typing long fields</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Checkout requires full address every time</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="137">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Retinitis Pigmentosa &gt; Stargardt Disease &gt; Diabetic Retinopathy</span></li>
+      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Central or peripheral vision loss reducing visual field and detail recognition</span></li>
+      <li><span class="name">Context</span>: <span class="value">Users may not see important UI elements.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Navigation placed only in corners or peripheral regions.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="138">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Schizophrenia &gt; Bipolar Disorder &gt; Anxiety Disorder</span></li>
+      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Overload, difficulty filtering</span></li>
+      <li><span class="name">Context</span>: <span class="value">Too much input creates confusion/distress.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Pop-up heavy dashboards with competing information.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="139">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Sensory Processing Disorder &gt; ADHD &gt; Anxiety</span></li>
+      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Distracted by noise</span></li>
+      <li><span class="name">Context</span>: <span class="value">User working in public café</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Auto-play background music with no mute option</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="140">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Sensory Processing Disorder &gt; Autism &gt; Dyslexia</span></li>
+      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Requires calm interface</span></li>
+      <li><span class="name">Context</span>: <span class="value">User accessing school portal</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Loud colors and dense text increase cognitive load</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="141">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Sensory Processing Disorder &gt; Autism &gt; Migraine</span></li>
+      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Overload from flashing visuals</span></li>
+      <li><span class="name">Context</span>: <span class="value">User browsing homepage</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Animated carousel rotates with strobe-like effects</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="142">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Sickle Cell Disease &gt; Hemophilia &gt; Anemia</span></li>
+      <li><span class="name">Category</span>: <span class="value">Chronic Illness &amp; Fatigue</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Low stamina and health interruptions</span></li>
+      <li><span class="name">Context</span>: <span class="value">Users may need to stop suddenly.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Sites logging users out automatically during inactivity.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="143">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Social Anxiety &gt; Autism &gt; Selective Mutism</span></li>
+      <li><span class="name">Category</span>: <span class="value">Mental Health</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Fear of exposure in social interactions</span></li>
+      <li><span class="name">Context</span>: <span class="value">Chat-heavy sites can be overwhelming.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Websites forcing webcam or audio input.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="144">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Spinal Muscular Atrophy &gt; Muscular Dystrophy &gt; Multiple Sclerosis</span></li>
+      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Progressive muscle weakness</span></li>
+      <li><span class="name">Context</span>: <span class="value">Muscles weaken over time, making sustained typing/clicking exhausting.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Long scrolling pages with no skip links.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="145">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Stroke &gt; Parkinson’s Disease &gt; Multiple Sclerosis</span></li>
+      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Slowed motor response</span></li>
+      <li><span class="name">Context</span>: <span class="value">User fills out form carefully</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Form auto-advances after short timeout</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="146">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Stutter &gt; Nonverbal Autism &gt; Aphasia</span></li>
+      <li><span class="name">Category</span>: <span class="value">Speech &amp; Communication</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Slow or unreliable speech</span></li>
+      <li><span class="name">Context</span>: <span class="value">User attempts voice input</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Voice-only customer service chatbot</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="147">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Tinnitus &gt; Auditory Processing Disorder &gt; Aging Adults</span></li>
+      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Distracted by background noise</span></li>
+      <li><span class="name">Context</span>: <span class="value">User listens in café</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Autoplay background music interferes with comprehension</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="148">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Tourette Syndrome &gt; Parkinson’s Disease &gt; Essential Tremor</span></li>
+      <li><span class="name">Category</span>: <span class="value">Motor &amp; Physical Control</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Involuntary motor movements interfering with precise control</span></li>
+      <li><span class="name">Context</span>: <span class="value">Tremors or tics disrupt pointing and clicking.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Tiny buttons with no alternative input options.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="149">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Traumatic Brain Injury (noise triggers) &gt; PTSD &gt; Autism</span></li>
+      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Sensitivity to loud, sudden noise</span></li>
+      <li><span class="name">Context</span>: <span class="value">Unexpected sounds are distressing.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Websites with autoplay sound effects.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="150">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Traumatic Brain Injury &gt; Fibromyalgia Brain Fog &gt; Chemotherapy Cognitive Impairment</span></li>
+      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Reduced stamina and working memory</span></li>
+      <li><span class="name">Context</span>: <span class="value">Users lose track of form inputs.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Long online forms with no save button.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="151">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Traumatic Brain Injury &gt; Stroke &gt; Dementia</span></li>
+      <li><span class="name">Category</span>: <span class="value">Cognitive &amp; Memory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Struggle with sequences</span></li>
+      <li><span class="name">Context</span>: <span class="value">User loses place during login</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Multi-step authentication with no save state</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="152">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Tunnel Vision &gt; Retinitis Pigmentosa &gt; Hemianopia</span></li>
+      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Restricted visual field</span></li>
+      <li><span class="name">Context</span>: <span class="value">Seeing only part of the screen at once.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Critical navigation placed only at edges.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="153">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Unilateral Deafness &gt; Partial Hearing Loss &gt; Asymmetrical Hearing</span></li>
+      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Difficulty localizing sound</span></li>
+      <li><span class="name">Context</span>: <span class="value">Users can&#x27;t easily separate overlapping voices.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Voice-only support calls with no visual backup.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="154">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Unilateral Deafness &gt; Partial Hearing Loss &gt; Asymmetrical Hearing</span></li>
+      <li><span class="name">Category</span>: <span class="value">Hearing &amp; Auditory</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Localizing sound is difficult</span></li>
+      <li><span class="name">Context</span>: <span class="value">Users can&#x27;t easily separate overlapping voices.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Group calls with no speaker identification.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="155">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Usher Syndrome &gt; Macular Degeneration &gt; Glaucoma</span></li>
+      <li><span class="name">Category</span>: <span class="value">Vision &amp; Reading</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Gradual vision loss impacting navigation and reading</span></li>
+      <li><span class="name">Context</span>: <span class="value">Detail recognition degrades.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Small font sizes without zoom options.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="156">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Vestibular Disorder &gt; Ménière’s Disease &gt; Motion Sensitivity</span></li>
+      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Sensitivity to movement visuals</span></li>
+      <li><span class="name">Context</span>: <span class="value">Motion can cause nausea or dizziness.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Parallax scrolling backgrounds without toggle.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="157">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Vestibular Disorder &gt; Ménière’s Disease &gt; Motion Sensitivity</span></li>
+      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Motion and parallax cause nausea</span></li>
+      <li><span class="name">Context</span>: <span class="value">Moving content disorients users.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Sites with constant parallax scrolling.</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="158">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Vestibular Disorder &gt; Motion Sensitivity &gt; Migraines</span></li>
+      <li><span class="name">Category</span>: <span class="value">Sensory &amp; Environmental</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Nausea from parallax or motion</span></li>
+      <li><span class="name">Context</span>: <span class="value">User scrolling site</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Background parallax effects can’t be disabled</span></li>
+    </ul>
+  </article>
+  <article class="row" data-row-index="159">
+    <ul>
+      <li><span class="name">Solve for One Extend to Many</span>: <span class="value">Williams Syndrome &gt; Fragile X Syndrome &gt; Down Syndrome</span></li>
+      <li><span class="name">Category</span>: <span class="value">Developmental &amp; Learning</span></li>
+      <li><span class="name">Shared Limitation</span>: <span class="value">Slower pace of task processing</span></li>
+      <li><span class="name">Context</span>: <span class="value">More time needed for comprehension.</span></li>
+      <li><span class="name">Website Mismatch</span>: <span class="value">Time-limited quizzes/tests.</span></li>
+    </ul>
+  </article>
+</main>
+</body>
+</html>

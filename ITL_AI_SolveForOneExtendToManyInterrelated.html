@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Using AI to Recognizing Exclusion - Microsoft Inclusive Tech Lab</title>
+<title>Using AI for Solve for One, Extend to Many - Microsoft Inclusive Tech Lab</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" href="normalize.css">
 <link rel="stylesheet" href="qr.dark.css">
@@ -50,110 +50,80 @@ footer {padding-right:16%; padding-left:16%;}
 </g></svg>
 </header>
 <main>
-<h1>Using AI to Recognizing Exclusion</h1>
+<h1>Using AI for Solve for One, Extend to Many</h1>
 
-<blockquote><b><a href="https://medium.com/microsoft-design/inclusive-design-principles-77f7c5f639da">Microsoft Inclusive Design Principle: Recognize Exclusion</a></b><br>
-Exclusion happens when we solve problems using our own biases. As Microsoft designers, we seek out those exclusions, and use them as opportunities to create new ideas and inclusive designs. 
+<blockquote><b><a href="https://medium.com/microsoft-design/inclusive-design-principles-77f7c5f639da">Microsoft Inclusive Design Principle: Solve for One, Extend to Many</a></b><br>
+Everyone has abilities, and limits to those abilities. Designing for people with permanent disabilities actually results in designs that benefit people universally. Constraints are a beautiful thing. 
 </blockquote>
   
-<p>Use these prompts to brainstorm potential points of exclusion that people with disabilities may encounter. <b>The output is meant to guide you in identifying which disability groups to consider, and to help you plan respectful questions for research or co-design sessions.</b> These prompts are not a checklist of fixes. Treat any generative-AI output as a starting point, and always verify accuracy, context, and bias in collaboration with people with disabilities.</p>
+<p>These two prompts are designed to help you explore how to “solve for one, extend to many” by <b>examining the interrelated needs across different disabilities.</b> The output should start with rarer disabilities and work your way toward more common ones to uncover inclusive design opportunities. Treat any generative AI output as a starting point—not a final solution—and always validate accuracy, context, and potential bias in close collaboration with people with disabilities.</p>
 <p><b>TIPS:</b></p>
 <ul>
   <li>Paste these into your GenAI service of choice. Use GPT5 or equivalent if you can.</li>
   <li>If the first set of generated ideas isn't helpful, ask the AI to generate more options.</li>
-  <li>You can narrow the focus by asking it to explore a specific category, such as <strong>Perceivable</strong>, <strong>Operable</strong>, or <strong>Understandable</strong>.</li>
   <li>When you find options that resonate, request additional detail so the AI can explain the context of the disability and the type of exclusion more clearly.</li>
+  <li>Once you've gathered a strong set of examples, you can begin brainstorming possible solutions with AI. However, it's essential to validate these ideas with people with disabilities to ensure they are truly inclusive and effective.</li>
 </ul>
 
 <article aria-labelledby="art1Title">
-<h2 id="art1Title">Recognize Exclusions on Websites</h2>
+<h2 id="art1Title">Solve for One, Extend to Many with Websites</h2>
 <button class="copy-btn">Copy Prompt</button>
 <pre class="cdblk"><code>
-I am a web designer applying Microsoft Inclusive Design methods, specifically the principle of "recognize exclusion", to identify potential barriers in a website I'm designing.
+I am a web designer applying Microsoft Inclusive Design methods, specifically the principle of "Solve for One, Extend to Many", to identify potential barriers in a website I'm designing.
 
-**Goal:** Generate a list of at least 24 potential exclusions that users with disabilities or assistive technology mismatches might encounter when interacting with my website.
+**Goal:** Generate 6 structured examples of “Solve for One, Extend to Many” scenarios that highlight mismatches users with disabilities or assistive technologies may encounter when interacting with a wed design pattern. Each example should reflect on interrelated disabilities, specify the shared limitation, describe the user’s context, and identify the website mismatch.
 
 ## Context:
 
-* Step 1: You will first ask me to describe the website in detail. Do not provide more than 3 items of needed detail. 
+* Step 1: You will first ask me to describe a web interaction pattern in detail. When answered, move to Step 2.  
 * Step 2: Then, ask clarifying questions to fully understand its design, functionality, and intended audience. Do not provide more than 3 clarifying questions. 
 
 ## Sources:
 
-* Use the files [https://inclusivetechlab.github.io/web/ITL_AI-Inclusive-Design-Sprints_website_exclusions.html] and [https://inclusivetechlab.github.io/web/ITL_AI-Inclusive-Design-Sprints_icf_exclusions.html] as foundational references.
+* Use [https://inclusivetechlab.github.io/web/ITL_AI-Inclusive-Design-Sprints_website_solve_interrelated.html] as a foundational reference.
 * Supplement with deep research from inclusive design frameworks, heuristics, function classification frameworks, and WCAG guidelines.
 * don't over index on WCAG
 
 ## Expectations:
 
-Think deeply and return a list of 24+ exclusions, each formatted as follows:
+Think deeply and return a list of 6 diverse examples for the interaction patterm, each example must have exactly five name–value pairs, formatted exactly as shown. Do not use bullet points or tables — only this layout.
 
-* Title of the pattern
-* Description of the user action
-* Exclusion type: Perceivability, Operability, or Understandability
-* Explanation: Include the disability or assistive tech mismatch and describe the issue clearly. Don't use acronyms. Don't provide WCAG references.
+**Solve for One Extend to Many:** [Rare condition] → [Uncommon condition] → [Common condition]
+**Category:** [use category options from https://inclusivetechlab.github.io/web/ITL_AI-Inclusive-Design-Sprints_website_solve_interrelated.html]
+**Shared Limitation:** [concise but detailed phrase]
+**Context:** [user situation]
+**Website Mismatch:** [specific mismatch]
 
 Wait for my responses after each step before proceeding.
 </code></pre>
 </article>
 <article aria-labelledby="art2Title">
-<h2 id="art2Title">Recognize Exclusions in Mobile Apps</h2>
+<h2 id="art2Title">Solve for One, Extend to Many in Games</h2>
 <button class="copy-btn">Copy Prompt</button>
 <pre class="cdblk"><code>
-I am an app designer applying Microsoft Inclusive Design methods, specifically the principle of "recognize exclusion", to identify potential barriers in a mobile app I'm designing.
+I am a game designer applying Microsoft Inclusive Design methods, specifically the principle of "Solve for One, Extend to Many", to identify potential barriers in a game I'm designing.
 
-**Goal:** Generate a list of at least 24 potential exclusions that users with disabilities or assistive technology mismatches might encounter when interacting with my mobile app.
+**Goal:** Generate 6 structured examples of “Solve for One, Extend to Many” scenarios that highlight mismatches users with disabilities or assistive technologies may encounter when interacting with a game design pattern. Each example should reflect on interrelated disabilities, specify the shared limitation, describe the user’s context, and identify the game design mismatch.
 
 ## Context:
 
-* Step 1: You will first ask me to describe the mobile app in detail. Do not provide more than 3 items of needed detail. 
+* Step 1: You will first ask me to describe a game design pattern in detail. When answered, move to Step 2.  
 * Step 2: Then, ask clarifying questions to fully understand its design, functionality, and intended audience. Do not provide more than 3 clarifying questions. 
 
 ## Sources:
 
-* Use the files [https://inclusivetechlab.github.io/web/ITL_AI-Inclusive-Design-Sprints_mobile_exclusions.html] and [https://inclusivetechlab.github.io/web/ITL_AI-Inclusive-Design-Sprints_website_exclusions.html] and [https://inclusivetechlab.github.io/web/ITL_AI-Inclusive-Design-Sprints_icf_exclusions.html] as foundational references.
-* Supplement with deep research from inclusive design frameworks, heuristics, function classification frameworks, and WCAG guidelines.
-* don't over index on WCAG
+* Use [https://inclusivetechlab.github.io/web/ITL_AI-Inclusive-Design-Sprints_games_solve_interrelated.html] as a foundational reference.
+* Supplement with deep research from inclusive design frameworks, heuristics, function classification frameworks, and the Gaming Accessibility Guidelines
 
 ## Expectations:
 
-Think deeply and return a list of 24+ exclusions, each formatted as follows:
+Think deeply and return a list of 6 diverse examples for the interaction patterm, each example must have exactly five name–value pairs, formatted exactly as shown. Do not use bullet points or tables — only this layout.
 
-* Title of the pattern
-* Description of the user action
-* Exclusion type: Perceivability, Operability, or Understandability
-* Explanation: Include the disability or assistive tech mismatch and describe the issue clearly. Don't use acronyms. Don't provide WCAG references.
-
-Wait for my responses after each step before proceeding.
-</code></pre>
-</article>
-<article aria-labelledby="art3Title">
-<h2 id="art3Title">Recognize Exclusions in Games</h2>
-<button class="copy-btn">Copy Prompt</button> 
-<pre class="cdblk"><code>
-I am a game designer applying Microsoft Inclusive Design methods, specifically the principle of "recognize exclusion", to identify potential barriers in a game I'm designing.
-
-**Goal:** Generate a list of at least 24 potential exclusions that users with disabilities or assistive technology mismatches might encounter when interacting with my game.
-
-## Context:
-
-* Step 1: You will first ask me to describe the game concept in detail. Do not provide more than 3 items of needed detail. 
-* Step 2: Then, ask clarifying questions to fully understand its design, functionality, and intended audience. Do not provide more than 3 clarifying questions. 
-
-## Sources:
-
-* Use the files [https://inclusivetechlab.github.io/web/ITL_AI-Inclusive-Design-Sprints_video_game_exclusions.html] and [https://inclusivetechlab.github.io/web/ITL_AI-Inclusive-Design-Sprints_icf_exclusions.html] as foundational references.
-* Supplement with deep research from inclusive design frameworks, heuristics, function classification frameworks, and game accessibility guidelines.
-
-
-## Expectations:
-
-Think deeply and return a list of 24+ exclusions, each formatted as follows:
-
-* Title of the pattern
-* Description of the user action
-* Exclusion type: Perceivability, Operability, or Understandability
-* Explanation: Include the disability or assistive tech mismatch and describe the issue clearly. Don't use acronyms.
+**Solve for One Extend to Many:** [Rare condition] → [Uncommon condition] → [Common condition]
+**Category:** [use category options from https://inclusivetechlab.github.io/web/ITL_AI-Inclusive-Design-Sprints_website_solve_interrelated.html]
+**Shared Limitation:** [concise but detailed phrase]
+**Context:** [user situation]
+**Game Mismatch:** [specific mismatch]
 
 Wait for my responses after each step before proceeding.
 </code></pre>
@@ -193,6 +163,25 @@ Wait for my responses after each step before proceeding.
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

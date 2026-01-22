@@ -5,6 +5,7 @@ header {padding: 1.5rem 5% 1.5rem 5%; display:block; background:#333;}
 main {padding: 0.5rem 5%; display:block; background:#111;}
 footer {padding: 0rem 5% 2rem 5%;}
 p, li { word-spacing: 0.35rem; line-height:1.4rem;}
+li {padding-left: 1.5rem;}
 a {text-decoration:none; font-weight:bold; border-bottom:1px dashed #aaa; letter-spacing:.08rem;}
 a:link {color:#7af;}
 a:visited {color:#ccc;}

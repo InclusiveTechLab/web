@@ -54,26 +54,6 @@ body {
   line-height: 1.6;
 }
 
-/* Skip navigation link */
-.skip-link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 8px 16px;
-  background: var(--canvas);
-  color: var(--accent);
-  font-family: var(--font);
-  font-size: 0.875rem;
-  font-weight: 600;
-  border: 2px solid var(--accent);
-  border-radius: var(--radius);
-  text-decoration: none;
-  transform: translateY(-100%);
-  transition: transform 0.15s ease;
-  z-index: 100;
-}
-.skip-link:focus { transform: translateY(0); }
-
 /* Global focus indicator (WCAG 2.4.12/13 AAA) */
 :focus-visible {
   outline: 3px solid var(--accent);
@@ -208,16 +188,48 @@ th {
 }
 tr:nth-child(2n) td { background: var(--canvas-subtle); }
 td a { word-break: break-all; }
+
+/* Video embed */
+.video-wrapper {
+  margin: 1.5em 0;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #000;
+}
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+figcaption {
+  font-size: 0.875rem;
+  color: var(--fg-muted);
+  margin-top: 0.4em;
+}
 </style>
 </head>
 <body>
-<a href="#main-content" class="skip-link">Skip to main content</a>
 <main id="main-content">
 <h1>Session 4: ATIA Recap &amp; Informal Conversation – Reflections, Takeaways, and What Stuck With Us</h1>
 <p><strong>Date:</strong> Friday, March 27, 2026</p>
 <p><strong>Time:</strong> 3:30–5:15 PM</p>
 <h2>Summary</h2>
 <p>This informal, conversational session brought together AT specialists, SLPs, OTs, educators, researchers, and Microsoft staff to share personal reflections from ATIA 2026, discuss the state of AI in education and AT, explore conference culture, and surface ideas around transition, regional collaboration, and community building. The tone was candid, collegial, and wide-ranging.</p>
+<figure aria-label="Session recording video">
+<div class="video-wrapper">
+<iframe
+  src="https://www.youtube-nocookie.com/embed/sDrqEIHMikA"
+  title="Session 4: ATIA Recap &amp; Informal Conversation – Reflections, Takeaways, and What Stuck With Us"
+  loading="lazy"
+  allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen></iframe>
+</div>
+<figcaption>Session 4 recording — ATIA Recap &amp; Informal Conversation – Reflections, Takeaways, and What Stuck With Us</figcaption>
+</figure>
 <h2>Thematic Breakdown</h2>
 
 <h3><button type="button" aria-expanded="false" aria-controls="section-1-content" id="section-1-btn">1: ATIA Conference Reflections<span aria-hidden="true" class="disclosure-icon"></span></button></h3>

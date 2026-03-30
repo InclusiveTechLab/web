@@ -54,25 +54,6 @@ body {
   line-height: 1.6;
 }
 
-/* Skip navigation link */
-.skip-link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 8px 16px;
-  background: var(--canvas);
-  color: var(--accent);
-  font-family: var(--font);
-  font-size: 0.875rem;
-  font-weight: 600;
-  border: 2px solid var(--accent);
-  border-radius: var(--radius);
-  text-decoration: none;
-  transform: translateY(-100%);
-  transition: transform 0.15s ease;
-  z-index: 100;
-}
-.skip-link:focus { transform: translateY(0); }
 
 /* Global focus indicator (WCAG 2.4.12/13 AAA) */
 :focus-visible {
@@ -225,7 +206,6 @@ figcaption {
 </style>
 </head>
 <body>
-<a href="#main-content" class="skip-link">Skip to main content</a>
 <main id="main-content">
 <h1>Session 1: Remote Inclusive Tech Lab Tour for Educators — Inclusive Technology in Practice</h1>
 <p><strong>Date:</strong> Friday, March 27, 2026</p>
@@ -243,7 +223,7 @@ figcaption {
 </div>
 <figcaption>Session 1 recording — Remote Inclusive Tech Lab Tour for Educators</figcaption>
 </figure>
-<h2>Thematic Breakdown</h2>
+<h2   >Thematic Breakdown</h2>
 
 <h3><button type="button" aria-expanded="false" aria-controls="section-1-content" id="section-1-btn">1: The Inclusive Design Methodology<span aria-hidden="true" class="disclosure-icon"></span></button></h3>
 <div id="section-1-content" role="region" aria-labelledby="section-1-btn" hidden>

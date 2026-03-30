@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<title>Session 3: Built In Accessibility as Instructional Infrastructure Literacy, Security, and Scalable Support Across Schools</title>
+<style>
+:root {
+  --fg: #1f2328;
+  --fg-muted: #1a1e23;
+  --canvas: #ffffff;
+  --canvas-subtle: #f6f8fa;
+  --border: #d0d7de;
+  --accent: #0550ae;
+  --accent-hover: #033d8b;
+  --btn-bg: #f6f8fa;
+  --btn-hover: #eaeef2;
+  --radius: 6px;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fg: #e6edf3;
+    --fg-muted: #c9d1d9;
+    --canvas: #0d1117;
+    --canvas-subtle: #161b22;
+    --border: #30363d;
+    --accent: #79c0ff;
+    --accent-hover: #a5d6ff;
+    --btn-bg: #21262d;
+    --btn-hover: #30363d;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 24px 16px 64px;
+  background: var(--canvas);
+  color: var(--fg);
+  font-family: var(--font);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Skip navigation link */
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 8px 16px;
+  background: var(--canvas);
+  color: var(--accent);
+  font-family: var(--font);
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 2px solid var(--accent);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transform: translateY(-100%);
+  transition: transform 0.15s ease;
+  z-index: 100;
+}
+.skip-link:focus { transform: translateY(0); }
+
+/* Global focus indicator (WCAG 2.4.12/13 AAA) */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+:focus:not(:focus-visible) { outline: none; }
+
+main {
+  max-width: 1012px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--fg);
+}
+h1 {
+  font-size: 2rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.4em;
+  margin-top: 0;
+}
+h2 {
+  font-size: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.3em;
+}
+h3 { font-size: 1.125rem; margin: 0.75em 0 0; }
+
+p { margin: 0.75em 0; }
+ul { padding-left: 1.5em; margin: 0.5em 0; }
+li { margin: 0.35em 0; }
+
+a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+a:hover { color: var(--accent-hover); }
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background: var(--canvas-subtle);
+  padding: 0.2em 0.4em;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+blockquote {
+  margin: 0.75em 0;
+  padding: 0 1em;
+  border-left: 4px solid var(--border);
+  color: var(--fg-muted);
+}
+blockquote p { margin: 0.5em 0; }
+
+/* Disclosure button — wraps H3 text */
+h3 button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--btn-bg);
+  color: var(--fg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-family: var(--font);
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.1s ease, border-color 0.1s ease;
+}
+h3 button:hover {
+  background: var(--btn-hover);
+  border-color: var(--accent);
+}
+h3 button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Chevron indicator */
+.disclosure-icon {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+  margin-right: 2px;
+}
+h3 button[aria-expanded="true"] .disclosure-icon {
+  transform: rotate(135deg);
+}
+
+/* Collapsible content region */
+[role="region"] {
+  padding: 14px 16px 16px;
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 var(--radius) var(--radius);
+  background: var(--canvas);
+}
+[role="region"] > *:first-child { margin-top: 0; }
+[role="region"] > *:last-child { margin-bottom: 0; }
+
+/* Table */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.9375rem;
+  overflow-x: auto;
+  display: block;
+}
+thead { position: sticky; top: 0; }
+th, td {
+  padding: 8px 13px;
+  border: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  background: var(--canvas-subtle);
+  font-weight: 600;
+}
+tr:nth-child(2n) td { background: var(--canvas-subtle); }
+td a { word-break: break-all; }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<main id="main-content">
+<h1>Session 3: Built In Accessibility as Instructional Infrastructure Literacy, Security, and Scalable Support Across Schools</h1>
+<p><strong>Date:</strong> Friday, March 27, 2026</p>
+<p><strong>Time:</strong> ~2:15 PM – 3:35 PM</p>
+<h2>Summary</h2>
+<p>This session was a roundtable discussion hosted by Bryce Johnson as part of the <em>Assistive Technology – Statewide Day of Learning @ Microsoft</em> event. The conversation centered on how built-in Microsoft accessibility tools are—and aren't—working for K–12 students and educators, with particular focus on scalability, security friction, tool consistency, and the gap between adult-oriented design and student needs. Melissa Hart from Everway (formerly TextHelp) also participated, opening a broader dialogue about Microsoft–third-party tool partnerships.</p>
+<h2>Thematic Breakdown</h2>
+
+<h3><button type="button" aria-expanded="false" aria-controls="section-1-content" id="section-1-btn">1: Products Built for Offices, Not Classrooms<span aria-hidden="true" class="disclosure-icon"></span></button></h3>
+<div id="section-1-content" role="region" aria-labelledby="section-1-btn" hidden>
+<p>Bryce Johnson framed the central tension of the session: Microsoft products are called "Office," not "Classroom." Tools designed for adult professionals often create friction when applied in educational settings, particularly for younger students still developing motor skills, executive function, and basic device literacy. Participants echoed this, noting that tools must be developmentally scaffolded — appropriate for young learners and growing in sophistication as students age.</p>
+<blockquote>
+<p>*"The products that we make are called Office, not classroom. And that simple point of view of trying to take something that was made for one place and trying to shove it in another place might cause some friction."*</p>
+<p>— Bryce Johnson</p>
+</blockquote>
+</div>
+
+<h3><button type="button" aria-expanded="false" aria-controls="section-2-content" id="section-2-btn">2: Developmental Appropriateness &amp; Access Barriers<span aria-hidden="true" class="disclosure-icon"></span></button></h3>
+<div id="section-2-content" role="region" aria-labelledby="section-2-btn" hidden>
+<p>Pielemeier, Jasmine highlighted that many students are learning to use a device for the very first time — figuring out trackpads, motor planning, and navigation layers — making even well-designed tools inaccessible in practice. Connolly, Amy added that scaling individual AT relationships into large district systems is a fundamentally different challenge than one-on-one clinical work.</p>
+<p><strong>Specific issues raised:</strong></p>
+<ul>
+<li>Young students' first devices are often iPhones/iPads, making Windows environments a re-learning experience</li>
+<li>Tools that require multiple navigation layers are prohibitive for students with executive functioning challenges</li>
+<li>Systematic instruction in any digital tool is needed but often absent — even typing is rarely taught explicitly</li>
+</ul>
+</div>
+
+<h3><button type="button" aria-expanded="false" aria-controls="section-3-content" id="section-3-btn">3: Security as a Barrier to Tool Access<span aria-hidden="true" class="disclosure-icon"></span></button></h3>
+<div id="section-3-content" role="region" aria-labelledby="section-3-btn" hidden>
+<p>This was a major thread of the discussion. Multiple districts described how IT security policies — particularly restrictions on browser extensions — are blocking student and staff access to third-party AT tools like Read&amp;Write.</p>
+<p><strong>Key points:</strong></p>
+<ul>
+<li><strong>Bellevue SD</strong> (Havanec, Allison R): Cannot allow open extensions for students; the Highline data breach (attributed to a compromised extension) has heightened district caution</li>
+<li><strong>Kent SD</strong> (Pielemeier, Jasmine): Has the extension but students primarily work in the Word desktop app, where Read&amp;Write features are less robust — requiring two tools, defeating the purpose of a unified access point</li>
+<li><strong>Bellingham SD</strong> (Connolly, Amy): Achieved auto-enrollment of the extension for a licensed group only within the last year — a barrier she expected to be resolved years earlier; resistance is now rooted in privacy/security concerns, not cost</li>
+<li><strong>Spokane Public Schools</strong> (Laura Hamilton): Access similarly blocked</li>
+<li><strong>LWSD</strong> (Taylor Phu): "Almost no extensions, period"</li>
+</ul>
+<p>Bryce Johnson acknowledged Microsoft's "security first" mandate from leadership but emphasized that security shouldn't require unnecessary friction for end users. He floated the idea of a <strong>Microsoft or OSPI "stamp of approval"</strong> for vetted AT tools — a pre-reviewed trusted list that districts could adopt without conducting individual reviews per device.</p>
+</div>
+
+<h3><button type="button" aria-expanded="false" aria-controls="section-4-content" id="section-4-btn">4: Licensing, Implementation &amp; Adoption Gaps<span aria-hidden="true" class="disclosure-icon"></span></button></h3>
+<div id="section-4-content" role="region" aria-labelledby="section-4-btn" hidden>
+<p>Beyond security, licensing models themselves create access inequities:</p>
+<ul>
+<li>Group licenses (vs. domain-wide) mean that only some staff/students know the tool exists and can request it</li>
+<li>Read&amp;Write implementation suffers when it is perceived as optional rather than universal</li>
+<li>Kent SD faces a dual-email-address problem: staff sign up with one email but auto-login uses another, requiring manual account merging for every user</li>
+</ul>
+<p>New staff mid-year often have no awareness of available tools</p>
+<p><strong>Connolly, Amy's suggestion:</strong> Auto-enroll users via group email lists imported through the licensing portal — a workaround that has helped Bellingham significantly.</p>
+</div>
+
+<h3><button type="button" aria-expanded="false" aria-controls="section-5-content" id="section-5-btn">5: Immersive Reader: Stagnation Concerns<span aria-hidden="true" class="disclosure-icon"></span></button></h3>
+<div id="section-5-content" role="region" aria-labelledby="section-5-btn" hidden>
+<p>Havanec, Allison R raised concerns that Immersive Reader appears to be losing features (e.g., picture dictionary) rather than gaining them, with less active development visible in recent years. Participants expressed frustration with:</p>
+<ul>
+<li>The tool opening in a separate window/frame, pulling students out of context (especially problematic when referencing images or teacher notes)</li>
+<li>Inconsistent availability across Teams, Edge, and other surfaces — sometimes present, sometimes not, with no clear explanation</li>
+<li>Lack of official, dated documentation of feature changes — educators rely on community-made YouTube videos to stay current</li>
+</ul>
+<p><strong>Bryce Johnson's response:</strong> Acknowledged the feedback, noted Immersive Reader and Edge are managed by separate teams, and committed to bringing these concerns back. He agreed the tool "could use a refresh" and noted the Chrome Reading Mode's split-screen approach as a model worth considering.</p>
+<p><strong>Requests made to Bryce:</strong></p>
+<ul>
+<li>Internal, up-to-date documentation on Immersive Reader feature evolution</li>
+<li>A feature comparison table (desktop vs. M365 browser) — dated and maintained</li>
+<li>Proactive update notes when features change (similar to phone OS update summaries)</li>
+</ul>
+</div>
+
+<h3><button type="button" aria-expanded="false" aria-controls="section-6-content" id="section-6-btn">6: Dictation, Word Prediction &amp; Fluid Dictation<span aria-hidden="true" class="disclosure-icon"></span></button></h3>
+<div id="section-6-content" role="region" aria-labelledby="section-6-btn" hidden>
+<p>Connolly, Amy celebrated <strong>Win+H</strong> (Windows dictation) as a universal, scalable tool — it works across all apps and contexts, making it teachable at the district level. Pielemeier, Jasmine agreed it has been a significant change for students.</p>
+<p>Bryce Johnson introduced <strong>Fluid Dictation</strong> (available on Copilot+ PCs) — AI-powered local dictation that auto-corrects, removes filler words, and improves accuracy via on-device language models. He acknowledged that autocomplete/word prediction in Microsoft tools is less robust than expected, particularly for high-context educational scenarios (e.g., geology vocabulary for a student report).</p>
+<p>Andrea Mano raised a concern about Dictate in <strong>Office Pro vs. M365</strong> — noting that Dictate (previously available in a Garage beta) is now M365-only, leaving DO-IT Scholars who use Office Pro without access. Bryce Johnson pointed to Win+H as an alternative.</p>
+</div>
+
+<h3><button type="button" aria-expanded="false" aria-controls="section-7-content" id="section-7-btn">7: Tool Continuity: From School to Post-Secondary Life<span aria-hidden="true" class="disclosure-icon"></span></button></h3>
+<div id="section-7-content" role="region" aria-labelledby="section-7-btn" hidden>
+<p>Paige, Shannon raised the transition cliff: students build skills with school-licensed AT tools, but those licenses don't follow them after graduation. The goal of building lifelong skills is undermined when the tools are only available within the school ecosystem. This connected to Havanec, Allison R's earlier observation that embedding tools in products like Office — rather than requiring specialized standalone apps — gives students continuity into the workplace.</p>
+</div>
+
+<h3><button type="button" aria-expanded="false" aria-controls="section-8-content" id="section-8-btn">8: Microsoft × Everway Partnership Opportunity<span aria-hidden="true" class="disclosure-icon"></span></button></h3>
+<div id="section-8-content" role="region" aria-labelledby="section-8-btn" hidden>
+<p>Connolly, Amy called for a formal partnership between Microsoft and Everway to address the gap in documentation and integration guidance for Windows users of Read&amp;Write. Currently, most guidance is grassroots and incomplete. Melissa Hart expressed enthusiasm and committed to sharing documentation on desktop vs. browser functionality and enrollment tips.</p>
+</div>
+
+<h3><button type="button" aria-expanded="false" aria-controls="section-9-content" id="section-9-btn">9: ADA Title II Compliance as a Driver<span aria-hidden="true" class="disclosure-icon"></span></button></h3>
+<div id="section-9-content" role="region" aria-labelledby="section-9-btn" hidden>
+<p>Connolly, Amy highlighted that <strong>ADA Title II</strong> changes require school districts to ensure all curriculum is accessible — with compliance deadlines of April 2026 or 2027 depending on district size. This is beginning to drive accessibility language into vendor contracts, which could be a structural lever for improving third-party tool accessibility standards over time.</p>
+</div>
+
+<h3><button type="button" aria-expanded="false" aria-controls="section-10-content" id="section-10-btn">10: Action Items &amp; Follow-Ups<span aria-hidden="true" class="disclosure-icon"></span></button></h3>
+<div id="section-10-content" role="region" aria-labelledby="section-10-btn" hidden>
+<table>
+<thead>
+<tr>
+<th scope="col">Owner</th>
+<th scope="col">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bryce Johnson</td>
+<td>Bring Immersive Reader feature regression concerns to the Immersive Reader team</td>
+</tr>
+<tr>
+<td>Bryce Johnson</td>
+<td>Explore feasibility of OSPI/Microsoft "stamp of approval" for vetted AT tools</td>
+</tr>
+<tr>
+<td>Bryce Johnson</td>
+<td>Request internal, dated documentation on Immersive Reader feature evolution</td>
+</tr>
+<tr>
+<td>Bryce Johnson</td>
+<td>Follow up with Andrea Mano on Dictate (Office Pro vs. M365)</td>
+</tr>
+<tr>
+<td>Bryce Johnson</td>
+<td>Take Narrator + word prediction integration request back to his team</td>
+</tr>
+<tr>
+<td>Melissa Hart / Everway</td>
+<td>Share documentation on Read&amp;Write desktop vs. browser functionality and enrollment workarounds</td>
+</tr>
+<tr>
+<td>Connolly, Amy</td>
+<td>Explore group email list import as a workaround for Kent SD's dual-account issue</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</main>
+<script>
+(function () {
+  'use strict';
+  document.querySelectorAll('h3 button[aria-controls]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      document.getElementById(btn.getAttribute('aria-controls')).hidden = expanded;
+    });
+  });
+}());
+</script>
+</body>
+</html>

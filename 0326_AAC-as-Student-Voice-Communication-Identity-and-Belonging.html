@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<title>Session 2: AAC as Student Voice: Communication, Identity, and Belonging in Schools</title>
+<style>
+:root {
+  --fg: #1f2328;
+  --fg-muted: #1a1e23;
+  --canvas: #ffffff;
+  --canvas-subtle: #f6f8fa;
+  --border: #d0d7de;
+  --accent: #0550ae;
+  --accent-hover: #033d8b;
+  --btn-bg: #f6f8fa;
+  --btn-hover: #eaeef2;
+  --radius: 6px;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fg: #e6edf3;
+    --fg-muted: #c9d1d9;
+    --canvas: #0d1117;
+    --canvas-subtle: #161b22;
+    --border: #30363d;
+    --accent: #79c0ff;
+    --accent-hover: #a5d6ff;
+    --btn-bg: #21262d;
+    --btn-hover: #30363d;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 24px 16px 64px;
+  background: var(--canvas);
+  color: var(--fg);
+  font-family: var(--font);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Skip navigation link */
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 8px 16px;
+  background: var(--canvas);
+  color: var(--accent);
+  font-family: var(--font);
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 2px solid var(--accent);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transform: translateY(-100%);
+  transition: transform 0.15s ease;
+  z-index: 100;
+}
+.skip-link:focus { transform: translateY(0); }
+
+/* Global focus indicator (WCAG 2.4.12/13 AAA) */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+:focus:not(:focus-visible) { outline: none; }
+
+main {
+  max-width: 1012px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--fg);
+}
+h1 {
+  font-size: 2rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.4em;
+  margin-top: 0;
+}
+h2 {
+  font-size: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.3em;
+}
+h3 { font-size: 1.125rem; margin: 0.75em 0 0; }
+
+p { margin: 0.75em 0; }
+ul { padding-left: 1.5em; margin: 0.5em 0; }
+li { margin: 0.35em 0; }
+
+a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+a:hover { color: var(--accent-hover); }
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background: var(--canvas-subtle);
+  padding: 0.2em 0.4em;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+/* Disclosure button — wraps H3 text */
+h3 button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--btn-bg);
+  color: var(--fg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-family: var(--font);
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.1s ease, border-color 0.1s ease;
+}
+h3 button:hover {
+  background: var(--btn-hover);
+  border-color: var(--accent);
+}
+h3 button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Chevron indicator */
+.disclosure-icon {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+  margin-right: 2px;
+}
+h3 button[aria-expanded="true"] .disclosure-icon {
+  transform: rotate(135deg);
+}
+
+/* Collapsible content region */
+[role="region"] {
+  padding: 14px 16px 16px;
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 var(--radius) var(--radius);
+  background: var(--canvas);
+}
+[role="region"] > *:first-child { margin-top: 0; }
+[role="region"] > *:last-child { margin-bottom: 0; }
+
+/* Table */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.9375rem;
+  overflow-x: auto;
+  display: block;
+}
+thead { position: sticky; top: 0; }
+th, td {
+  padding: 8px 13px;
+  border: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  background: var(--canvas-subtle);
+  font-weight: 600;
+}
+tr:nth-child(2n) td { background: var(--canvas-subtle); }
+td a { word-break: break-all; }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<main id="main-content">
+<h1>Session 2: AAC as Student Voice: Communication, Identity, and Belonging in Schools</h1>
+<p><strong>Date:</strong> Friday, March 27, 2026</p>
+<p><strong>Time:</strong> 12:30–1:51 PM</p>
+<h2>Summary</h2>
+<p>This session was a candid, practitioner-led conversation about AAC in K–12 school settings, focusing on where Microsoft and Windows can better support AAC users, the role of AI in AAC, district IT barriers, symbol systems, and the future of communication technology. Bryce framed it as a listening session — not a sales pitch — to understand real challenges and identify where Microsoft can meaningfully contribute.</p>
+<h2>Thematic Breakdown</h2>
+
+<h3><button type="button" aria-expanded="false" aria-controls="section-1-content" id="section-1-btn">1: AAC on Windows — Gaps &amp; Opportunities<span aria-hidden="true" class="disclosure-icon"></span></button></h3>
+<div id="section-1-content" role="region" aria-labelledby="section-1-btn" hidden>
+<ul>
+<li>Districts like Bellevue are <strong>Microsoft 1:1 device districts</strong> but consistently maintain ~1% iPads for AAC — a systemic tension Bryce named directly with leadership.</li>
+<li><strong>Ali Havanec</strong> identified a critical unmet need: tier 1 and tier 2 AAC support on Windows devices, so all students — not just those qualifying for special ed — can access communication tools. She cited <strong>FlexSpeak</strong> as an example of a tool she'd love to see Microsoft acquire or integrate.</li>
+<li><strong>Bryce</strong> pointed to <strong>Cboard</strong> (Windows Store, free tier) as an existing option, though participants noted it is no longer fully free and has limitations.</li>
+<li>Microsoft currently funds <strong>Cboard's AI development via Azure AI credits</strong>.</li>
+<li><strong>Leslie Rytel</strong> highlighted the value of <strong>embedded symbol support</strong> across Microsoft products (Word, Teams, captions) — not just a standalone AAC app — as a high-impact, lower-barrier entry point.</li>
+<li><strong>Boardmaker symbols</strong> are currently licensed within <strong>Immersive Reader</strong> only; broader integration was flagged as desirable.</li>
+</ul>
+</div>
+
+<h3><button type="button" aria-expanded="false" aria-controls="section-2-content" id="section-2-btn">2: AAC Tiers Explained (Heidi Brislin)<span aria-hidden="true" class="disclosure-icon"></span></button></h3>
+<div id="section-2-content" role="region" aria-labelledby="section-2-btn" hidden>
+<table>
+<thead>
+<tr>
+<th scope="col">Tier</th>
+<th scope="col">Description</th>
+<th scope="col">Example in Edmonds SD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tier 1</td>
+<td>Universal, available to all students</td>
+<td>Core communication board in 6 languages</td>
+</tr>
+<tr>
+<td>Tier 2</td>
+<td>iPad + communication app for students with identified needs</td>
+<td>TouchChat as district standard</td>
+</tr>
+<tr>
+<td>Tier 3</td>
+<td>Dedicated, complex system with alternative access (eye gaze, switches)</td>
+<td>Individualized SGDs</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h3><button type="button" aria-expanded="false" aria-controls="section-3-content" id="section-3-btn">3: AAC in Remote &amp; Online Environments<span aria-hidden="true" class="disclosure-icon"></span></button></h3>
+<div id="section-3-content" role="region" aria-labelledby="section-3-btn" hidden>
+<ul>
+<li><strong>Taylor Phu</strong> described using Teams during COVID as the primary bridge for AAC users to communicate with therapists — but noted that AAC devices need to remain <strong>dedicated to communication</strong>, separate from the academic device.</li>
+<li>Desire for an <strong>AAC app that floats as a persistent overlay</strong> on Windows (like an on-screen keyboard) so students can work and communicate simultaneously.</li>
+<li><strong>Leslie</strong> noted AAC users struggle in Teams calls because communication partners can't see when they're composing — requesting a visual "typing indicator" for AAC users in Teams.</li>
+</ul>
+</div>
+
+<h3><button type="button" aria-expanded="false" aria-controls="section-4-content" id="section-4-btn">4: Symbol Systems — What Matters and Why<span aria-hidden="true" class="disclosure-icon"></span></button></h3>
+<div id="section-4-content" role="region" aria-labelledby="section-4-btn" hidden>
+<ul>
+<li><strong>SymbolStix</strong> and <strong>Boardmaker</strong> are preferred largely because they <strong>cross multiple AAC apps</strong>, giving students consistency across devices and settings.</li>
+<li><strong>Ali</strong> (citing Janice Light's research at Penn State) noted that symbol guessability is often poor — kids frequently can't identify what a symbol means without training. <strong>Consistency of use</strong> is what makes a symbol system valuable, not inherent quality.</li>
+<li><strong>Heidi</strong> cited Karen Erickson and David Koppenhaver: symbols used for reading/writing <strong>slow down literacy development</strong> — letters are the more evidence-based support for reading/writing. Symbols are most appropriate for supporting fast, efficient communication.</li>
+<li><strong>Sara Ayars</strong> added: some literate autistic adults still prefer symbols — <strong>preference must always be honored</strong>.</li>
+<li><strong>Global Symbols</strong> was highlighted as an AI-integrated symbol set enabling culturally customized symbol generation via prompts.</li>
+<li>Cultural representation in symbols remains a gap — skin tones and cultural contexts are often inaccurate or non-representative.</li>
+</ul>
+</div>
+
+<h3><button type="button" aria-expanded="false" aria-controls="section-5-content" id="section-5-btn">5: AI in AAC — Promise and District Barriers<span aria-hidden="true" class="disclosure-icon"></span></button></h3>
+<div id="section-5-content" role="region" aria-labelledby="section-5-btn" hidden>
+<ul>
+<li><strong>Sara Ayars</strong> returned from ATIA excited about AI in AAC but found it was a <strong>non-starter for district IT</strong>, even for locally-stored AI.</li>
+<li><strong>Ali</strong> described a months-long effort to get <strong>Grid 3</strong> approved in Bellevue SD — blocked specifically because of <strong>OpenAI integration</strong> and offshore data storage. Districts have approved Copilot, Colleague AI, and Magic School AI, but are very selective.</li>
+<li><strong>Chris Gibbons (Smartbox/Grid)</strong> shared that Grid has an <strong>AI ethics policy</strong> and an opt-in toggle — but districts don't trust user-level toggles; they want <strong>district-level MDM control</strong> (e.g., via Jamf).</li>
+<li><strong>Leslie</strong> suggested: if AI were embedded in a <strong>district-approved tool</strong> (e.g., Colleague AI), the approval path might be smoother.</li>
+<li><strong>Bryce</strong> noted that much of Microsoft's Windows AI is <strong>local/on-device</strong>, not cloud-based — Surface Pro can run GPT-4-class models locally — and suggested this could ease district privacy concerns significantly.</li>
+<li><strong>Allison</strong> raised the need for <strong>communication partner training</strong> alongside AI tools — especially for paraprofessionals — to ensure authentic authorship for AAC users.</li>
+</ul>
+</div>
+
+<h3><button type="button" aria-expanded="false" aria-controls="section-6-content" id="section-6-btn">6: Innovative AI + AAC Examples Shared<span aria-hidden="true" class="disclosure-icon"></span></button></h3>
+<div id="section-6-content" role="region" aria-labelledby="section-6-btn" hidden>
+<ul>
+<li><strong>Kate Glazko</strong> (UW PhD, HCI): Building an <strong>agentic AI tool</strong> that validates AAC symbol accuracy and braille output using a university-controlled, locally-hosted AI model — potential for a Copilot partnership with university oversight.</li>
+<li><strong>Tobias Weinberg</strong> (Cornell PhD, AAC user): Paper — <em>"Why So Serious? Exploring Timely Humorous Comments in AAC through AI-powered Interfaces"</em> — live demo of AI-powered real-time humor generation for AAC users. Website: TOBIWG.com.</li>
+<li><strong>Jutta Treviranus</strong> (OCAD University): Working on AAC built from Amazon Fire tablets using <strong>local AI + Bliss Symbolics</strong> — exploring nonlinear, non-English language models for low-cost global AAC.</li>
+<li><strong>Alexander Liddell</strong>: Building AI-assisted AAC using <strong>Llama + Eleven Labs + MIDI controllers</strong> to minimize cost.</li>
+<li><strong>Magic School AI</strong> (Heidi Brislin): Used with AAC users for <strong>authentic writing</strong> — partner-assisted scanning for choice-making, built-in scaffolding, and a student-side tutor for curriculum support (e.g., Romeo and Juliet at appropriate reading level).</li>
+<li><strong>Goblin Tools</strong>: Referenced by Bryce as a comparable AI scaffold tool.</li>
+</ul>
+</div>
+
+<h3><button type="button" aria-expanded="false" aria-controls="section-7-content" id="section-7-btn">7: Broader Reflection — Language, Identity &amp; AI's Future<span aria-hidden="true" class="disclosure-icon"></span></button></h3>
+<div id="section-7-content" role="region" aria-labelledby="section-7-btn" hidden>
+<ul>
+<li>Bryce raised a philosophical question: if AI can translate any language in real-time, <strong>does a student need to learn English?</strong> Conversation touched on the tension between communication empowerment and shared societal experience.</li>
+<li><strong>Bliss Symbolics</strong> highlighted as a nonlinear, non-English symbol system that pairs well with small local AI models — created by a 12-year-old girl (Rachel Zimmerman Brachman), shared as a Women's History Month fact by Sarah Kinsella.</li>
+<li><strong>Chris Gibbons</strong>: Framed the global stakes — millions of people globally live without AAC access due to geography and cost; low-cost, local AI AAC could be a "huge game changer."</li>
+</ul>
+</div>
+
+<h3><button type="button" aria-expanded="false" aria-controls="section-8-content" id="section-8-btn">8: Resources<span aria-hidden="true" class="disclosure-icon"></span></button></h3>
+<div id="section-8-content" role="region" aria-labelledby="section-8-btn" hidden>
+<table>
+<thead>
+<tr>
+<th scope="col">Resource Name</th>
+<th scope="col">URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Smartbox AI Ethics Statement</td>
+<td><a href="https://thinksmartbox.com/ai-ethics-statement/">https://thinksmartbox.com/ai-ethics-statement/</a></td>
+</tr>
+<tr>
+<td>Colleague AI (K-12 Education Platform)</td>
+<td><a href="https://www.colleague.ai/">https://www.colleague.ai/</a></td>
+</tr>
+<tr>
+<td>Goblin Tools</td>
+<td><a href="https://goblin.tools/">https://goblin.tools/</a></td>
+</tr>
+<tr>
+<td>Magic School AI</td>
+<td><a href="https://www.magicschool.ai/">https://www.magicschool.ai/</a></td>
+</tr>
+<tr>
+<td>Magic School AI Tip Video (Sara Ayars)</td>
+<td><a href="https://youtu.be/FHMtaeUpLDU">https://youtu.be/FHMtaeUpLDU</a></td>
+</tr>
+<tr>
+<td>Jutta Treviranus — OCAD University</td>
+<td><a href="https://www.ocadu.ca/academics/explore-faculty/jtreviranus">https://www.ocadu.ca/academics/explore-faculty/jtreviranus</a></td>
+</tr>
+<tr>
+<td>Bliss Symbolics Printer — Rachel Zimmerman Brachman (CBC)</td>
+<td><a href="https://www.cbc.ca/2017/this-canadian-girl-s-school-project-gave-non-verbal-kids-a-new-voice-1.4036004">https://www.cbc.ca/2017/this-canadian-girl-s-school-project-gave-non-verbal-kids-a-new-voice-1.4036004</a></td>
+</tr>
+<tr>
+<td>Bliss Tactile Symbols (Volksswitch)</td>
+<td><a href="https://volksswitch.org/index.php/volks-devices/bliss-tactile-symbols">https://volksswitch.org/index.php/volks-devices/bliss-tactile-symbols</a></td>
+</tr>
+<tr>
+<td>Spelling AAC with Prediction (Will Wade)</td>
+<td><a href="https://willwade.github.io/letter-by-letter-AAC/">https://willwade.github.io/letter-by-letter-AAC/</a></td>
+</tr>
+<tr>
+<td>Tobias Weinberg — AAC + Humor Research</td>
+<td><a href="https://tobiwg.com">https://tobiwg.com</a></td>
+</tr>
+<tr>
+<td>Alexander Liddell LinkedIn Post</td>
+<td><a href="https://www.linkedin.com/posts/alexander-liddell-bsc-hons-24361068_accessibility-inclusiveeducation-aiineducation-activity-7440313672062775298-x_QU">https://www.linkedin.com/posts/alexander-liddell-bsc-hons-24361068_accessibility-inclusiveeducation-aiineducation-activity-7440313672062775298-x_QU</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h3><button type="button" aria-expanded="false" aria-controls="section-9-content" id="section-9-btn">9: Action Items &amp; Follow-Ups<span aria-hidden="true" class="disclosure-icon"></span></button></h3>
+<div id="section-9-content" role="region" aria-labelledby="section-9-btn" hidden>
+<table>
+<thead>
+<tr>
+<th scope="col">Item</th>
+<th scope="col">Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Write up a session report and share with all registrants</td>
+<td>Bryce Johnson</td>
+</tr>
+<tr>
+<td>Make session recording available to all attendees</td>
+<td>Bryce Johnson / Microsoft</td>
+</tr>
+<tr>
+<td>Follow up with Kate Glazko (UW) re: agentic AI + AAC research</td>
+<td>Bryce Johnson</td>
+</tr>
+<tr>
+<td>Explore Tobias Weinberg's humor-in-AAC demo (TOBIWG.com)</td>
+<td>Attendees</td>
+</tr>
+<tr>
+<td>Share Magic School AI tips in chat/follow-up</td>
+<td>Sarah Kinsella / Sara Ayars</td>
+</tr>
+<tr>
+<td>Grid to revisit Bellevue IT approval once US data storage confirmed</td>
+<td>Ali Havanec + Chris Gibbons</td>
+</tr>
+<tr>
+<td>Explore district-level MDM toggle for AI features in AAC apps</td>
+<td>Chris Gibbons / Grid</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</main>
+<script>
+(function () {
+  'use strict';
+  document.querySelectorAll('h3 button[aria-controls]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      document.getElementById(btn.getAttribute('aria-controls')).hidden = expanded;
+    });
+  });
+}());
+</script>
+</body>
+</html>

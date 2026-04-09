@@ -152,6 +152,19 @@ figcaption {
   background: var(--canvas-subtle);
 }
 .two-col .card p { margin: 0; }
+.two-col .card figure { margin: 0; }
+.two-col .card figcaption {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.two-col .card:has(.video-wrapper) { padding: 0; }
 .two-col .card .video-wrapper { margin-top: 0; margin-bottom: 0; }
 
 /* Disclosure button */
@@ -289,7 +302,7 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
   <li>Producing a wrap-up video is an excellent opportunity to share ideas with the broader team.</li>
 </ul>
 
-<figure aria-label="Inclusive design sprint overview video">
+<figure>
   <div class="video-wrapper">
     <iframe
       src="https://www.youtube-nocookie.com/embed/kG7Xn8hupf4"
@@ -378,7 +391,7 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
 
 <p>This two-hour <a href="https://www.uxcon.io/">UXCon Vienna</a> workshop shares the foundations of Inclusive Design and how to run effective sprints. Each time we teach, we sharpen the practice, making it more usable, repeatable, and accessible to designers everywhere.</p>
 
-<figure aria-label="Inclusive Design 101 workshop video from UXCon Vienna">
+<figure>
   <div class="video-wrapper">
     <iframe
       src="https://www.youtube-nocookie.com/embed/Yxj0at4JmSI"

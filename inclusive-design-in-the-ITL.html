@@ -185,6 +185,17 @@ figcaption {
   padding: 0.65em 1em;
   margin: 0;
 }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
 /* Disclosure button */
 h2 button.disclosure {
@@ -431,9 +442,11 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
 
 <div class="two-col">
   <div class="card image-card" style="background-image: url(-contentsDAA.jpg)">
+    <span class="sr-only">An open booklet rests on a desk under directional light, displaying a contents page titled “Microsoft’s inclusive design principles – Digital and physical.” The page lists sections including devices, accessories, augmentations, awareness, configuration, and physical augmentation.</span>
     <p><b><a href="https://inclusive.microsoft.design/tools-and-activities/DevicesAccessoriesandAugmentations.pdf">Devices + Accessories + Augmentations (PDF)</a></b></p>
   </div>
   <div class="card image-card" style="background-image: url(-morganDAA.jpg)">
+    <span class="sr-only">A person seated in a chair uses a Surface Pro with a Surface Pen fitted inside a large adaptive grip to write handwritten notes on the screen, demonstrating assistive technology for improved accessibility and control.</span>
     <p><b><a href="https://microsoft.design/articles/when-designing-for-the-disabled-fit-is-the-finish/">When designing for the disabled, fit is the finish</a></b></p>
   </div>
 </div>

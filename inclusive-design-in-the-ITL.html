@@ -153,8 +153,10 @@ figcaption {
 }
 .two-col .card p { margin: 0; }
 .two-col .card figure { margin: 0; }
-.two-col .card:nth-child(2) { aspect-ratio: 16 / 9; overflow: hidden; }
-.two-col .card figcaption {
+.two-col .card:nth-child(2),
+.two-col .card.video-sized { aspect-ratio: 16 / 9; overflow: hidden; }
+.two-col .card figcaption,
+[role="region"] figcaption {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -339,16 +341,6 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
   <div class="card">
     <p>RE agent</p>
 
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.</p>
-<p>Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.</p>
-<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.</p>
-<p>Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.</p>
-<p>Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.</p>
-
-
-
-
-
 
 
 
@@ -428,7 +420,7 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
 <p>People engage with devices in countless ways, and design must meet that diversity. By focusing on clear, operable, and understandable interactions, and co-designing with disabled communities, we have created a system of devices, accessories, and augmentations that can be tailored to fit individual needs.</p>
 
 <div class="two-col">
-  <div class="card">
+  <div class="card video-sized">
     <p><a href="https://inclusive.microsoft.design/tools-and-activities/DevicesAccessoriesandAugmentations.pdf">Devices + Accessories + Augmentations (PDF)</a></p>
   </div>
   <div class="card">

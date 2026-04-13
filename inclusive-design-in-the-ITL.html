@@ -3,36 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="color-scheme" content="light dark">
+<meta name="color-scheme" content="dark">
 <title>Our Inclusive Design Practice in the Inclusive Tech Lab</title>
 <style>
 :root {
-  --fg: #1f2328;
-  --fg-muted: #1a1e23;
-  --canvas: #ffffff;
-  --canvas-subtle: #f6f8fa;
-  --border: #d0d7de;
-  --accent: #0550ae;
-  --accent-hover: #033d8b;
-  --btn-bg: #f6f8fa;
-  --btn-hover: #eaeef2;
+  --fg: #e6edf3;
+  --fg-muted: #c9d1d9;
+  --canvas: #0d1117;
+  --canvas-subtle: #161b22;
+  --border: #30363d;
+  --accent: #79c0ff;
+  --accent-hover: #a5d6ff;
+  --btn-bg: #21262d;
+  --btn-hover: #30363d;
   --radius: 6px;
   --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
-  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --fg: #e6edf3;
-    --fg-muted: #c9d1d9;
-    --canvas: #0d1117;
-    --canvas-subtle: #161b22;
-    --border: #30363d;
-    --accent: #79c0ff;
-    --accent-hover: #a5d6ff;
-    --btn-bg: #21262d;
-    --btn-hover: #30363d;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -47,7 +32,6 @@
 body {
   margin: 0;
   padding: 48px 16px 550px;
-  background: var(--canvas);
   color: var(--fg);
   font-family: var(--font);
   font-size: 1rem;
@@ -70,7 +54,6 @@ body {
   outline-offset: 2px;
   border-radius: 3px;
 }
-:focus:not(:focus-visible) { outline: none; }
 
 main, footer {
   max-width: 1012px;
@@ -79,7 +62,6 @@ main, footer {
 main {
   padding: 0 2em 0.5em;
   background: var(--canvas);
-  border: 0;
   border-radius: var(--radius);
 }
 
@@ -170,7 +152,6 @@ figcaption {
   padding: 1em;
   background: var(--canvas-subtle);
 }
-.two-col .card p { margin: 0; }
 .two-col .card figure { margin: 0; }
 .two-col .card:nth-child(2),
 .two-col .card.video-sized { aspect-ratio: 16 / 9; overflow: hidden; }
@@ -183,6 +164,7 @@ figcaption {
   margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
   white-space: nowrap;
   border: 0;
 }
@@ -215,6 +197,7 @@ figcaption {
   margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
   white-space: nowrap;
   border: 0;
 }
@@ -285,9 +268,9 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
 .btn-start {
   display: inline-block;
   padding: 8px 18px;
-  background: var(--accent);
+  background-color: rgb(34, 91, 98);
   color: #fff;
-  border: 1px solid var(--accent);
+  border: 1px solid rgb(34, 91, 98);
   border-radius: var(--radius);
   font-family: var(--font);
   font-size: 0.9rem;
@@ -297,8 +280,8 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
   transition: background 0.1s ease, border-color 0.1s ease;
 }
 .btn-start:hover {
-  background: var(--accent-hover);
-  border-color: var(--accent-hover);
+  background: #000;
+  border-color: #000;
   color: #fff;
 }
 
@@ -313,13 +296,14 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
   line-height: 1.2em;
 }
 .id-card h3 {
-  margin-top: 1.5em;
+  margin-top: 1em;
   font-size: 150%;
+  color: #000;
 }
 .id-card a {
   color: #000;
 }
-.id-card p + p {
+.id-card p {
   margin-top: 0.5em;
 }
 .id-card .btn-start {
@@ -335,6 +319,62 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
   }
   #mthr p:last-child {
     display: none;
+  }
+}
+
+/* Modal */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.6);
+  overflow-y: auto;
+  padding: 64px 16px;
+}
+.modal-overlay.open {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.modal {
+  max-width: 1012px;
+  width: 100%;
+  background: var(--canvas);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0 2em 2em;
+  position: relative;
+}
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: var(--fg);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
+}
+.modal-close:hover {
+  color: var(--accent);
+}
+.modal-row-full {
+  padding: 1.5em 0;
+  border-bottom: 1px solid var(--border);
+}
+.modal-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5em;
+  margin-top: 1.5em;
+  align-items: start;
+}
+@media (max-width: 680px) {
+  .modal-two-col {
+    grid-template-columns: 1fr;
   }
 }
 </style>
@@ -377,6 +417,7 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
           title="Introduction to Microsoft Inclusive Design"
           loading="lazy"
           allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+          referrerpolicy="no-referrer"
           allowfullscreen></iframe>
       </div>
       <figcaption>Introduction to Microsoft Inclusive Design</figcaption>
@@ -422,6 +463,7 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
       title="Inclusive design sprint overview"
       loading="lazy"
       allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+      referrerpolicy="no-referrer"
       allowfullscreen></iframe>
   </div>
   <figcaption>Inclusive design sprint overview</figcaption>
@@ -443,6 +485,7 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
           title="Recognize Exclusion"
           loading="lazy"
           allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+          referrerpolicy="no-referrer"
           allowfullscreen></iframe>
       </div>
       <figcaption>Recognize Exclusion</figcaption>
@@ -450,8 +493,8 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
   </div>
   <div class="card id-card">
     <h3>Recognize exclusion early—with AI</h3>
-    <p>Use the AI of your choice to identify barriers early—treat ideas as hypotheses and ground designs with disabled people.</p>
-    <p><a href="" class="btn-start">Start Prompt</a></p>
+    <p><b>Use the AI of your choice to identify barriers early—treat ideas as hypotheses and ground designs with disabled people.</b></p>
+    <p><button type="button" class="btn-start" id="re-start-btn">Start Prompt</button></p>
 
   </div>
 </div>
@@ -469,6 +512,7 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
           title="Learn from Diversity"
           loading="lazy"
           allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+          referrerpolicy="no-referrer"
           allowfullscreen></iframe>
       </div>
       <figcaption>Learn from Diversity</figcaption>
@@ -495,15 +539,16 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
           title="Solve for One, Extend to Many"
           loading="lazy"
           allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+          referrerpolicy="no-referrer"
           allowfullscreen></iframe>
       </div>
       <figcaption>Solve for One, Extend to Many</figcaption>
     </figure>
   </div>
-  <div class="card id-card">
+  <div class="card id-card" style="padding-top:0.5em;">
     <h3>Solve for one, extend to many—diverge with AI</h3>
-    <p>Start with one need and design deeply so it extends. Use persona spectrum to move from permanent to situational contexts, and interrelated needs to reveal shared patterns.</p>
-    <p><a href="" class="btn-start">Start Prompt</a></p>
+    <p><b>Start with one person's needs and design deeply so it extends. Use our persona spectrum to move from permanent to situational contexts, and interrelated needs to reveal shared patterns.</b></p>
+    <p><button type="button" class="btn-start" id="solve-start-btn">Start Prompt</button></p>
   </div>
 </div>
 
@@ -519,6 +564,7 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
       title="Inclusive Design 101: Full Workshop from UXCon Vienna"
       loading="lazy"
       allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+      referrerpolicy="no-referrer"
       allowfullscreen></iframe>
   </div>
   <figcaption>Inclusive Design 101: Full Workshop from UXCon Vienna 2025</figcaption>
@@ -541,6 +587,46 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
 
 </main>
 
+<div class="modal-overlay" id="re-modal" role="dialog" aria-modal="true" aria-labelledby="re-modal-title">
+  <div class="modal">
+    <button type="button" class="modal-close" aria-label="Close">&times;</button>
+    <div class="modal-row-full">
+      <h2 id="re-modal-title">Recognize Exclusion — AI Sprint</h2>
+      <p>This is the full-width top row. Add instructions, context, or introductory content here.</p>
+    </div>
+    <div class="modal-two-col">
+      <div>
+        <h3>Left column</h3>
+        <p>Placeholder content for the left side. This could contain prompts, input fields, or guidance.</p>
+      </div>
+      <div>
+        <h3>Right column</h3>
+        <p>Placeholder content for the right side. This could contain results, examples, or references.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="solve-modal" role="dialog" aria-modal="true" aria-labelledby="solve-modal-title">
+  <div class="modal">
+    <button type="button" class="modal-close" aria-label="Close">&times;</button>
+    <div class="modal-row-full">
+      <h2 id="solve-modal-title">Solve for One, Extend to Many — AI Sprint</h2>
+      <p>This is the full-width top row. Add instructions, context, or introductory content here.</p>
+    </div>
+    <div class="modal-two-col">
+      <div>
+        <h3>Left column</h3>
+        <p>Placeholder content for the left side. This could contain prompts, input fields, or guidance.</p>
+      </div>
+      <div>
+        <h3>Right column</h3>
+        <p>Placeholder content for the right side. This could contain results, examples, or references.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <footer>
 </footer>
 
@@ -554,6 +640,60 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
       document.getElementById(btn.getAttribute('aria-controls')).hidden = expanded;
     });
   });
+
+  // Modals
+  function initModal(overlayId, openBtnId) {
+    var overlay = document.getElementById(overlayId);
+    var openBtn = document.getElementById(openBtnId);
+    var closeBtn = overlay.querySelector('.modal-close');
+    var modal = overlay.querySelector('.modal');
+
+    function getFocusable() {
+      return modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    }
+
+    function openModal() {
+      overlay.classList.add('open');
+      document.querySelectorAll('header, main, footer').forEach(function (el) {
+        el.setAttribute('inert', '');
+        el.setAttribute('aria-hidden', 'true');
+      });
+      closeBtn.focus();
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      overlay.classList.remove('open');
+      document.querySelectorAll('header, main, footer').forEach(function (el) {
+        el.removeAttribute('inert');
+        el.removeAttribute('aria-hidden');
+      });
+      openBtn.focus();
+      document.body.style.overflow = '';
+    }
+
+    openBtn.addEventListener('click', openModal);
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) closeModal();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (!overlay.classList.contains('open')) return;
+      if (e.key === 'Escape') { closeModal(); return; }
+      if (e.key === 'Tab') {
+        var focusable = getFocusable();
+        var first = focusable[0];
+        var last = focusable[focusable.length - 1];
+        if (e.shiftKey) {
+          if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+        } else {
+          if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+        }
+      }
+    });
+  }
+
+  initModal('re-modal', 're-start-btn');
+  initModal('solve-modal', 'solve-start-btn');
 }());
 </script>
 

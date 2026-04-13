@@ -280,6 +280,39 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
   font-size: 1.05rem;
   line-height: 1.7;
 }
+
+/* Inclusive Design card */
+#mthr {
+  padding: 2.5em;
+  background-image: url('-idbak.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color: #eee;
+  color: rgb(34, 91, 98);
+  line-height: 1.2em;
+}
+#mthr h3 {
+  margin-top: 1.5em;
+  font-size: 150%;
+}
+#mthr a {
+  color: #000;
+}
+#mthr p + p {
+  margin-top: 0.5em;
+}
+@media (max-width: 599px) {
+  #mthr {
+    padding: 1.1em;
+  }
+  #mthr h3 {
+    margin-top: 1.2em;
+    font-size: 120%;
+  }
+  #mthr p:last-child {
+    display: none;
+  }
+}
 </style>
 </head>
 <body>
@@ -325,11 +358,11 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
       <figcaption>Introduction to Microsoft Inclusive Design</figcaption>
     </figure>
   </div>
-  <div class="card" id="mthr" style="padding: 2.5em; background-image: url('-idbak.jpg'); background-size: cover; background-position: center; background-color: #eee; color: rgb(34, 91, 98); line-height: 1.2em;">
-    <h3 style="margin-top: 1.5em; font-size: 150%;"><a href="https://inclusive.microsoft.design/" style="color: #000;">Microsoft Inclusive Design</a></h3>
+  <div class="card" id="mthr">
+    <h3><a href="https://inclusive.microsoft.design/">Microsoft Inclusive Design</a></h3>
     <p><b>Design is a methodology that enables and draws on the full range of human diversity.</b></p>
-    <p style="margin-top: 0.5em;"><b><a href="https://inclusive.microsoft.design/articles/inclusive-101-guidebook" id="id101" style="color:#000;">Inclusive 101</a> &nbsp;|&nbsp; <a href="https://inclusive.microsoft.design/articles/inclusive-activity-cards" id="idac" style="color: #000;">Inclusive activity cards</a></b></p>
-    <p style="margin-top: 0.5em;"><small>&copy; Microsoft 2016 Licensed under Creative Commons Attribution NonCommercial-NoDerivatives (CC BY-NC-ND)</small></p>
+    <p><b><a href="https://inclusive.microsoft.design/articles/inclusive-101-guidebook" id="id101">Inclusive 101</a> &nbsp;|&nbsp; <a href="https://inclusive.microsoft.design/articles/inclusive-activity-cards" id="idac">Inclusive activity cards</a></b></p>
+    <p><small>&copy; Microsoft 2016 Licensed under Creative Commons Attribution NonCommercial-NoDerivatives (CC BY-NC-ND)</small></p>
   </div>
 </div>
 

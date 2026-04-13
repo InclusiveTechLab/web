@@ -281,8 +281,29 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
   line-height: 1.7;
 }
 
-/* Inclusive Design card */
-#mthr {
+/* Start button */
+.btn-start {
+  display: inline-block;
+  padding: 8px 18px;
+  background: var(--accent);
+  color: #fff;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  font-family: var(--font);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.1s ease, border-color 0.1s ease;
+}
+.btn-start:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: #fff;
+}
+
+/* Inclusive Design cards */
+.id-card {
   padding: 2.5em;
   background-image: url('-idbak.jpg');
   background-size: cover;
@@ -291,21 +312,24 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
   color: rgb(34, 91, 98);
   line-height: 1.2em;
 }
-#mthr h3 {
+.id-card h3 {
   margin-top: 1.5em;
   font-size: 150%;
 }
-#mthr a {
+.id-card a {
   color: #000;
 }
-#mthr p + p {
+.id-card p + p {
   margin-top: 0.5em;
 }
+.id-card .btn-start {
+  color: #fff;
+}
 @media (max-width: 680px) {
-  #mthr {
+  .id-card {
     padding: 1.1em;
   }
-  #mthr h3 {
+  .id-card h3 {
     margin-top: 1.2em;
     font-size: 120%;
   }
@@ -358,7 +382,7 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
       <figcaption>Introduction to Microsoft Inclusive Design</figcaption>
     </figure>
   </div>
-  <div class="card" id="mthr">
+  <div class="card id-card" id="mthr">
     <h3><a href="https://inclusive.microsoft.design/">Microsoft Inclusive Design</a></h3>
     <p><b>Design is a methodology that enables and draws on the full range of human diversity.</b></p>
     <p><b><a href="https://inclusive.microsoft.design/articles/inclusive-101-guidebook" id="id101">Inclusive 101</a> &nbsp;|&nbsp; <a href="https://inclusive.microsoft.design/articles/inclusive-activity-cards" id="idac">Inclusive activity cards</a></b></p>
@@ -424,9 +448,11 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
       <figcaption>Recognize Exclusion</figcaption>
     </figure>
   </div>
-  <div class="card">
-    <h3>Recognize exclusion early—with AI and with people.</h3>
-    <p>Use the AI, of your choice, to identify potential barriers early, but treat these ideas as hypotheses. Ground the work with disabled people to ensure it reflects real needs, not assumptions.</p>
+  <div class="card id-card">
+    <h3>Recognize exclusion early—with AI</h3>
+    <p>Use the AI of your choice to identify barriers early—treat ideas as hypotheses and ground designs with disabled people.</p>
+    <p><a href="" class="btn-start">Start Prompt</a></p>
+
   </div>
 </div>
 
@@ -474,8 +500,10 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
       <figcaption>Solve for One, Extend to Many</figcaption>
     </figure>
   </div>
-  <div class="card">
-    <p>Solve Agent</p>
+  <div class="card id-card">
+    <h3>Solve for one, extend to many—diverge with AI</h3>
+    <p>Start with one need and design deeply so it extends. Use persona spectrum to move from permanent to situational contexts, and interrelated needs to reveal shared patterns.</p>
+    <p><a href="" class="btn-start">Start Prompt</a></p>
   </div>
 </div>
 

@@ -375,9 +375,15 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
   margin-top: 1.5em;
   align-items: start;
 }
+.modal-two-col > div:first-child {
+  padding-right: 32px;
+}
 @media (max-width: 680px) {
   .modal-two-col {
     grid-template-columns: 1fr;
+  }
+  .modal-two-col > div:first-child {
+    padding-right: 0;
   }
 }
 </style>

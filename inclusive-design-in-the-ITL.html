@@ -824,9 +824,41 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
           <li>Validate findings through research</li>
         </ul>
       </div>
-      <div class="solform">
-        <h3>Right column</h3>
-        <p>Placeholder content for the right side. This could contain results, examples, or references.</p>
+      <div class="solform reform">
+        <div class="reform-tabs" role="tablist" aria-label="Solve for One workflow type">
+          <button role="tab" id="sol-tab-web-ext" aria-selected="true" aria-controls="sol-panel-web-ext">Website: Extend</button>
+          <button role="tab" id="sol-tab-web-inter" aria-selected="false" aria-controls="sol-panel-web-inter" tabindex="-1">Website: Interrelated</button>
+          <button role="tab" id="sol-tab-game-ext" aria-selected="false" aria-controls="sol-panel-game-ext" tabindex="-1">Game: Extend</button>
+          <button role="tab" id="sol-tab-game-inter" aria-selected="false" aria-controls="sol-panel-game-inter" tabindex="-1">Game: Interrelated</button>
+        </div>
+        <div role="tabpanel" id="sol-panel-web-ext" class="reform-tabpanel active" aria-labelledby="sol-tab-web-ext">
+          <label for="sol-prompt-web-ext" class="sr-only">Describe the web interaction pattern to explore permanent, temporary, and situational exclusions</label>
+          <textarea id="sol-prompt-web-ext" class="reform-textarea" placeholder="Describe the web interaction pattern to explore permanent, temporary, and situational exclusions" rows="3"></textarea>
+        </div>
+        <div role="tabpanel" id="sol-panel-web-inter" class="reform-tabpanel" aria-labelledby="sol-tab-web-inter" hidden>
+          <label for="sol-prompt-web-inter" class="sr-only">Describe the web interaction pattern to explore interrelated needs across different disabilities</label>
+          <textarea id="sol-prompt-web-inter" class="reform-textarea" placeholder="Describe the web interaction pattern to explore interrelated needs across different disabilities" rows="3"></textarea>
+        </div>
+        <div role="tabpanel" id="sol-panel-game-ext" class="reform-tabpanel" aria-labelledby="sol-tab-game-ext" hidden>
+          <label for="sol-prompt-game-ext" class="sr-only">Describe the game design pattern to explore permanent, temporary, and situational exclusions</label>
+          <textarea id="sol-prompt-game-ext" class="reform-textarea" placeholder="Describe the game design pattern to explore permanent, temporary, and situational exclusions" rows="3"></textarea>
+        </div>
+        <div role="tabpanel" id="sol-panel-game-inter" class="reform-tabpanel" aria-labelledby="sol-tab-game-inter" hidden>
+          <label for="sol-prompt-game-inter" class="sr-only">Describe the game design pattern to explore interrelated needs across different disabilities</label>
+          <textarea id="sol-prompt-game-inter" class="reform-textarea" placeholder="Describe the game design pattern to explore interrelated needs across different disabilities" rows="3"></textarea>
+        </div>
+        <div class="reform-submit-group">
+          <button type="button" class="btn-submit" data-form="sol" aria-label="Submit prompt to Copilot">Send to Microsoft Copilot</button>
+          <button type="button" class="btn-dropdown" aria-haspopup="menu" aria-expanded="false" aria-label="Choose AI engine">
+            <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg>
+          </button>
+          <div class="reform-dropdown-menu" role="menu" aria-label="AI engine">
+            <button role="menuitemradio" aria-checked="true" data-engine="Copilot">Microsoft Copilot</button>
+            <button role="menuitemradio" aria-checked="false" data-engine="ChatGPT">OpenAI ChatGPT</button>
+            <button role="menuitemradio" aria-checked="false" data-engine="Claude">Anthropic Claude</button>
+            <button role="menuitemradio" aria-checked="false" data-engine="Gemini">Google Gemini</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

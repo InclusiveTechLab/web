@@ -958,9 +958,9 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
       item.addEventListener('click', function () {
         items.forEach(function (i) { i.setAttribute('aria-checked', 'false'); });
         item.setAttribute('aria-checked', 'true');
-        var engine = item.getAttribute('data-engine');
-        submitBtn.textContent = 'Send to ' + engine;
-        submitBtn.setAttribute('aria-label', 'Submit prompt to ' + engine);
+        var label = item.textContent;
+        submitBtn.textContent = 'Send to ' + label;
+        submitBtn.setAttribute('aria-label', 'Submit prompt to ' + label);
         closeMenu();
         dropdownBtn.focus();
       });

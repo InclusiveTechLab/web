@@ -217,30 +217,36 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
   padding: 0 0 12px 0;
   background: var(--canvas);
 }
-a.row-heading {
+button.row-heading {
   text-decoration: none;
   color: inherit;
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
 }
-a.row-heading:focus-visible {
+button.row-heading:focus-visible {
   outline: none;
   color: var(--lc);
 }
-a.row-heading:hover {
+button.row-heading:hover {
   color: var(--lc);
 }
-a.row-heading:hover h3,
-a.row-heading:focus-visible h3 {
+button.row-heading:hover h3,
+button.row-heading:focus-visible h3 {
   color: var(--lc);
 }
-a.row-heading:hover p,
-a.row-heading:focus-visible p {
+button.row-heading:hover p,
+button.row-heading:focus-visible p {
   color: var(--lc);
 }
 .row-heading .subway-track {
   display: none;
   margin-bottom: 6px;
 }
-a.row-heading:focus-visible .subway-track {
+button.row-heading:focus-visible .subway-track {
   display: flex;
 }
 .row-heading .subway-dot {
@@ -510,7 +516,7 @@ footer {
 <div class="grid-header-q">FY27 Q3</div>
 <div class="grid-header-q">FY27 Q4</div>
 <div class="row"><!-- Row 1 -->
-<a href="#" class="row-heading" id="ws-1-btn" style="--lc: var(--c1)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 1</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
+<button type="button" class="row-heading" id="ws-1-btn" style="--lc: var(--c1)" aria-haspopup="dialog" aria-controls="ws-1-modal"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 1</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></button>
 <div class="cell" style="--lc: var(--c1)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c1)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c1)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
@@ -523,7 +529,7 @@ footer {
 <div class="cell" style="--lc: var(--c1)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 </div>
 <div class="row"><!-- Row 2 -->
-<a href="#" class="row-heading" id="ws-2-btn" style="--lc: var(--c2)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 2</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
+<button type="button" class="row-heading" id="ws-2-btn" style="--lc: var(--c2)" aria-haspopup="dialog" aria-controls="ws-2-modal"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 2</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></button>
 <div class="cell" style="--lc: var(--c2)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c2)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c2)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
@@ -536,7 +542,7 @@ footer {
 <div class="cell" style="--lc: var(--c2)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 </div>
 <div class="row"><!-- Row 3 -->
-<a href="#" class="row-heading" id="ws-3-btn" style="--lc: var(--c3)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 3</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
+<button type="button" class="row-heading" id="ws-3-btn" style="--lc: var(--c3)" aria-haspopup="dialog" aria-controls="ws-3-modal"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 3</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></button>
 <div class="cell" style="--lc: var(--c3)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c3)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c3)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
@@ -549,7 +555,7 @@ footer {
 <div class="cell" style="--lc: var(--c3)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 </div>
 <div class="row"><!-- Row 4 -->
-<a href="#" class="row-heading" id="ws-4-btn" style="--lc: var(--c4)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 4</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
+<button type="button" class="row-heading" id="ws-4-btn" style="--lc: var(--c4)" aria-haspopup="dialog" aria-controls="ws-4-modal"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 4</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></button>
 <div class="cell" style="--lc: var(--c4)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c4)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c4)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
@@ -562,7 +568,7 @@ footer {
 <div class="cell" style="--lc: var(--c4)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 </div>
 <div class="row"><!-- Row 5 -->
-<a href="#" class="row-heading" id="ws-5-btn" style="--lc: var(--c5)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 5</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
+<button type="button" class="row-heading" id="ws-5-btn" style="--lc: var(--c5)" aria-haspopup="dialog" aria-controls="ws-5-modal"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 5</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></button>
 <div class="cell" style="--lc: var(--c5)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c5)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c5)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
@@ -590,7 +596,7 @@ footer {
 <div class="grid-header-q">FY27 Q3</div>
 <div class="grid-header-q">FY27 Q4</div>
 <div class="row"><!-- Row 1 -->
-<a href="#" class="row-heading" id="ws-6-btn" style="--lc: var(--c6)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 1</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
+<button type="button" class="row-heading" id="ws-6-btn" style="--lc: var(--c6)" aria-haspopup="dialog" aria-controls="ws-6-modal"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 1</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></button>
 <div class="cell" style="--lc: var(--c6)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c6)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c6)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
@@ -603,7 +609,7 @@ footer {
 <div class="cell" style="--lc: var(--c6)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 </div>
 <div class="row"><!-- Row 2 -->
-<a href="#" class="row-heading" id="ws-7-btn" style="--lc: var(--c7)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 2</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
+<button type="button" class="row-heading" id="ws-7-btn" style="--lc: var(--c7)" aria-haspopup="dialog" aria-controls="ws-7-modal"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 2</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></button>
 <div class="cell" style="--lc: var(--c7)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c7)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c7)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
@@ -616,7 +622,7 @@ footer {
 <div class="cell" style="--lc: var(--c7)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 </div>
 <div class="row"><!-- Row 3 -->
-<a href="#" class="row-heading" id="ws-8-btn" style="--lc: var(--c8)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 3</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
+<button type="button" class="row-heading" id="ws-8-btn" style="--lc: var(--c8)" aria-haspopup="dialog" aria-controls="ws-8-modal"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 3</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></button>
 <div class="cell" style="--lc: var(--c8)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c8)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c8)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
@@ -629,7 +635,7 @@ footer {
 <div class="cell" style="--lc: var(--c8)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 </div>
 <div class="row"><!-- Row 4 -->
-<a href="#" class="row-heading" id="ws-9-btn" style="--lc: var(--c9)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 4</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
+<button type="button" class="row-heading" id="ws-9-btn" style="--lc: var(--c9)" aria-haspopup="dialog" aria-controls="ws-9-modal"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 4</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></button>
 <div class="cell" style="--lc: var(--c9)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c9)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c9)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
@@ -642,7 +648,7 @@ footer {
 <div class="cell" style="--lc: var(--c9)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 </div>
 <div class="row"><!-- Row 5 -->
-<a href="#" class="row-heading" id="ws-10-btn" style="--lc: var(--c10)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 5</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
+<button type="button" class="row-heading" id="ws-10-btn" style="--lc: var(--c10)" aria-haspopup="dialog" aria-controls="ws-10-modal"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 5</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></button>
 <div class="cell" style="--lc: var(--c10)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c10)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c10)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
@@ -670,7 +676,7 @@ footer {
 <div class="grid-header-q">FY27 Q3</div>
 <div class="grid-header-q">FY27 Q4</div>
 <div class="row"><!-- Row 1 -->
-<a href="#" class="row-heading" id="ws-11-btn" style="--lc: var(--c11)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 1</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
+<button type="button" class="row-heading" id="ws-11-btn" style="--lc: var(--c11)" aria-haspopup="dialog" aria-controls="ws-11-modal"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 1</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></button>
 <div class="cell" style="--lc: var(--c11)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c11)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c11)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
@@ -683,7 +689,7 @@ footer {
 <div class="cell" style="--lc: var(--c11)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 </div>
 <div class="row"><!-- Row 2 -->
-<a href="#" class="row-heading" id="ws-12-btn" style="--lc: var(--c12)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 2</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
+<button type="button" class="row-heading" id="ws-12-btn" style="--lc: var(--c12)" aria-haspopup="dialog" aria-controls="ws-12-modal"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 2</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></button>
 <div class="cell" style="--lc: var(--c12)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c12)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c12)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
@@ -696,7 +702,7 @@ footer {
 <div class="cell" style="--lc: var(--c12)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 </div>
 <div class="row"><!-- Row 3 -->
-<a href="#" class="row-heading" id="ws-13-btn" style="--lc: var(--c13)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 3</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
+<button type="button" class="row-heading" id="ws-13-btn" style="--lc: var(--c13)" aria-haspopup="dialog" aria-controls="ws-13-modal"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 3</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></button>
 <div class="cell" style="--lc: var(--c13)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c13)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c13)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
@@ -709,7 +715,7 @@ footer {
 <div class="cell" style="--lc: var(--c13)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 </div>
 <div class="row"><!-- Row 4 -->
-<a href="#" class="row-heading" id="ws-14-btn" style="--lc: var(--c14)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 4</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
+<button type="button" class="row-heading" id="ws-14-btn" style="--lc: var(--c14)" aria-haspopup="dialog" aria-controls="ws-14-modal"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 4</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></button>
 <div class="cell" style="--lc: var(--c14)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c14)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c14)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
@@ -722,7 +728,7 @@ footer {
 <div class="cell" style="--lc: var(--c14)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 </div>
 <div class="row"><!-- Row 5 -->
-<a href="#" class="row-heading" id="ws-15-btn" style="--lc: var(--c15)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 5</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
+<button type="button" class="row-heading" id="ws-15-btn" style="--lc: var(--c15)" aria-haspopup="dialog" aria-controls="ws-15-modal"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 5</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></button>
 <div class="cell" style="--lc: var(--c15)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c15)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c15)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
@@ -750,7 +756,7 @@ footer {
 <div class="grid-header-q">FY27 Q3</div>
 <div class="grid-header-q">FY27 Q4</div>
 <div class="row"><!-- Row 1 -->
-<a href="#" class="row-heading" id="ws-16-btn" style="--lc: var(--c16)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 1</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
+<button type="button" class="row-heading" id="ws-16-btn" style="--lc: var(--c16)" aria-haspopup="dialog" aria-controls="ws-16-modal"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 1</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></button>
 <div class="cell" style="--lc: var(--c16)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c16)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c16)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
@@ -763,7 +769,7 @@ footer {
 <div class="cell" style="--lc: var(--c16)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 </div>
 <div class="row"><!-- Row 2 -->
-<a href="#" class="row-heading" id="ws-17-btn" style="--lc: var(--c17)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 2</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
+<button type="button" class="row-heading" id="ws-17-btn" style="--lc: var(--c17)" aria-haspopup="dialog" aria-controls="ws-17-modal"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 2</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></button>
 <div class="cell" style="--lc: var(--c17)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c17)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c17)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
@@ -776,7 +782,7 @@ footer {
 <div class="cell" style="--lc: var(--c17)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 </div>
 <div class="row"><!-- Row 3 -->
-<a href="#" class="row-heading" id="ws-18-btn" style="--lc: var(--c18)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 3</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
+<button type="button" class="row-heading" id="ws-18-btn" style="--lc: var(--c18)" aria-haspopup="dialog" aria-controls="ws-18-modal"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 3</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></button>
 <div class="cell" style="--lc: var(--c18)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c18)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c18)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
@@ -789,7 +795,7 @@ footer {
 <div class="cell" style="--lc: var(--c18)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 </div>
 <div class="row"><!-- Row 4 -->
-<a href="#" class="row-heading" id="ws-19-btn" style="--lc: var(--c19)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 4</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
+<button type="button" class="row-heading" id="ws-19-btn" style="--lc: var(--c19)" aria-haspopup="dialog" aria-controls="ws-19-modal"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 4</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></button>
 <div class="cell cell-empty" style="--lc: var(--c19)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div></div>
 <div class="cell cell-empty" style="--lc: var(--c19)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div></div>
 <div class="cell" style="--lc: var(--c19)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
@@ -802,7 +808,7 @@ footer {
 <div class="cell" style="--lc: var(--c19)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 </div>
 <div class="row row-none"><!-- Row 5 -->
-<a href="#" class="row-heading" id="ws-20-btn" style="--lc: var(--c20)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 5</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
+<button type="button" class="row-heading" id="ws-20-btn" style="--lc: var(--c20)" aria-haspopup="dialog" aria-controls="ws-20-modal"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 5</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></button>
 <div class="cell" style="--lc: var(--c20)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c20)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c20)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
@@ -830,7 +836,7 @@ footer {
 <div class="grid-header-q">FY27 Q3</div>
 <div class="grid-header-q">FY27 Q4</div>
 <div class="row"><!-- Row 1 -->
-<a href="#" class="row-heading" id="ws-21-btn" style="--lc: var(--c21)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 1</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
+<button type="button" class="row-heading" id="ws-21-btn" style="--lc: var(--c21)" aria-haspopup="dialog" aria-controls="ws-21-modal"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 1</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></button>
 <div class="cell" style="--lc: var(--c21)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c21)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c21)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
@@ -843,7 +849,7 @@ footer {
 <div class="cell" style="--lc: var(--c21)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 </div>
 <div class="row"><!-- Row 2 -->
-<a href="#" class="row-heading" id="ws-22-btn" style="--lc: var(--c22)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 2</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
+<button type="button" class="row-heading" id="ws-22-btn" style="--lc: var(--c22)" aria-haspopup="dialog" aria-controls="ws-22-modal"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 2</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></button>
 <div class="cell" style="--lc: var(--c22)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c22)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c22)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
@@ -856,7 +862,7 @@ footer {
 <div class="cell" style="--lc: var(--c22)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 </div>
 <div class="row"><!-- Row 3 -->
-<a href="#" class="row-heading" id="ws-23-btn" style="--lc: var(--c23)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 3</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
+<button type="button" class="row-heading" id="ws-23-btn" style="--lc: var(--c23)" aria-haspopup="dialog" aria-controls="ws-23-modal"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 3</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></button>
 <div class="cell" style="--lc: var(--c23)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c23)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c23)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
@@ -869,7 +875,7 @@ footer {
 <div class="cell" style="--lc: var(--c23)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 </div>
 <div class="row"><!-- Row 4 -->
-<a href="#" class="row-heading" id="ws-24-btn" style="--lc: var(--c24)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 4</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
+<button type="button" class="row-heading" id="ws-24-btn" style="--lc: var(--c24)" aria-haspopup="dialog" aria-controls="ws-24-modal"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 4</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></button>
 <div class="cell" style="--lc: var(--c24)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c24)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c24)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
@@ -882,7 +888,7 @@ footer {
 <div class="cell" style="--lc: var(--c24)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 </div>
 <div class="row"><!-- Row 5 -->
-<a href="#" class="row-heading" id="ws-25-btn" style="--lc: var(--c25)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 5</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
+<button type="button" class="row-heading" id="ws-25-btn" style="--lc: var(--c25)" aria-haspopup="dialog" aria-controls="ws-25-modal"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><h3>Workstream 5</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></button>
 <div class="cell" style="--lc: var(--c25)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c25)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
 <div class="cell" style="--lc: var(--c25)"><div class="subway-track" aria-hidden="true"><div class="subway-dot"></div></div><p class="cell-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
@@ -920,7 +926,6 @@ footer {
 </div>
 </div>
 </div>
-</div>
 
 <div class="modal-overlay" id="ws-2-modal" style="--lc: var(--c2)" role="dialog" aria-modal="true" aria-labelledby="ws-2-modal-title">
 <div class="modal">
@@ -937,7 +942,6 @@ footer {
 <div>
 <h3>TBD</h3>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</div>
 </div>
 </div>
 </div>
@@ -962,7 +966,6 @@ footer {
 </div>
 </div>
 </div>
-</div>
 
 <div class="modal-overlay" id="ws-4-modal" style="--lc: var(--c4)" role="dialog" aria-modal="true" aria-labelledby="ws-4-modal-title">
 <div class="modal">
@@ -979,7 +982,6 @@ footer {
 <div>
 <h3>TBD</h3>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</div>
 </div>
 </div>
 </div>
@@ -1004,7 +1006,6 @@ footer {
 </div>
 </div>
 </div>
-</div>
 
 <div class="modal-overlay" id="ws-6-modal" style="--lc: var(--c6)" role="dialog" aria-modal="true" aria-labelledby="ws-6-modal-title">
 <div class="modal">
@@ -1021,7 +1022,6 @@ footer {
 <div>
 <h3>TBD</h3>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</div>
 </div>
 </div>
 </div>
@@ -1046,7 +1046,6 @@ footer {
 </div>
 </div>
 </div>
-</div>
 
 <div class="modal-overlay" id="ws-8-modal" style="--lc: var(--c8)" role="dialog" aria-modal="true" aria-labelledby="ws-8-modal-title">
 <div class="modal">
@@ -1063,7 +1062,6 @@ footer {
 <div>
 <h3>TBD</h3>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</div>
 </div>
 </div>
 </div>
@@ -1088,7 +1086,6 @@ footer {
 </div>
 </div>
 </div>
-</div>
 
 <div class="modal-overlay" id="ws-10-modal" style="--lc: var(--c10)" role="dialog" aria-modal="true" aria-labelledby="ws-10-modal-title">
 <div class="modal">
@@ -1105,7 +1102,6 @@ footer {
 <div>
 <h3>TBD</h3>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</div>
 </div>
 </div>
 </div>
@@ -1130,7 +1126,6 @@ footer {
 </div>
 </div>
 </div>
-</div>
 
 <div class="modal-overlay" id="ws-12-modal" style="--lc: var(--c12)" role="dialog" aria-modal="true" aria-labelledby="ws-12-modal-title">
 <div class="modal">
@@ -1147,7 +1142,6 @@ footer {
 <div>
 <h3>TBD</h3>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</div>
 </div>
 </div>
 </div>
@@ -1172,7 +1166,6 @@ footer {
 </div>
 </div>
 </div>
-</div>
 
 <div class="modal-overlay" id="ws-14-modal" style="--lc: var(--c14)" role="dialog" aria-modal="true" aria-labelledby="ws-14-modal-title">
 <div class="modal">
@@ -1189,7 +1182,6 @@ footer {
 <div>
 <h3>TBD</h3>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</div>
 </div>
 </div>
 </div>
@@ -1214,7 +1206,6 @@ footer {
 </div>
 </div>
 </div>
-</div>
 
 <div class="modal-overlay" id="ws-16-modal" style="--lc: var(--c16)" role="dialog" aria-modal="true" aria-labelledby="ws-16-modal-title">
 <div class="modal">
@@ -1231,7 +1222,6 @@ footer {
 <div>
 <h3>TBD</h3>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</div>
 </div>
 </div>
 </div>
@@ -1256,7 +1246,6 @@ footer {
 </div>
 </div>
 </div>
-</div>
 
 <div class="modal-overlay" id="ws-18-modal" style="--lc: var(--c18)" role="dialog" aria-modal="true" aria-labelledby="ws-18-modal-title">
 <div class="modal">
@@ -1273,7 +1262,6 @@ footer {
 <div>
 <h3>TBD</h3>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</div>
 </div>
 </div>
 </div>
@@ -1298,7 +1286,6 @@ footer {
 </div>
 </div>
 </div>
-</div>
 
 <div class="modal-overlay" id="ws-20-modal" style="--lc: var(--c20)" role="dialog" aria-modal="true" aria-labelledby="ws-20-modal-title">
 <div class="modal">
@@ -1315,7 +1302,6 @@ footer {
 <div>
 <h3>TBD</h3>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</div>
 </div>
 </div>
 </div>
@@ -1340,7 +1326,6 @@ footer {
 </div>
 </div>
 </div>
-</div>
 
 <div class="modal-overlay" id="ws-22-modal" style="--lc: var(--c22)" role="dialog" aria-modal="true" aria-labelledby="ws-22-modal-title">
 <div class="modal">
@@ -1357,7 +1342,6 @@ footer {
 <div>
 <h3>TBD</h3>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</div>
 </div>
 </div>
 </div>
@@ -1382,7 +1366,6 @@ footer {
 </div>
 </div>
 </div>
-</div>
 
 <div class="modal-overlay" id="ws-24-modal" style="--lc: var(--c24)" role="dialog" aria-modal="true" aria-labelledby="ws-24-modal-title">
 <div class="modal">
@@ -1403,7 +1386,6 @@ footer {
 </div>
 </div>
 </div>
-</div>
 
 <div class="modal-overlay" id="ws-25-modal" style="--lc: var(--c25)" role="dialog" aria-modal="true" aria-labelledby="ws-25-modal-title">
 <div class="modal">
@@ -1420,7 +1402,6 @@ footer {
 <div>
 <h3>TBD</h3>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</div>
 </div>
 </div>
 </div>
@@ -1524,7 +1505,7 @@ footer {
 
   // S/W keyboard navigation through row-headings
   (function () {
-    var headings = Array.prototype.slice.call(document.querySelectorAll('a.row-heading'));
+    var headings = Array.prototype.slice.call(document.querySelectorAll('button.row-heading'));
     if (!headings.length) return;
 
     function getSectionFor(heading) {
@@ -1595,7 +1576,7 @@ footer {
 
   // D/A keyboard navigation through modals
   (function () {
-    var headings = Array.prototype.slice.call(document.querySelectorAll('a.row-heading'));
+    var headings = Array.prototype.slice.call(document.querySelectorAll('button.row-heading'));
     if (!headings.length) return;
 
     function isVisible(h) {

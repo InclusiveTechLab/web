@@ -268,10 +268,15 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
   line-height: 1.7;
 }
 
-/* Start button */
+
+
+/* Inclusive Design cards */
 .btn-start {
-  display: inline-block;
-  padding: 8px 18px;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  gap: 0.25em;
+  padding: 8px 18px 8px 9px;
   background-color: rgb(34, 91, 98);
   color: #fff;
   border: 1px solid rgb(34, 91, 98);
@@ -283,10 +288,17 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
   cursor: pointer;
   transition: background 0.1s ease, border-color 0.1s ease;
 }
-.btn-start:hover {
+.btn-start:hover,
+.btn-start:focus-visible {
   background: #000;
   border-color: #000;
   color: #fff;
+}
+
+.btn-start + .btn-start {
+  margin-left: 1em;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 /* Inclusive Design cards */
@@ -307,12 +319,13 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
 .id-card a {
   color: #000;
 }
-.id-card p {
-  margin-top: 0.5em;
-}
 .id-card .btn-start {
   color: #fff;
 }
+.id-card p {
+  margin-top: 0.5em;
+}
+
 @media (max-width: 680px) {
   .card.id-card {
     padding: 1.1em;
@@ -329,227 +342,7 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
   }
 }
 
-/* Modal */
-.modal-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-  background: rgba(0, 0, 0, 0.6);
-  overflow-y: auto;
-  padding: 64px 16px;
-}
-.modal-overlay.open {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-.modal {
-  max-width: 1012px;
-  width: 100%;
-  background: var(--canvas);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 0 2em 2em;
-  position: relative;
-}
-.modal-close {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: none;
-  border: none;
-  color: var(--fg);
-  font-size: 1.5rem;
-  cursor: pointer;
-  padding: 4px 8px;
-  line-height: 1;
-}
-.modal-close:hover {
-  color: var(--accent);
-}
-.modal-row-full {
-  padding: 1.5em 0;
-  border-bottom: 1px solid var(--border);
-}
-.modal-two-col {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5em;
-  margin-top: 1.5em;
-  align-items: start;
-}
-.modal-two-col > div:first-child {
-  padding-right: 32px;
-}
-@media (max-width: 680px) {
-  .modal-two-col {
-    grid-template-columns: 1fr;
-  }
-  .modal-two-col > div:first-child {
-    padding-right: 0;
-  }
-}
 
-/* Reform prompt form */
-.reform-tabs {
-  display: flex;
-  gap: 0;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 1em;
-}
-.reform-tabs [role="tab"] {
-  background: none;
-  border: none;
-  border-bottom: 2px solid transparent;
-  color: var(--fg-muted);
-  font: inherit;
-  font-size: 0.9rem;
-  padding: 0.5em 1em;
-  cursor: pointer;
-}
-.reform-tabs [role="tab"][aria-selected="true"] {
-  color: var(--fg);
-  border-bottom-color: var(--accent);
-}
-.reform-tabs [role="tab"]:hover {
-  color: var(--fg);
-}
-.reform-tabpanel {
-  display: none;
-}
-.reform-tabpanel.active {
-  display: block;
-}
-.reform-textarea {
-  width: 100%;
-  min-height: 4em;
-  max-height: 16em;
-  resize: none;
-  overflow-y: auto;
-  background: var(--canvas-subtle);
-  color: var(--fg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 0.6em 0.75em;
-  font: inherit;
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-.reform-textarea:focus {
-  border-color: var(--accent);
-  outline: 2px solid transparent;
-  box-shadow: 0 0 0 2px rgba(121, 192, 255, 0.3);
-}
-@media (forced-colors: active) {
-  .reform-textarea:focus {
-    outline: 2px solid Highlight;
-  }
-}
-.reform-submit-group {
-  display: flex;
-  margin-top: 0.75em;
-  border-radius: var(--radius);
-  overflow: visible;
-  position: relative;
-}
-.reform-submit-group .btn-submit {
-  flex: 1;
-  background: var(--btn-bg);
-  color: var(--fg);
-  border: 1px solid var(--border);
-  border-right: none;
-  border-radius: var(--radius) 0 0 var(--radius);
-  padding: 0.5em 1em;
-  font: inherit;
-  font-size: 0.9rem;
-  cursor: pointer;
-  text-align: left;
-}
-.reform-submit-group .btn-submit:hover {
-  background: var(--btn-hover);
-}
-.reform-submit-group .btn-dropdown {
-  background: var(--btn-bg);
-  color: var(--fg);
-  border: 1px solid var(--border);
-  border-radius: 0 var(--radius) var(--radius) 0;
-  padding: 0.5em 0.6em;
-  font: inherit;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
-.reform-submit-group .btn-dropdown:hover {
-  background: var(--btn-hover);
-}
-.reform-submit-group .btn-dropdown svg {
-  width: 12px;
-  height: 12px;
-  fill: currentColor;
-}
-.reform-dropdown-menu {
-  display: none;
-  position: absolute;
-  bottom: 100%;
-  right: 0;
-  margin-bottom: 4px;
-  background: var(--canvas-subtle);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  min-width: 160px;
-  z-index: 10;
-  padding: 4px 0;
-}
-.reform-dropdown-menu.open {
-  display: block;
-}
-.reform-dropdown-menu [role="menuitemradio"] {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-  width: 100%;
-  background: none;
-  border: none;
-  color: var(--fg);
-  font: inherit;
-  font-size: 0.875rem;
-  padding: 0.4em 0.75em;
-  cursor: pointer;
-  text-align: left;
-}
-.reform-dropdown-menu [role="menuitemradio"]:hover,
-.reform-dropdown-menu [role="menuitemradio"]:focus {
-  background: var(--btn-hover);
-}
-.reform-dropdown-menu [role="menuitemradio"][aria-checked="true"]::before {
-  content: "✓";
-  font-size: 0.75rem;
-}
-.reform-dropdown-menu [role="menuitemradio"][aria-checked="false"]::before {
-  content: "";
-  display: inline-block;
-  width: 0.75rem;
-}
-.reform-toast {
-  position: absolute;
-  bottom: calc(100% + 8px);
-  left: 0;
-  right: 0;
-  background: var(--canvas-subtle);
-  color: var(--fg);
-  border: 1px solid var(--accent);
-  border-radius: var(--radius);
-  padding: 0.5em 0.75em;
-  font-size: 0.85rem;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  pointer-events: none;
-}
-.reform-toast.visible {
-  opacity: 1;
-}
 </style>
 </head>
 <body>
@@ -664,8 +457,7 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
   <div class="card id-card">
     <h3>Recognize exclusion early—with AI</h3>
     <p><b>Use the AI of your choice to identify barriers early—treat ideas as hypotheses and ground designs with disabled people.</b></p>
-    <p><button type="button" class="btn-start" id="re-start-btn">Start Prompt</button></p>
-
+    <p><a href="https://chatgpt.com/g/g-69e40a3dade88191a285dcff5ba7102e-inclusive-tech-lab-recognize-exclusion" target="_blank" rel="noopener" class="btn-start"><svg aria-hidden="true" width="1.8em" height="1.8em" viewBox="0 0 720 720" fill="currentColor" style="vertical-align: middle;"><path d="M303.64,294.51v-45.58c0-3.84,1.44-6.72,4.8-8.64l91.65-52.78c12.48-7.2,27.35-10.55,42.7-10.55,57.58,0,94.05,44.62,94.05,92.12,0,3.36,0,7.2-.48,11.04l-95-55.66c-5.76-3.36-11.52-3.36-17.27,0l-120.43,70.05ZM517.64,472.05v-108.92c0-6.72-2.88-11.52-8.64-14.88l-120.43-70.05,39.35-22.55c3.36-1.92,6.24-1.92,9.6,0l91.65,52.78c26.39,15.36,44.14,47.98,44.14,79.65,0,36.46-21.59,70.05-55.66,83.97h0ZM275.33,376.08l-39.35-23.03c-3.36-1.92-4.8-4.8-4.8-8.64v-105.56c0-51.34,39.35-90.21,92.61-90.21,20.15,0,38.86,6.72,54.7,18.71l-94.52,54.7c-5.76,3.36-8.64,8.15-8.64,14.87v139.15h0ZM360.02,425.02l-56.38-31.67v-67.17l56.38-31.67,56.38,31.67v67.17l-56.38,31.67ZM396.25,570.89c-20.15,0-38.86-6.72-54.7-18.71l94.52-54.7c5.76-3.36,8.64-8.15,8.64-14.88v-139.15l39.83,23.03c3.36,1.92,4.8,4.8,4.8,8.64v105.56c0,51.34-39.83,90.21-93.08,90.21h0ZM282.53,463.89l-91.65-52.78c-26.39-15.36-44.14-47.98-44.14-79.65,0-36.95,22.07-70.05,56.14-83.97v109.4c0,6.72,2.88,11.52,8.64,14.87l119.96,69.57-39.35,22.55c-3.36,1.92-6.24,1.92-9.6,0ZM277.25,542.58c-54.22,0-94.05-40.78-94.05-91.17,0-3.84.48-7.68.96-11.52l94.52,54.7c5.76,3.36,11.52,3.36,17.27,0l120.43-69.57v45.58c0,3.84-1.44,6.72-4.8,8.64l-91.65,52.78c-12.48,7.2-27.35,10.55-42.7,10.55h0ZM396.25,599.68c58.06,0,106.52-41.26,117.56-95.96,53.74-13.92,88.29-64.3,88.29-115.64,0-33.59-14.39-66.21-40.3-89.73,2.4-10.08,3.84-20.15,3.84-30.23,0-68.61-55.66-119.96-119.96-119.96-12.95,0-25.43,1.92-37.9,6.24-21.6-21.11-51.34-34.55-83.97-34.55-58.06,0-106.52,41.26-117.56,95.96-53.74,13.92-88.29,64.3-88.29,115.64,0,33.59,14.39,66.21,40.3,89.73-2.4,10.08-3.84,20.15-3.84,30.23,0,68.61,55.66,119.96,119.96,119.96,12.95,0,25.43-1.92,37.9-6.24,21.59,21.11,51.34,34.55,83.97,34.55Z"/></svg> Try GPT<span class="sr-only"> — Recognize Exclusion (opens in new window)</span></a> <a href="ITL_RecognizeExclusion.md" target="_blank" rel="noopener" class="btn-start"><svg aria-hidden="true" width="1.26em" height="1.26em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 1px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>&ensp;Review Markdown<span class="sr-only"> — Recognize Exclusion (opens in new window)</span></a></p>
   </div>
 </div>
 
@@ -716,7 +508,7 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
   <div class="card id-card" style="padding-top:0.5em;">
     <h3>Solve for one, extend to many—diverge with AI</h3>
     <p><b>Start with one person's needs and design deeply so it extends. Use our persona spectrum to move from permanent to situational contexts, and interrelated needs to reveal shared patterns.</b></p>
-    <p><button type="button" class="btn-start" id="solve-start-btn">Start Prompt</button></p>
+    <p><a href="https://chatgpt.com/g/g-69f54a50774081919d16a029e8dbf468-inclusive-tech-lab-solve-for-one-extend-to-many" target="_blank" rel="noopener" class="btn-start"><svg aria-hidden="true" width="1.8em" height="1.8em" viewBox="0 0 720 720" fill="currentColor" style="vertical-align: middle;"><path d="M303.64,294.51v-45.58c0-3.84,1.44-6.72,4.8-8.64l91.65-52.78c12.48-7.2,27.35-10.55,42.7-10.55,57.58,0,94.05,44.62,94.05,92.12,0,3.36,0,7.2-.48,11.04l-95-55.66c-5.76-3.36-11.52-3.36-17.27,0l-120.43,70.05ZM517.64,472.05v-108.92c0-6.72-2.88-11.52-8.64-14.88l-120.43-70.05,39.35-22.55c3.36-1.92,6.24-1.92,9.6,0l91.65,52.78c26.39,15.36,44.14,47.98,44.14,79.65,0,36.46-21.59,70.05-55.66,83.97h0ZM275.33,376.08l-39.35-23.03c-3.36-1.92-4.8-4.8-4.8-8.64v-105.56c0-51.34,39.35-90.21,92.61-90.21,20.15,0,38.86,6.72,54.7,18.71l-94.52,54.7c-5.76,3.36-8.64,8.15-8.64,14.87v139.15h0ZM360.02,425.02l-56.38-31.67v-67.17l56.38-31.67,56.38,31.67v67.17l-56.38,31.67ZM396.25,570.89c-20.15,0-38.86-6.72-54.7-18.71l94.52-54.7c5.76-3.36,8.64-8.15,8.64-14.88v-139.15l39.83,23.03c3.36,1.92,4.8,4.8,4.8,8.64v105.56c0,51.34-39.83,90.21-93.08,90.21h0ZM282.53,463.89l-91.65-52.78c-26.39-15.36-44.14-47.98-44.14-79.65,0-36.95,22.07-70.05,56.14-83.97v109.4c0,6.72,2.88,11.52,8.64,14.87l119.96,69.57-39.35,22.55c-3.36,1.92-6.24,1.92-9.6,0ZM277.25,542.58c-54.22,0-94.05-40.78-94.05-91.17,0-3.84.48-7.68.96-11.52l94.52,54.7c5.76,3.36,11.52,3.36,17.27,0l120.43-69.57v45.58c0,3.84-1.44,6.72-4.8,8.64l-91.65,52.78c-12.48,7.2-27.35,10.55-42.7,10.55h0ZM396.25,599.68c58.06,0,106.52-41.26,117.56-95.96,53.74-13.92,88.29-64.3,88.29-115.64,0-33.59-14.39-66.21-40.3-89.73,2.4-10.08,3.84-20.15,3.84-30.23,0-68.61-55.66-119.96-119.96-119.96-12.95,0-25.43,1.92-37.9,6.24-21.6-21.11-51.34-34.55-83.97-34.55-58.06,0-106.52,41.26-117.56,95.96-53.74,13.92-88.29,64.3-88.29,115.64,0,33.59,14.39,66.21,40.3,89.73-2.4,10.08-3.84,20.15-3.84,30.23,0,68.61,55.66,119.96,119.96,119.96,12.95,0,25.43-1.92,37.9-6.24,21.59,21.11,51.34,34.55,83.97,34.55Z"/></svg> Try GPT<span class="sr-only"> — Solve for One (opens in new window)</span></a> <a href="ITL_SolveForOneExtendToMany.md" target="_blank" rel="noopener" class="btn-start"><svg aria-hidden="true" width="1.26em" height="1.26em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 1px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>&ensp;Review Markdown<span class="sr-only"> — Solve for One (opens in new window)</span></a></p>
   </div>
 </div>
 
@@ -754,119 +546,7 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
 
 </main>
 
-<div class="modal-overlay" id="re-modal" role="dialog" aria-modal="true" aria-labelledby="re-modal-title">
-  <div class="modal">
-    <button type="button" class="modal-close" aria-label="Close">&times;</button>
-    <div class="modal-row-full">
-      <h2 id="re-modal-title">Recognize Exclusion — AI Sprint</h2>
-      <p>Use AI to identify potential exclusion patterns people with disabilities may encounter in your design. This may help you generate inclusive design research ideas based on the Microsoft Inclusive Design principle of <i>Recognize Exclusion</i>. AI output should be treated as a starting point and confirmed through research with people with disabilities.</p>
-    </div>
-    <div class="modal-two-col">
-      <div>
-        <h3>BEFORE YOU SUBMIT</h3>
-          <ul>
-            <li>Describe your experience in terms<br>of what users are trying to do</li>
-            <li>Focus on interaction, not visual layout</li>
-            <li>Consider intended audience and environment</li>
-          </ul>
-          <h3>AFTER YOU RECEIVE RESULTS</h3>
-          <ul>
-            <li>Ask for more options if ideas are too generic</li>
-            <li>Focus exclusions by Perceivability, Operability, or Understandability</li>
-            <li>Request deeper explanation of a disability mismatch</li>
-            <li>Use results to guide research or co-design questions</li>
-          </ul>
-      </div>
-      <div class="reform">
-        <div class="reform-tabs" role="tablist" aria-label="Workflow type">
-          <button role="tab" id="re-tab-website" aria-selected="true" aria-controls="re-panel-website">Website prompt</button>
-          <button role="tab" id="re-tab-game" aria-selected="false" aria-controls="re-panel-game" tabindex="-1">Game prompt</button>
-        </div>
-        <div role="tabpanel" id="re-panel-website" class="reform-tabpanel active" aria-labelledby="re-tab-website">
-          <label for="re-prompt-website" class="sr-only">Describe the website or component experience in no more than three key details</label>
-          <textarea id="re-prompt-website" class="reform-textarea" placeholder="Describe the website or component experience in no more than three key details" rows="3"></textarea>
-        </div>
-        <div role="tabpanel" id="re-panel-game" class="reform-tabpanel" aria-labelledby="re-tab-game" hidden>
-          <label for="re-prompt-game" class="sr-only">Describe the game experience in no more than three key details</label>
-          <textarea id="re-prompt-game" class="reform-textarea" placeholder="Describe the game experience in no more than three key details" rows="3"></textarea>
-        </div>
-        <div class="reform-submit-group">
-          <button type="button" class="btn-submit" data-form="re" aria-label="Submit prompt to Copilot">Send to Microsoft Copilot</button>
-          <button type="button" class="btn-dropdown" aria-haspopup="menu" aria-expanded="false" aria-label="Choose AI engine">
-            <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg>
-          </button>
-          <div class="reform-dropdown-menu" role="menu" aria-label="AI engine">
-            <button role="menuitemradio" aria-checked="true" data-engine="Copilot">Microsoft Copilot</button>
-            <button role="menuitemradio" aria-checked="false" data-engine="ChatGPT">OpenAI ChatGPT</button>
-            <button role="menuitemradio" aria-checked="false" data-engine="Claude">Anthropic Claude</button>
-            <button role="menuitemradio" aria-checked="false" data-engine="Gemini">Google Gemini</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div class="modal-overlay" id="solve-modal" role="dialog" aria-modal="true" aria-labelledby="solve-modal-title">
-  <div class="modal">
-    <button type="button" class="modal-close" aria-label="Close">&times;</button>
-    <div class="modal-row-full">
-      <h2 id="solve-modal-title">Solve for One, Extend to Many with AI</h2>
-      <p>Use AI to explore scalable design opportunities through two aligned lenses: extending solutions from permanent limitations to temporary or situational contexts, and examining how shared functional needs appear across different disabilities.</p>
-    </div>
-    <div class="modal-two-col">
-      <div>
-        <h3>Solve for One, Extend to Many with AI</h3>
-        <p>Use AI to explore scalable design opportunities through two aligned lenses: extending solutions from permanent limitations to temporary or situational contexts, and examining how shared functional needs appear across different disabilities.</p>
-        <h3>Two ways to approach the work</h3>
-        <p>Extending solutions from permanent limitations to temporary or situational contexts, and examining how similar functional challenges may appear across different disabilities.</p>
-        <h3>Review the Results</h3>
-        <ul>
-          <li>Begin with permanent disabilities</li>
-          <li>Work to extend to situational and temporary contexts and other interrelated needs</li>
-          <li>Look for recurring functional limitations</li>
-          <li>Validate findings through research</li>
-        </ul>
-      </div>
-      <div class="solform reform">
-        <div class="reform-tabs" role="tablist" aria-label="Solve for One workflow type">
-          <button role="tab" id="sol-tab-web-ext" aria-selected="true" aria-controls="sol-panel-web-ext">Website: Extend</button>
-          <button role="tab" id="sol-tab-web-inter" aria-selected="false" aria-controls="sol-panel-web-inter" tabindex="-1">Website: Interrelated</button>
-          <button role="tab" id="sol-tab-game-ext" aria-selected="false" aria-controls="sol-panel-game-ext" tabindex="-1">Game: Extend</button>
-          <button role="tab" id="sol-tab-game-inter" aria-selected="false" aria-controls="sol-panel-game-inter" tabindex="-1">Game: Interrelated</button>
-        </div>
-        <div role="tabpanel" id="sol-panel-web-ext" class="reform-tabpanel active" aria-labelledby="sol-tab-web-ext">
-          <label for="sol-prompt-web-ext" class="sr-only">Describe the web interaction pattern to explore permanent, temporary, and situational exclusions</label>
-          <textarea id="sol-prompt-web-ext" class="reform-textarea" placeholder="Describe the web interaction pattern to explore permanent, temporary, and situational exclusions" rows="3"></textarea>
-        </div>
-        <div role="tabpanel" id="sol-panel-web-inter" class="reform-tabpanel" aria-labelledby="sol-tab-web-inter" hidden>
-          <label for="sol-prompt-web-inter" class="sr-only">Describe the web interaction pattern to explore interrelated needs across different disabilities</label>
-          <textarea id="sol-prompt-web-inter" class="reform-textarea" placeholder="Describe the web interaction pattern to explore interrelated needs across different disabilities" rows="3"></textarea>
-        </div>
-        <div role="tabpanel" id="sol-panel-game-ext" class="reform-tabpanel" aria-labelledby="sol-tab-game-ext" hidden>
-          <label for="sol-prompt-game-ext" class="sr-only">Describe the game design pattern to explore permanent, temporary, and situational exclusions</label>
-          <textarea id="sol-prompt-game-ext" class="reform-textarea" placeholder="Describe the game design pattern to explore permanent, temporary, and situational exclusions" rows="3"></textarea>
-        </div>
-        <div role="tabpanel" id="sol-panel-game-inter" class="reform-tabpanel" aria-labelledby="sol-tab-game-inter" hidden>
-          <label for="sol-prompt-game-inter" class="sr-only">Describe the game design pattern to explore interrelated needs across different disabilities</label>
-          <textarea id="sol-prompt-game-inter" class="reform-textarea" placeholder="Describe the game design pattern to explore interrelated needs across different disabilities" rows="3"></textarea>
-        </div>
-        <div class="reform-submit-group">
-          <button type="button" class="btn-submit" data-form="sol" aria-label="Submit prompt to Copilot">Send to Microsoft Copilot</button>
-          <button type="button" class="btn-dropdown" aria-haspopup="menu" aria-expanded="false" aria-label="Choose AI engine">
-            <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg>
-          </button>
-          <div class="reform-dropdown-menu" role="menu" aria-label="AI engine">
-            <button role="menuitemradio" aria-checked="true" data-engine="Copilot">Microsoft Copilot</button>
-            <button role="menuitemradio" aria-checked="false" data-engine="ChatGPT">OpenAI ChatGPT</button>
-            <button role="menuitemradio" aria-checked="false" data-engine="Claude">Anthropic Claude</button>
-            <button role="menuitemradio" aria-checked="false" data-engine="Gemini">Google Gemini</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <footer>
 </footer>
@@ -882,206 +562,7 @@ h2 button.disclosure[aria-expanded="true"] .disclosure-icon {
     });
   });
 
-  // Modals
-  function initModal(overlayId, openBtnId) {
-    var overlay = document.getElementById(overlayId);
-    var openBtn = document.getElementById(openBtnId);
-    var closeBtn = overlay.querySelector('.modal-close');
-    var modal = overlay.querySelector('.modal');
 
-    function getFocusable() {
-      return modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-    }
-
-    function openModal() {
-      overlay.classList.add('open');
-      document.querySelectorAll('header, main, footer').forEach(function (el) {
-        el.setAttribute('inert', '');
-        el.setAttribute('aria-hidden', 'true');
-      });
-      closeBtn.focus();
-      document.body.style.overflow = 'hidden';
-    }
-    function closeModal() {
-      overlay.classList.remove('open');
-      document.querySelectorAll('header, main, footer').forEach(function (el) {
-        el.removeAttribute('inert');
-        el.removeAttribute('aria-hidden');
-      });
-      openBtn.focus();
-      document.body.style.overflow = '';
-    }
-
-    openBtn.addEventListener('click', openModal);
-    closeBtn.addEventListener('click', closeModal);
-    overlay.addEventListener('click', function (e) {
-      if (e.target === overlay) closeModal();
-    });
-    document.addEventListener('keydown', function (e) {
-      if (!overlay.classList.contains('open')) return;
-      if (e.key === 'Escape') { closeModal(); return; }
-      if (e.key === 'Tab') {
-        var focusable = getFocusable();
-        var first = focusable[0];
-        var last = focusable[focusable.length - 1];
-        if (e.shiftKey) {
-          if (document.activeElement === first) { e.preventDefault(); last.focus(); }
-        } else {
-          if (document.activeElement === last) { e.preventDefault(); first.focus(); }
-        }
-      }
-    });
-  }
-
-  initModal('re-modal', 're-start-btn');
-  initModal('solve-modal', 'solve-start-btn');
-
-  // Deep-link: open modal from URL hash
-  var hashModals = {
-    '#recognizeexclusion': 're-start-btn',
-    '#solveforone': 'solve-start-btn'
-  };
-  function checkHash() {
-    var btnId = hashModals[location.hash.toLowerCase()];
-    if (btnId) {
-      var btn = document.getElementById(btnId);
-      if (btn) btn.click();
-    }
-  }
-  checkHash();
-  window.addEventListener('hashchange', checkHash);
-
-  // Reform: tabs, auto-resize textarea, split-button dropdown
-  document.querySelectorAll('.reform-tabs').forEach(function (tablist) {
-    var tabs = tablist.querySelectorAll('[role="tab"]');
-    function activate(tab) {
-      tabs.forEach(function (t) {
-        t.setAttribute('aria-selected', 'false');
-        t.tabIndex = -1;
-        var panel = document.getElementById(t.getAttribute('aria-controls'));
-        if (panel) { panel.classList.remove('active'); panel.setAttribute('hidden', ''); }
-      });
-      tab.setAttribute('aria-selected', 'true');
-      tab.tabIndex = 0;
-      tab.focus();
-      var panel = document.getElementById(tab.getAttribute('aria-controls'));
-      if (panel) { panel.classList.add('active'); panel.removeAttribute('hidden'); }
-    }
-    tabs.forEach(function (tab) {
-      tab.addEventListener('click', function () { activate(tab); });
-      tab.addEventListener('keydown', function (e) {
-        var idx = Array.prototype.indexOf.call(tabs, tab);
-        if (e.key === 'ArrowRight') { e.preventDefault(); activate(tabs[(idx + 1) % tabs.length]); }
-        if (e.key === 'ArrowLeft') { e.preventDefault(); activate(tabs[(idx - 1 + tabs.length) % tabs.length]); }
-        if (e.key === 'Home') { e.preventDefault(); activate(tabs[0]); }
-        if (e.key === 'End') { e.preventDefault(); activate(tabs[tabs.length - 1]); }
-      });
-    });
-  });
-
-  // Auto-resize textareas
-  document.querySelectorAll('.reform-textarea').forEach(function (ta) {
-    function resize() {
-      ta.style.height = 'auto';
-      ta.style.height = Math.min(ta.scrollHeight, parseInt(getComputedStyle(ta).maxHeight, 10)) + 'px';
-    }
-    ta.addEventListener('input', resize);
-  });
-
-  // Split-button dropdown
-  document.querySelectorAll('.reform-submit-group').forEach(function (group) {
-    var submitBtn = group.querySelector('.btn-submit');
-    var dropdownBtn = group.querySelector('.btn-dropdown');
-    var menu = group.querySelector('.reform-dropdown-menu');
-    var items = menu.querySelectorAll('[role="menuitemradio"]');
-
-    function closeMenu() {
-      menu.classList.remove('open');
-      dropdownBtn.setAttribute('aria-expanded', 'false');
-    }
-    function openMenu() {
-      menu.classList.add('open');
-      dropdownBtn.setAttribute('aria-expanded', 'true');
-      var checked = menu.querySelector('[aria-checked="true"]');
-      if (checked) checked.focus();
-    }
-
-    dropdownBtn.addEventListener('click', function () {
-      if (menu.classList.contains('open')) closeMenu(); else openMenu();
-    });
-
-    items.forEach(function (item) {
-      item.addEventListener('click', function () {
-        items.forEach(function (i) { i.setAttribute('aria-checked', 'false'); });
-        item.setAttribute('aria-checked', 'true');
-        var label = item.textContent;
-        submitBtn.textContent = 'Send to ' + label;
-        submitBtn.removeAttribute('aria-label');
-        closeMenu();
-        dropdownBtn.focus();
-      });
-      item.addEventListener('keydown', function (e) {
-        var idx = Array.prototype.indexOf.call(items, item);
-        if (e.key === 'ArrowDown') { e.preventDefault(); items[(idx + 1) % items.length].focus(); }
-        if (e.key === 'ArrowUp') { e.preventDefault(); items[(idx - 1 + items.length) % items.length].focus(); }
-        if (e.key === 'Escape') { closeMenu(); dropdownBtn.focus(); }
-        if (e.key === 'Home') { e.preventDefault(); items[0].focus(); }
-        if (e.key === 'End') { e.preventDefault(); items[items.length - 1].focus(); }
-      });
-    });
-
-    // Close menu on outside click
-    document.addEventListener('click', function (e) {
-      if (!group.contains(e.target)) closeMenu();
-    });
-
-    // Toast helper
-    var toast = document.createElement('div');
-    toast.className = 'reform-toast';
-    toast.setAttribute('role', 'status');
-    toast.setAttribute('aria-live', 'polite');
-    group.appendChild(toast);
-
-    function showToast(msg) {
-      toast.textContent = msg;
-      toast.classList.add('visible');
-      setTimeout(function () { toast.classList.remove('visible'); }, 3000);
-    }
-
-    // Submit handler
-    submitBtn.addEventListener('click', function () {
-      var reform = submitBtn.closest('.reform');
-      var activePanel = reform.querySelector('.reform-tabpanel.active');
-      var textarea = activePanel ? activePanel.querySelector('textarea') : null;
-      var prompt = textarea ? textarea.value.trim() : '';
-      if (!prompt) {
-        textarea.focus();
-        return;
-      }
-      var engine = menu.querySelector('[aria-checked="true"]').getAttribute('data-engine');
-      var encoded = encodeURIComponent(prompt);
-      var urlMap = {
-        Copilot: 'https://copilot.microsoft.com/?q=' + encoded,
-        ChatGPT: 'https://chatgpt.com/',
-        Claude: 'https://claude.ai/new',
-        Gemini: 'https://gemini.google.com/app'
-      };
-      var url = urlMap[engine] || urlMap.Copilot;
-
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(prompt).then(function () {
-          if (engine === 'Copilot') {
-            showToast('Prompt sent to Copilot');
-          } else {
-            showToast('Prompt copied — paste into ' + engine);
-          }
-          window.open(url, '_blank', 'noopener');
-        });
-      } else {
-        window.open(url, '_blank', 'noopener');
-      }
-    });
-  });
 }());
 </script>
 

@@ -5798,6 +5798,376 @@
 </ul>
 </section>
 </article>
+<!-- 1) Vestibular functions -->
+<article aria-labelledby="vestibular-functions-h" id="vestibular-functions">
+<h2 id="vestibular-functions-h">Vestibular functions</h2>
+<p class="icf-label"><b>Sensory</b> Vestibular functions</p>
+<section aria-labelledby="vestibular-functions-perceivable-h" id="vestibular-functions-perceivable">
+<h3 id="vestibular-functions-perceivable-h">Perceivable</h3>
+<ul>
+<li data-principle="perceivable">Window-open and minimize animations use scaling and parallax; users with vestibular sensitivity experience dizziness before they can react.</li>
+<li data-principle="perceivable">Live Tiles and Widgets cycle content with sliding transitions; motion-sensitive users can’t perceive the information without discomfort.</li>
+<li data-principle="perceivable">Snap Assist previews animate windows across the screen; the rapid repositioning triggers nausea for vestibular-affected users.</li>
+</ul>
+</section>
+<section aria-labelledby="vestibular-functions-operable-h" id="vestibular-functions-operable">
+<h3 id="vestibular-functions-operable-h">Operable</h3>
+<ul>
+<li data-principle="operable">“Reduce motion” in Accessibility Settings doesn’t suppress all OS animations; users still encounter motion they can’t control.</li>
+<li data-principle="operable">Virtual Desktop swipe transitions use a full-screen slide; users who need reduced motion can’t switch desktops comfortably.</li>
+<li data-principle="operable">Scroll momentum in Edge and Settings pages continues after input stops; users can’t operate scrollable content without overshoot-induced vertigo.</li>
+</ul>
+</section>
+<section aria-labelledby="vestibular-functions-understandable-h" id="vestibular-functions-understandable">
+<h3 id="vestibular-functions-understandable-h">Understandable</h3>
+<ul>
+<li data-principle="understandable">“Animation effects” toggle doesn’t describe which motions it controls; users can’t predict what will change.</li>
+<li data-principle="understandable">“Transparency effects” and “Animation effects” are separate toggles; the relationship between visual comfort settings is unclear.</li>
+<li data-principle="understandable">Smooth-scrolling options are buried per-app; users can’t understand why some surfaces still animate after disabling system motion.</li>
+</ul>
+</section>
+<section aria-labelledby="vestibular-functions-robust-h" id="vestibular-functions-robust">
+<h3 id="vestibular-functions-robust-h">Robust</h3>
+<ul>
+<li data-principle="robust">There’s no unified motion-preference API across Win32 and UWP; AT and browser reduce-motion queries aren’t honored consistently.</li>
+<li data-principle="robust">Third-party apps don’t inherit the system “reduce animations” flag; assistive tools can’t enforce motion suppression globally.</li>
+<li data-principle="robust">Transition event metadata isn’t exposed to AT; screen readers can’t warn users before an animation plays.</li>
+</ul>
+</section>
+</article>
+<!-- 2) Proprioceptive function -->
+<article aria-labelledby="proprioceptive-function-h" id="proprioceptive-function">
+<h2 id="proprioceptive-function-h">Proprioceptive function</h2>
+<p class="icf-label"><b>Sensory</b> Proprioceptive function</p>
+<section aria-labelledby="proprioceptive-function-perceivable-h" id="proprioceptive-function-perceivable">
+<h3 id="proprioceptive-function-perceivable-h">Perceivable</h3>
+<ul>
+<li data-principle="perceivable">Touch-keyboard key boundaries lack tactile differentiation; users who can’t sense finger position miss key edges visually.</li>
+<li data-principle="perceivable">Touchpad gesture regions (edge swipes, corners) have no on-screen mapping; users unaware of finger placement miss available actions.</li>
+<li data-principle="perceivable">Pen pressure levels produce subtle line-weight changes; users who can’t feel grip force don’t perceive the visual difference.</li>
+</ul>
+</section>
+<section aria-labelledby="proprioceptive-function-operable-h" id="proprioceptive-function-operable">
+<h3 id="proprioceptive-function-operable-h">Operable</h3>
+<ul>
+<li data-principle="operable">Multi-finger trackpad gestures assume users can sense finger spacing; pinch-to-zoom fails without proprioceptive feedback.</li>
+<li data-principle="operable">Drag-and-drop in File Explorer gives no haptic or audio confirmation of grab/release; users can’t tell when the action registers.</li>
+<li data-principle="operable">Touch targets on tablet-mode taskbar are flush with no raised affordance; users misjudge tap location without body-position awareness.</li>
+</ul>
+</section>
+<section aria-labelledby="proprioceptive-function-understandable-h" id="proprioceptive-function-understandable">
+<h3 id="proprioceptive-function-understandable-h">Understandable</h3>
+<ul>
+<li data-principle="understandable">“Touch sensitivity” settings don’t explain what physical input changes; users can’t map the slider to their grip experience.</li>
+<li data-principle="understandable">Pen calibration instructions reference pressure zones without visual guides; users can’t understand what force is expected.</li>
+<li data-principle="understandable">Gesture tutorials describe motions (“swipe from edge”) without clarifying required speed or distance thresholds.</li>
+</ul>
+</section>
+<section aria-labelledby="proprioceptive-function-robust-h" id="proprioceptive-function-robust">
+<h3 id="proprioceptive-function-robust-h">Robust</h3>
+<ul>
+<li data-principle="robust">Touch-input APIs don’t report contact area or pressure to AT; assistive tools can’t adapt target sizing dynamically.</li>
+<li data-principle="robust">Pen tilt and pressure metadata aren’t consistently passed to accessibility hooks; alternative input tools can’t replicate intent.</li>
+<li data-principle="robust">Surface-level haptic feedback isn’t standardized across OEM hardware; AT can’t guarantee consistent tactile cues.</li>
+</ul>
+</section>
+</article>
+<!-- 3) Control of voluntary movement functions -->
+<article aria-labelledby="control-of-voluntary-movement-functions-h" id="control-of-voluntary-movement-functions">
+<h2 id="control-of-voluntary-movement-functions-h">Control of voluntary movement functions</h2>
+<p class="icf-label"><b>Mobility</b> Control of voluntary movement functions</p>
+<section aria-labelledby="control-of-voluntary-movement-functions-perceivable-h" id="control-of-voluntary-movement-functions-perceivable">
+<h3 id="control-of-voluntary-movement-functions-perceivable-h">Perceivable</h3>
+<ul>
+<li data-principle="perceivable">Cursor movement doesn’t highlight the active click target; users with involuntary movements can’t see what they’re about to select.</li>
+<li data-principle="perceivable">Scrollbar thumb is narrow and low-contrast; users with tremor lose visual track of their scroll position.</li>
+<li data-principle="perceivable">Touch-keyboard key highlights disappear instantly; users who press slowly can’t confirm which key registered.</li>
+</ul>
+</section>
+<section aria-labelledby="control-of-voluntary-movement-functions-operable-h" id="control-of-voluntary-movement-functions-operable">
+<h3 id="control-of-voluntary-movement-functions-operable-h">Operable</h3>
+<ul>
+<li data-principle="operable">Right-click context menus dismiss on any stray pointer movement; users with tremor accidentally close menus before selecting an item.</li>
+<li data-principle="operable">Snap Assist drop zones require holding a window while dragging precisely; involuntary release drops the window in the wrong zone.</li>
+<li data-principle="operable">Filter Keys configuration demands typing test sequences; users with inconsistent motor control can’t complete the calibration.</li>
+</ul>
+</section>
+<section aria-labelledby="control-of-voluntary-movement-functions-understandable-h" id="control-of-voluntary-movement-functions-understandable">
+<h3 id="control-of-voluntary-movement-functions-understandable-h">Understandable</h3>
+<ul>
+<li data-principle="understandable">“Pointer speed” and “Pointer precision” are separate sliders with no explanation of how they interact; users misconfigure both.</li>
+<li data-principle="understandable">Filter Keys, Slow Keys, and Bounce Keys are listed without describing which tremor pattern each addresses.</li>
+<li data-principle="understandable">Mouse trail and cursor size settings are in different panes; users can’t find all motor-related pointer adjustments in one place.</li>
+</ul>
+</section>
+<section aria-labelledby="control-of-voluntary-movement-functions-robust-h" id="control-of-voluntary-movement-functions-robust">
+<h3 id="control-of-voluntary-movement-functions-robust-h">Robust</h3>
+<ul>
+<li data-principle="robust">Pointer-event APIs don’t expose jitter-filtering metadata; AT can’t distinguish intentional movement from tremor.</li>
+<li data-principle="robust">Full-screen games capture raw input, bypassing Filter Keys and accessibility hooks; motor accommodations are lost.</li>
+<li data-principle="robust">Synthetic click injection from AT conflicts with anti-cheat and DRM hooks; assistive input is blocked in some apps.</li>
+</ul>
+</section>
+</article>
+<!-- 4) Attention functions -->
+<article aria-labelledby="attention-functions-h" id="attention-functions">
+<h2 id="attention-functions-h">Attention functions</h2>
+<p class="icf-label"><b>Cognition</b> Attention functions</p>
+<section aria-labelledby="attention-functions-perceivable-h" id="attention-functions-perceivable">
+<h3 id="attention-functions-perceivable-h">Perceivable</h3>
+<ul>
+<li data-principle="perceivable">Notification Center stacks alerts with identical styling; users can’t visually distinguish urgent items from routine ones at a glance.</li>
+<li data-principle="perceivable">Taskbar badge counts are small and unaccompanied by text; users scanning quickly overlook pending action indicators.</li>
+<li data-principle="perceivable">Settings search results highlight matches in thin blue; the relevant keyword blends into surrounding text for inattentive readers.</li>
+</ul>
+</section>
+<section aria-labelledby="attention-functions-operable-h" id="attention-functions-operable">
+<h3 id="attention-functions-operable-h">Operable</h3>
+<ul>
+<li data-principle="operable">Toast notifications auto-dismiss after a few seconds; users who take longer to shift attention lose the chance to act.</li>
+<li data-principle="operable">Start Menu recommended section rotates content on each open; users can’t reliably return to a recently seen item.</li>
+<li data-principle="operable">Alt+Tab task switcher cycles linearly; users with attention fatigue overshoot their target window and must loop again.</li>
+</ul>
+</section>
+<section aria-labelledby="attention-functions-understandable-h" id="attention-functions-understandable">
+<h3 id="attention-functions-understandable-h">Understandable</h3>
+<ul>
+<li data-principle="understandable">Settings categories split related controls across “System”, “Accessibility”, and “Personalization”; users can’t predict where a feature lives.</li>
+<li data-principle="understandable">Windows Update progress shows percentage without estimated time; users can’t gauge whether to wait or leave.</li>
+<li data-principle="understandable">“Optional updates” vs. “Feature updates” vs. “Quality updates” aren’t distinguished in plain terms; users ignore important patches.</li>
+</ul>
+</section>
+<section aria-labelledby="attention-functions-robust-h" id="attention-functions-robust">
+<h3 id="attention-functions-robust-h">Robust</h3>
+<ul>
+<li data-principle="robust">Notification priority levels aren’t consistently exposed to AT; assistive tools can’t filter and surface only high-priority alerts.</li>
+<li data-principle="robust">Focus Assist state isn’t reliably broadcast to third-party apps; companion tools can’t suppress distractions in sync with the OS.</li>
+<li data-principle="robust">Live tile and widget refresh events lack semantic tags; AT can’t suppress low-value content changes from interrupting users.</li>
+</ul>
+</section>
+</article>
+<!-- 5) Seeing functions -->
+<article aria-labelledby="seeing-functions-h" id="seeing-functions">
+<h2 id="seeing-functions-h">Seeing functions</h2>
+<p class="icf-label"><b>Vision</b> Seeing functions</p>
+<section aria-labelledby="seeing-functions-perceivable-h" id="seeing-functions-perceivable">
+<h3 id="seeing-functions-perceivable-h">Perceivable</h3>
+<ul>
+<li data-principle="perceivable">File Explorer icon view relies on tiny visual thumbnails; users with low vision can’t distinguish file types without switching to detail view.</li>
+<li data-principle="perceivable">Windows Hello face-recognition feedback is a subtle animated ring; users with limited sight can’t tell if the camera detected them.</li>
+<li data-principle="perceivable">System tray overflow icons are 16×16 pixels with no text labels; magnifier users must zoom in on each one to identify it.</li>
+</ul>
+</section>
+<section aria-labelledby="seeing-functions-operable-h" id="seeing-functions-operable">
+<h3 id="seeing-functions-operable-h">Operable</h3>
+<ul>
+<li data-principle="operable">Magnifier lens mode follows the pointer but can’t be pinned to a region; users must continuously track two focal points.</li>
+<li data-principle="operable">Narrator scan mode requires learning a separate key map; users transitioning from visual to non-visual input lose orientation.</li>
+<li data-principle="operable">High-contrast mode disables some app-custom styling, breaking layouts; users must choose between visibility and functionality.</li>
+</ul>
+</section>
+<section aria-labelledby="seeing-functions-understandable-h" id="seeing-functions-understandable">
+<h3 id="seeing-functions-understandable-h">Understandable</h3>
+<ul>
+<li data-principle="understandable">“Text size”, “Display scale”, and “Magnifier zoom” are three separate controls; users don’t know which to adjust for their needs.</li>
+<li data-principle="understandable">Narrator verbosity levels (“1–5”) don’t describe what each level adds or removes; users can’t choose without trial and error.</li>
+<li data-principle="understandable">Colour filter mode names (“Deuteranopia”, “Tritanopia”) use clinical terms; plain descriptions of what changes aren’t provided.</li>
+</ul>
+</section>
+<section aria-labelledby="seeing-functions-robust-h" id="seeing-functions-robust">
+<h3 id="seeing-functions-robust-h">Robust</h3>
+<ul>
+<li data-principle="robust">UWP and Win32 apps expose different automation trees; Narrator announces inconsistent control names across app frameworks.</li>
+<li data-principle="robust">PDF and image content in Edge isn’t always OCR-processed; screen readers encounter silent regions in mixed documents.</li>
+<li data-principle="robust">Live region updates in web-based Settings panels fire inconsistently; AT misses dynamic content changes.</li>
+</ul>
+</section>
+</article>
+<!-- 6) Memory functions -->
+<article aria-labelledby="memory-functions-h" id="memory-functions">
+<h2 id="memory-functions-h">Memory functions</h2>
+<p class="icf-label"><b>Cognition</b> Memory functions</p>
+<section aria-labelledby="memory-functions-perceivable-h" id="memory-functions-perceivable">
+<h3 id="memory-functions-perceivable-h">Perceivable</h3>
+<ul>
+<li data-principle="perceivable">Recently opened files in Jump Lists show paths but no timestamps; users can’t visually confirm which version they last worked on.</li>
+<li data-principle="perceivable">Clipboard History entries display plain text snippets without source-app labels; users can’t recognise where content came from.</li>
+<li data-principle="perceivable">File Explorer “Recent” view mixes files from all apps; users with short-term memory loss can’t spot the item they just saved.</li>
+</ul>
+</section>
+<section aria-labelledby="memory-functions-operable-h" id="memory-functions-operable">
+<h3 id="memory-functions-operable-h">Operable</h3>
+<ul>
+<li data-principle="operable">Clipboard History clears on restart with no warning; users who relied on stored clips lose them without a chance to save.</li>
+<li data-principle="operable">Browser password autofill prompts disappear after a few seconds; users who need more time can’t return to the prompt.</li>
+<li data-principle="operable">Settings changes apply immediately with no undo; users who forget what they changed can’t revert without remembering the prior state.</li>
+</ul>
+</section>
+<section aria-labelledby="memory-functions-understandable-h" id="memory-functions-understandable">
+<h3 id="memory-functions-understandable-h">Understandable</h3>
+<ul>
+<li data-principle="understandable">“Sync settings” doesn’t list which specific preferences are included; users can’t recall what will follow them to a new device.</li>
+<li data-principle="understandable">OneDrive “Files On-Demand” status icons (cloud, checkmark, green circle) aren’t labeled; users forget which icon means locally available.</li>
+<li data-principle="understandable">Timeline/Activity History was removed without a clear replacement; users who depended on it can’t find an equivalent recall feature.</li>
+</ul>
+</section>
+<section aria-labelledby="memory-functions-robust-h" id="memory-functions-robust">
+<h3 id="memory-functions-robust-h">Robust</h3>
+<ul>
+<li data-principle="robust">Clipboard History API doesn’t expose entry timestamps or source-app metadata to AT; assistive tools can’t help users search clips.</li>
+<li data-principle="robust">Jump List entries lack structured metadata beyond file path; AT can’t provide contextual reminders about recent work.</li>
+<li data-principle="robust">Undo/redo stacks aren’t standardised across Win32 and UWP; AT can’t offer a consistent “step back” command across apps.</li>
+</ul>
+</section>
+</article>
+<!-- 7) Lateralization of sound -->
+<article aria-labelledby="lateralization-of-sound-h" id="lateralization-of-sound">
+<h2 id="lateralization-of-sound-h">Lateralization of sound</h2>
+<p class="icf-label"><b>Hearing</b> Lateralization of sound</p>
+<section aria-labelledby="lateralization-of-sound-perceivable-h" id="lateralization-of-sound-perceivable">
+<h3 id="lateralization-of-sound-perceivable-h">Perceivable</h3>
+<ul>
+<li data-principle="perceivable">Stereo notification sounds play from a fixed left or right channel; users with unilateral hearing loss miss alerts assigned to their affected side.</li>
+<li data-principle="perceivable">Spatial Audio in Windows positions sounds in a 3D field with no visual map; users can’t perceive directional cues they’re missing.</li>
+<li data-principle="perceivable">System alerts and app sounds share the same stereo mix; users can’t perceive which source triggered a sound on a particular side.</li>
+</ul>
+</section>
+<section aria-labelledby="lateralization-of-sound-operable-h" id="lateralization-of-sound-operable">
+<h3 id="lateralization-of-sound-operable-h">Operable</h3>
+<ul>
+<li data-principle="operable">Channel balance is a single slider buried in Sound properties; users who need per-app left/right adjustment can’t configure it quickly.</li>
+<li data-principle="operable">“Mono audio” is an all-or-nothing toggle; users with partial unilateral loss can’t blend partial stereo to their stronger ear.</li>
+<li data-principle="operable">Spatial Audio settings apply globally; users can’t disable it for alerts while keeping it for media playback.</li>
+</ul>
+</section>
+<section aria-labelledby="lateralization-of-sound-understandable-h" id="lateralization-of-sound-understandable">
+<h3 id="lateralization-of-sound-understandable-h">Understandable</h3>
+<ul>
+<li data-principle="understandable">“Mono audio” doesn’t explain that it merges both channels equally; users with asymmetric loss expect a weighted blend toward their good ear.</li>
+<li data-principle="understandable">Spatial Audio format names (“Windows Sonic”, “Dolby Atmos”) don’t describe the lateralization effect; users can’t choose meaningfully.</li>
+<li data-principle="understandable">Per-device audio profiles don’t indicate which channel carries speech vs. effects; users can’t plan their listening setup.</li>
+</ul>
+</section>
+<section aria-labelledby="lateralization-of-sound-robust-h" id="lateralization-of-sound-robust">
+<h3 id="lateralization-of-sound-robust-h">Robust</h3>
+<ul>
+<li data-principle="robust">Channel-balance metadata isn’t exposed to AT; assistive tools can’t auto-route critical alerts to the user’s stronger ear.</li>
+<li data-principle="robust">Spatial Audio APIs don’t share listener-profile data with accessibility hooks; hearing-aid apps can’t compensate for positional effects.</li>
+<li data-principle="robust">Mono-audio state isn’t broadcast to third-party media apps; some players continue outputting stereo despite the system setting.</li>
+</ul>
+</section>
+</article>
+<!-- 8) Undertaking multiple tasks -->
+<article aria-labelledby="undertaking-multiple-tasks-h" id="undertaking-multiple-tasks">
+<h2 id="undertaking-multiple-tasks-h">Undertaking multiple tasks</h2>
+<p class="icf-label"><b>Cognition</b> Undertaking multiple tasks</p>
+<section aria-labelledby="undertaking-multiple-tasks-perceivable-h" id="undertaking-multiple-tasks-perceivable">
+<h3 id="undertaking-multiple-tasks-perceivable-h">Perceivable</h3>
+<ul>
+<li data-principle="perceivable">Taskbar window grouping collapses multiple instances under one icon; users can’t perceive how many tasks are active without hovering.</li>
+<li data-principle="perceivable">Snap layouts show window positions as abstract rectangles; users can’t identify which app goes where without reading tiny previews.</li>
+<li data-principle="perceivable">Virtual Desktop overview thumbnails are small and unlabelled; users juggling tasks across desktops can’t perceive context at a glance.</li>
+</ul>
+</section>
+<section aria-labelledby="undertaking-multiple-tasks-operable-h" id="undertaking-multiple-tasks-operable">
+<h3 id="undertaking-multiple-tasks-operable-h">Operable</h3>
+<ul>
+<li data-principle="operable">Splitting two apps with Snap Assist requires a precise drag-then-pick sequence; users managing multiple tasks lose flow between steps.</li>
+<li data-principle="operable">Alt+Tab doesn’t allow reordering windows; users can’t group related tasks together for faster switching.</li>
+<li data-principle="operable">Background apps that lose focus may pause or throttle; users returning to a secondary task find stale or frozen content.</li>
+</ul>
+</section>
+<section aria-labelledby="undertaking-multiple-tasks-understandable-h" id="undertaking-multiple-tasks-understandable">
+<h3 id="undertaking-multiple-tasks-understandable-h">Understandable</h3>
+<ul>
+<li data-principle="understandable">“Task View” and “Alt+Tab” overlap in function but show different content (desktops vs. windows); the distinction isn’t explained.</li>
+<li data-principle="understandable">Snap layout suggestions differ by screen size with no documentation; users on different monitors get inconsistent options.</li>
+<li data-principle="understandable">Taskbar “End task” vs. “Close window” in right-click menus isn’t clarified; users don’t know which safely preserves their work.</li>
+</ul>
+</section>
+<section aria-labelledby="undertaking-multiple-tasks-robust-h" id="undertaking-multiple-tasks-robust">
+<h3 id="undertaking-multiple-tasks-robust-h">Robust</h3>
+<ul>
+<li data-principle="robust">Window-arrangement state isn’t saved across restarts; AT can’t restore a user’s multi-task layout automatically.</li>
+<li data-principle="robust">Task View automation properties don’t expose desktop-to-window mappings; AT can’t help users navigate across grouped tasks.</li>
+<li data-principle="robust">App suspend/resume events aren’t communicated to AT; assistive tools can’t warn users that a background task has stalled.</li>
+</ul>
+</section>
+</article>
+<!-- 9) Touch function -->
+<article aria-labelledby="touch-function-h" id="touch-function">
+<h2 id="touch-function-h">Touch function</h2>
+<p class="icf-label"><b>Sensory</b> Touch function</p>
+<section aria-labelledby="touch-function-perceivable-h" id="touch-function-perceivable">
+<h3 id="touch-function-perceivable-h">Perceivable</h3>
+<ul>
+<li data-principle="perceivable">Touchscreen button states (pressed, selected, disabled) rely on subtle colour shifts; users with reduced touch sensation get no tactile confirmation.</li>
+<li data-principle="perceivable">On-screen keyboard keys provide no haptic pulse on contact; users who can’t feel the glass don’t perceive whether a keypress registered.</li>
+<li data-principle="perceivable">Swipe gesture progress (e.g., pull-down for Notification Center) shows a thin visual strip; users who can’t feel the drag miss the cue.</li>
+</ul>
+</section>
+<section aria-labelledby="touch-function-operable-h" id="touch-function-operable">
+<h3 id="touch-function-operable-h">Operable</h3>
+<ul>
+<li data-principle="operable">Long-press actions (right-click equivalent) require sustained finger contact; users with numbness lift too early and trigger a tap instead.</li>
+<li data-principle="operable">Edge swipe gestures to open widgets or Task View demand precise finger placement at the bezel; users with reduced fingertip sensation overshoot.</li>
+<li data-principle="operable">Pinch-to-zoom requires coordinated two-finger pressure; users who can’t sense contact force either under-zoom or accidentally scroll.</li>
+</ul>
+</section>
+<section aria-labelledby="touch-function-understandable-h" id="touch-function-understandable">
+<h3 id="touch-function-understandable-h">Understandable</h3>
+<ul>
+<li data-principle="understandable">“Touch feedback” vibration setting doesn’t describe intensity or duration; users can’t predict whether they’ll perceive the haptic.</li>
+<li data-principle="understandable">Touchscreen calibration asks users to tap crosshairs but doesn’t explain acceptable accuracy tolerance; users unsure of their touch precision don’t know if calibration succeeded.</li>
+<li data-principle="understandable">“Gesture” settings list action names (“three-finger swipe”) without describing the physical motion required; users can’t map names to movements.</li>
+</ul>
+</section>
+<section aria-labelledby="touch-function-robust-h" id="touch-function-robust">
+<h3 id="touch-function-robust-h">Robust</h3>
+<ul>
+<li data-principle="robust">Touch-contact pressure data isn’t forwarded to AT; assistive tools can’t warn users when they’re pressing too lightly to register.</li>
+<li data-principle="robust">Haptic-feedback APIs vary across OEM hardware; AT can’t guarantee consistent tactile confirmation on all Windows devices.</li>
+<li data-principle="robust">Touch-rejection zones near screen edges aren’t reported to AT; assistive overlays can’t avoid placing targets in dead regions.</li>
+</ul>
+</section>
+</article>
+<!-- 10) Muscle tone functions -->
+<article aria-labelledby="muscle-tone-functions-h" id="muscle-tone-functions">
+<h2 id="muscle-tone-functions-h">Muscle tone functions</h2>
+<p class="icf-label"><b>Mobility</b> Muscle tone functions</p>
+<section aria-labelledby="muscle-tone-functions-perceivable-h" id="muscle-tone-functions-perceivable">
+<h3 id="muscle-tone-functions-perceivable-h">Perceivable</h3>
+<ul>
+<li data-principle="perceivable">Key-down visual indicators on the on-screen keyboard flash briefly; users with high muscle tone who press slowly miss the feedback.</li>
+<li data-principle="perceivable">Mouse cursor doesn’t change shape during click-and-hold actions; users with spasticity can’t perceive whether their sustained press registered.</li>
+<li data-principle="perceivable">Sticky Keys activation indicator is a small tray icon; users focused on managing their motor effort overlook modifier-key state.</li>
+</ul>
+</section>
+<section aria-labelledby="muscle-tone-functions-operable-h" id="muscle-tone-functions-operable">
+<h3 id="muscle-tone-functions-operable-h">Operable</h3>
+<ul>
+<li data-principle="operable">Keyboard shortcuts require simultaneous key presses (Ctrl+Shift+Esc); users with spasticity can’t coordinate multi-key combos even with Sticky Keys.</li>
+<li data-principle="operable">Touchpad scrolling requires sustained light contact; users with fluctuating tone alternate between too much and too little pressure.</li>
+<li data-principle="operable">File Explorer rename mode exits on any click outside the field; an accidental spastic movement cancels the edit without warning.</li>
+</ul>
+</section>
+<section aria-labelledby="muscle-tone-functions-understandable-h" id="muscle-tone-functions-understandable">
+<h3 id="muscle-tone-functions-understandable-h">Understandable</h3>
+<ul>
+<li data-principle="understandable">“Key repeat delay” and “Bounce Keys” both address unwanted repeated input but are described differently; users can’t tell which solves their specific tone issue.</li>
+<li data-principle="understandable">Click Lock description doesn’t explain it replaces sustained holds with a toggle; users with high tone don’t realise it could help.</li>
+<li data-principle="understandable">Accessibility “interaction” settings are spread across Mouse, Keyboard, and Touch pages; users can’t find all tone-relevant adjustments together.</li>
+</ul>
+</section>
+<section aria-labelledby="muscle-tone-functions-robust-h" id="muscle-tone-functions-robust">
+<h3 id="muscle-tone-functions-robust-h">Robust</h3>
+<ul>
+<li data-principle="robust">Input-timing telemetry (hold duration, inter-key gaps) isn’t exposed to AT; assistive tools can’t auto-tune repeat and debounce settings.</li>
+<li data-principle="robust">Sticky Keys state isn’t reliably communicated to all app frameworks; some apps still require simultaneous key combos.</li>
+<li data-principle="robust">On-screen keyboard key-size and spacing can’t be adjusted programmatically by AT; companion tools can’t adapt the layout to the user’s motor range.</li>
+</ul>
+</section>
+</article>
 </main>
 </body>
 </html>
